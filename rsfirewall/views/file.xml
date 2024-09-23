@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu>
+    <hidden>true</hidden>
+    <type>submenu</type>
+    <page_title>page_title_file</page_title>
+    <menu_title>menu_title_file</menu_title>
+    <capability>manage_options</capability>
+    <menu_slug>rsfirewall_file</menu_slug>
+    <function>display</function>
+    <ordering>101</ordering>
+</menu>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <section name="data">
+        <field name="rsfirewall_url" label="lbl_url" type="textbox" required="1" description="desc_url"/>
+        <field name="rsfirewall_limit" label="lbl_limit" type="textbox" required="1" description="desc_limit"/>
+    </section>
+</form>
+

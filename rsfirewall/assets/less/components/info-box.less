@@ -1,0 +1,83 @@
+.rs-info-box {
+  background-color : @gray;
+  padding          : 15px;
+  height           : 225px;
+  > img {
+	display        : block;
+	margin         : 0 auto;
+	padding-bottom : 15px;
+  }
+  .rs-info-box-caption {
+	> p {
+	  color : fade(@font-color, 30%);
+	}
+  }
+  .system-check-badge {
+	display    : block;
+	text-align : center;
+	.dashicons {
+	  font-size : 70px;
+	  width     : initial;
+	  height    : initial;
+	}
+	.dashicons-yes {
+	  color : @brand-success;
+	}
+	.dashicons-warning {
+	  color : @brand-danger;
+	}
+  }
+  .system-check-result {
+	p {
+	  font-size  : 14px;
+	  text-align : center;
+	  strong {
+		color : @brand-success;
+	  }
+	}
+  }
+
+  // Colors
+  &.danger, &.critical {
+	background-color : @brand-danger;
+	color            : fade(#FFF, 80%);
+	a {
+	  color : #FFF;
+	  &:hover {
+		color : @brand-secondary;
+	  }
+	}
+  }
+  &.info, &.low {
+	background-color : @brand-info;
+  }
+  &.success {
+	background-color : @brand-success;
+  }
+  &.warning, &.medium {
+	background-color : @brand-warning;
+  }
+}
+
+.alert-badge {
+  width         : 20px;
+  height        : 20px;
+  border-radius : 50%;
+  display       : inline-block;
+  text-align    : center;
+  color         : #FFF;
+  font-weight   : 900;
+  &.alert-badge-danger, &.alert-badge-critical {
+	background-color : @brand-danger;
+  }
+  &.alert-badge-warning, &.alert-badge-medium {
+	background-color : @brand-warning;
+  }
+  &.alert-badge-info, &.alert-badge-low {
+	background-color : @brand-info;
+  }
+}
+
+tr.ignored {
+  background-color : #CDF7BE;
+}

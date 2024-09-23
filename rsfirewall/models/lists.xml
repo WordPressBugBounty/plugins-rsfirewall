@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <section name="data">
+        <field name="rsfirewall_ip" label="lbl_ip" type="textbox" required="1" description="desc_ip"/>
+        <field name="rsfirewall_type" label="lbl_type" type="select" description="desc_type">
+            <option checked="checked" value="1">option_whitelist</option>
+            <option value="0">option_blacklist</option>
+        </field>
+        <field name="rsfirewall_reason" label="lbl_reason" type="textarea" description="desc_reason"/>
+    </section>
+</form>
+

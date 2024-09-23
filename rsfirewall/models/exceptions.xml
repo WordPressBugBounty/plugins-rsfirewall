@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <section name="data">
+        <field name="rsfirewall_exception_type" label="lbl_exception_type" type="select">
+            <option checked="checked" value="ua">option_user_agent</option>
+            <option value="url">option_url</option>
+        </field>
+        <field name="rsfirewall_use_regex" label="lbl_use_regex" type="switchery" default="0" description="desc_use_regex"/>
+
+        <field name="rsfirewall_match" label="lbl_match" required="1" type="textbox" description="desc_match"/>
+        <field name="rsfirewall_php" label="lbl_php" type="switchery" default="1" description="desc_php"/>
+        <field name="rsfirewall_sql" label="lbl_sql" type="switchery" default="1" description="desc_sql"/>
+        <field name="rsfirewall_js" label="lbl_js" type="switchery" default="1" description="desc_js"/>
+        <field name="rsfirewall_uploads" label="lbl_uploads" type="switchery" default="1" description="desc_uploads"/>
+        <field name="rsfirewall_reason" label="lbl_reason" type="textarea" description="desc_reason"/>
+    </section>
+</form>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu>
+    <type>menu</type>
+    <page_title>page_title_dashboard</page_title>
+    <menu_title>menu_title_dashboard</menu_title>
+    <capability>manage_options</capability>
+    <menu_slug>rsfirewall</menu_slug>
+    <function>display</function>
+    <ordering>0</ordering>
+
+    <!-- logo -->
+    <icon>assets/images/rsfirewall-icon.png</icon>
+</menu>

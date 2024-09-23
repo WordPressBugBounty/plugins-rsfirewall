@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu>
+    <type>submenu</type>
+    <page_title>page_title_lists</page_title>
+    <menu_title>menu_title_lists</menu_title>
+    <capability>manage_options</capability>
+    <menu_slug>edit.php?post_type=rsf_lists</menu_slug>
+    <function></function>
+    <ordering>4</ordering>
+</menu>

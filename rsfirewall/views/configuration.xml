@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu>
+    <type>submenu</type>
+    <page_title>page_title_configuration</page_title>
+    <menu_title>menu_title_configuration</menu_title>
+    <capability>manage_options</capability>
+    <menu_slug>rsfirewall_configuration</menu_slug>
+    <function>display</function>
+    <ordering>3</ordering>
+</menu>

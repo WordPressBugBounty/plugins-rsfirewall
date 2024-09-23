@@ -1,0 +1,130 @@
+.rs-box {
+  background-color : @gray;
+  padding          : 15px;
+  position         : relative;
+  .transition(.5s, linear);
+  &.overlayed {
+	&:before {
+	  background-color : fade(#FFF, 0);
+	  position         : absolute;
+	  width            : 100%;
+	  height           : 100%;
+	  top              : 0;
+	  left             : 0;
+	  display          : block;
+	  content          : '';
+	  .transition(.3s, linear);
+	}
+	&.overlayed-show {
+	  &:before {
+		background-color : fade(#fff, 70);
+		z-index          : 12;
+		.transition(.3s, linear);
+	  }
+	}
+  }
+}
+
+.bordered-sub-box {
+  border  : 1px solid fade(@font-color, 15%);
+  padding : 10px;
+  margin  : 5px;
+}
+
+.rsfirewall-ok {
+  position     : relative;
+  padding-left : 10px;
+  &:before {
+	font-family : "Dashicons";
+	content     : "\f147";
+	color       : @brand-success;
+	font-size   : 30px;
+	position    : absolute;
+	top         : -10px;
+	left        : -30px;
+  }
+}
+
+.rsfirewall-not-ok {
+  position     : relative;
+  padding-left : 10px;
+  &:before {
+	font-family : "Dashicons";
+	content     : "\f534";
+	color       : @brand-danger;
+	font-size   : 30px;
+	position    : absolute;
+	top         : -10px;
+	left        : -30px;
+  }
+}
+
+.system-check-step {
+  border-top : 1px solid fade(@font-color, 15%);
+  position   : relative;
+  &:first-of-type {
+	border-top : none;
+  }
+  .system-check-dropdown-btn {
+	text-decoration  : none;
+	font-size        : 18px;
+	color            : #FFF;
+	background-color : @brand-primary;
+	width            : 25px;
+	height           : 25px;
+	position         : absolute;
+	top              : 10px;
+	right            : 0;
+	text-align       : center;
+	padding-top      : 4px;
+	z-index          : 10;
+	display          : none;
+	&:active {
+	  background-color : darken(@brand-primary, 10%);
+	}
+  }
+}
+
+.rsfirewall-knob-score {
+  cursor : default;
+}
+
+.knob-holder {
+  padding-top : 50px;
+}
+
+.support-system-form {
+  label {
+	margin-top : 15px;
+	display    : block;
+  }
+  input {
+	width  : 100%;
+	height : 35px;
+  }
+  textarea {
+	width  : 100%;
+	height : 70px;
+  }
+  .selectize-input {
+	width : 100%;
+  }
+  .selectize-input > input {
+	display : none;
+  }
+}
+
+.system-check-progress {
+  height           : 5px;
+  width            : 0;
+  display          : block;
+  background-color : @brand-primary;
+  position         : absolute;
+  top              : 0;
+  left             : 0;
+  .transition(.2s, linear);
+}
+
+.short-message-holder {
+  padding-right : 50px;
+}

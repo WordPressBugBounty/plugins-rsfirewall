@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <section name="rsfirewall_active_scanner" label="lbl_active_scanner" hide_label="1">
+        <field name="enable_active_scanner" label="lbl_enable_active_scanner" type="switchery" default="1" description="desc_enable_active_scanner"/>
+        <field name="enable_active_scanner_in_admin" label="lbl_enable_active_scanner_in_admin" type="switchery" default="1" description="desc_enable_active_scanner_in_admin"/>
+        <field name="log_all_blocked_attempts" label="lbl_log_all_blocked_attempts" type="switchery" default="0" description="desc_log_all_blocked_attempts"/>
+        <field name="verify_emails" label="lbl_verify_emails" type="only_pro_field" default="0" description="desc_verify_emails"/>
+        <field name="prevent_author_scan" label="lbl_prevent_author_scan" type="switchery" default="1" description="desc_prevent_author_scan"/>
+        <field name="ip_proxy_headers" label="lbl_ip_proxy_headers" multiple="multiple" type="select" description="desc_ip_proxy_headers">
+            <option value="HTTP_X_REAL_IP">HTTP_X_REAL_IP</option>
+            <option value="HTTP_CLIENT_IP">HTTP_CLIENT_IP</option>
+            <option value="HTTP_TRUE_CLIENT_IP">HTTP_TRUE_CLIENT_IP</option>
+            <option value="HTTP_X_FWD_IP_ADDR">HTTP_X_FWD_IP_ADDR</option>
+            <option value="HTTP_X_FORWARDED_FOR">HTTP_X_FORWARDED_FOR</option>
+            <option value="HTTP_X_FORWARDED">HTTP_X_FORWARDED</option>
+            <option value="HTTP_FORWARDED_FOR">HTTP_FORWARDED_FOR</option>
+            <option value="HTTP_FORWARDED">HTTP_FORWARDED</option>
+            <option value="HTTP_VIA">HTTP_VIA</option>
+            <option value="HTTP_X_COMING_FROM">HTTP_X_COMING_FROM</option>
+            <option value="HTTP_COMING_FROM">HTTP_COMING_FROM</option>
+            <option value="HTTP_CF_CONNECTING_IP">HTTP_CF_CONNECTING_IP</option>
+            <option value="HTTP_INCAP_CLIENT_IP">HTTP_INCAP_CLIENT_IP</option>
+        </field>
+        <field name="php_protection_separator" label="lbl_php_protection_separator" type="separator"/>
+        <field name="local_file_inclusion" label="lbl_local_file_inclusion" type="switchery" default="1" description="desc_local_file_inclusion"/>
+        <field name="remote_file_inclusion" label="lbl_remote_file_inclusion" type="switchery" default="1" description="desc_remote_file_inclusion"/>
+        <field name="php_enable_protections_for" label="lbl_php_enable_protections_for" multiple="multiple" type="select" description="desc_php_enable_protections_for">
+            <option checked="checked" value="get">option_url_data_get</option>
+            <option value="post">option_form_data_post</option>
+        </field>
+        <field name="sql_protection_separator" label="lbl_sql_protection_separator" type="separator"/>
+        <field name="sql_enable_protections_for" label="lbl_sql_enable_protections_for" multiple="multiple" type="select" description="desc_sql_enable_protections_for">
+            <option checked="checked" value="get">option_url_data_get</option>
+            <option value="post">option_form_data_post</option>
+        </field>
+        <field name="js_protection_separator" label="lbl_js_protection_separator" type="separator"/>
+        <field name="filter_javascript" label="lbl_filter_javascript" type="switchery" default="1" description="desc_filter_javascript"/>
+        <field name="js_enable_protections_for" label="lbl_js_enable_protections_for" multiple="multiple" type="select" description="desc_js_enable_protections_for">
+            <option checked="checked" value="get">option_url_data_get</option>
+            <option value="post">option_form_data_post</option>
+        </field>
+        <field name="dos_protection_separator" label="lbl_dos_protection_separator" type="separator"/>
+        <field name="dos_enable_protections_for" label="lbl_dos_enable_protections_for" multiple="multiple" type="select" description="desc_dos_enable_protections_for">
+            <option checked="checked" value="empty_user_agents">option_empty_user_agent</option>
+            <option checked="checked" value="perl">perl</option>
+            <option checked="checked" value="curl">cURL</option>
+            <option checked="checked" value="java">Java</option>
+            <option checked="checked" value="mozilla">option_mozzila_impersonators</option>
+        </field>
+        <field name="protect_forms_from_abuse" label="lbl_protect_forms_from_abuse" type="only_pro_field" default="0" description="desc_protect_forms_from_abuse"/>
+        <field name="deny_access_to_referers" label="lbl_deny_access_to_referers" type="textarea" description="desc_deny_access_to_referers"/>
+        <field name="auto_blacklist_separator" label="lbl_auto_blacklist_separator" type="separator"/>
+        <field name="enable_auto_blacklist" label="lbl_enable_auto_blacklist" type="switchery" default="0" description="desc_enable_auto_blacklist"/>
+        <field name="enable_auto_blacklist_for_admin" label="lbl_enable_auto_blacklist_for_admin" type="switchery" default="0" description="desc_enable_auto_blacklist_for_admin"/>
+        <field name="autoban_attempts" label="lbl_autoban_attempts" type="textbox" default="10" description="desc_autoban_attempts"/>
+        <field name="captcha_separator" label="lbl_captcha_separator" type="separator"/>
+        <field name="recaptcha_site_key" label="lbl_recaptcha_site_key" type="textbox" default=""/>
+        <field name="recaptcha_secret_key" label="lbl_recaptcha_secret_key" type="textbox" default=""/>
+        <field name="enable_captcha" label="lbl_enable_captcha" type="switchery" default="0" description="desc_enable_captcha"/>
+        <field name="autoban_captcha_attempts" label="lbl_autoban_captcha_attempts" type="textbox" default="3" description="desc_autoban_captcha_attempts"/>
+        <field name="enable_captcha_comments" label="lbl_enable_captcha_comments" type="switchery" default="0" description="desc_enable_captcha_comments"/>
+        <field name="enable_captcha_register" label="lbl_enable_captcha_register" type="switchery" default="0" description="desc_enable_captcha_register"/>
+        <field name="backend_login_separator" label="lbl_backend_login_separator" type="separator"/>
+        <field name="capture_login_attempts" label="lbl_capture_login_attempts" type="switchery" default="1" description="desc_capture_login_attempts"/>
+        <field name="capture_login_attempts_password" label="lbl_capture_login_attempts_password" type="switchery" default="1" description="desc_capture_login_attempts_password"/>
+        <field name="uploads_separator" label="lbl_uploads_separator" type="separator"/>
+        <field name="filter_uploads" label="lbl_filter_uploads" type="switchery" default="1" description="desc_filter_uploads"/>
+        <field name="check_multiple_extensions" label="lbl_check_multiple_extensions" type="switchery" default="1" description="desc_check_multiple_extensions"/>
+        <field name="check_known_malware" label="lbl_check_known_malware" type="switchery" default="1" description="desc_check_known_malware"/>
+        <field name="banned_extensions" label="lbl_banned_extensions" type="textarea" description="desc_banned_extensions"/>
+    </section>
+    <section name="rsfirewall_core_scanner" label="lbl_core_scanner" hide_label="1">
+        <field name="verify_generator" label="lbl_verify_generator" type="switchery" default="0" description="desc_verify_generator"/>
+        <field name="check_core_wp_integrity" label="lbl_check_core_wp_integrity" type="switchery" default="1" description="desc_check_core_wp_integrity"/>
+        <field name="monitor_files" label="lbl_monitor_files" type="textarea_filemanager" limit_to="files" description="desc_monitor_files"/>
+        <field name="block_xmlrpc" label="lbl_block_xmlrpc" type="switchery" default="0" description="desc_block_xmlrpc"/>
+        <field name="disable_rest_api" label="lbl_disable_rest_api" type="switchery" default="0" description="desc_disable_rest_api"/>
+        <field name="allow_rest_api_logged" label="lbl_allow_rest_api_logged" type="switchery" default="0" description="desc_allow_rest_api_logged"/>
+        <field name="rest_api_exceptions" label="lbl_rest_api_exceptions" type="textarea" description="desc_rest_api_exceptions"/>
+    </section>
+    <section name="rsfirewall_backend_password" label="lbl_backend_password" hide_label="1">
+        <field name="enable_backend" label="lbl_enable_backend" type="switchery" default="0" description="desc_enable_backend"/>
+        <field name="type_password" label="lbl_type_password" type="password" description="desc_type_password"/>
+        <field name="confirm_password" label="lbl_confirm_password" type="password" description="desc_confirm_password"/>
+        <field name="admin_slug_separator" label="lbl_admin_slug_separator" type="separator"/>
+        <field name="enable_admin_slug" label="lbl_enable_admin_slug" type="switchery" default="0" description="desc_enable_admin_slug"/>
+        <field name="admin_slug_text" label="lbl_admin_slug_text" type="textbox" description="desc_admin_slug_text"/>
+        <field name="admin_slug_current" label="lbl_admin_slug_current" type="current_slug" description="desc_admin_slug_current"/>
+        <field name="logout_redirect_separator" label="lbl_logout_redirect_separator" type="separator"/>
+        <field name="logout_redirect" label="lbl_logout_redirect" type="textbox" description="desc_logout_redirect"/>
+    </section>
+    <section name="rsfirewall_system_check" label="lbl_system_check" hide_label="1">
+        <field name="offset" label="lbl_offset" type="only_pro_field" default="300" description="desc_offset"/>
+        <field name="ignore_files_or_folders" label="lbl_ignore_files_or_folders" type="only_pro_field" description="desc_ignore_files_or_folders"/>
+        <field name="enable_logging" label="lbl_enable_logging" type="only_pro_field" default="0" description="desc_enable_logging"/>
+        <field name="file_permissions" label="lbl_file_permissions" type="only_pro_field" default="644" description="desc_file_permissions"/>
+        <field name="folder_permissions" label="lbl_folder_permissions" type="only_pro_field" default="755" description="desc_folder_permissions"/>
+        <field name="pause_between_requests" label="lbl_pause_between_requests" type="textbox" default="0" description="desc_pause_between_requests"/>
+    </section>
+    <section name="rsfirewall_hardening" label="lbl_hardening" hide_label="1">
+        <field name="harden_uploads" label="lbl_harden_uploads" type="switchery" default="0" check_before="is_harden|wp-content/uploads" description="desc_harden_uploads"/>
+        <field name="harden_wp_content" label="lbl_harden_wp_content" type="switchery" default="0" check_before="is_harden|wp-content" description="desc_harden_wp_content"/>
+        <field name="harden_wp_includes" label="lbl_harden_wp_includes" type="switchery" default="0" check_before="is_harden|wp-includes" description="desc_harden_wp_includes"/>
+        <field name="harden_editors" label="lbl_harden_editors" type="switchery" default="0" description="desc_harden_editors"/>
+        <field name="harden_whitelisted_files" label="lbl_harden_whitelisted_files" type="modal_custom" default="0" callback="add_whitelisted_php_files" description="desc_harden_whitelisted_files"/>
+    </section>
+    <section name="rsfirewall_lockdown" label="lbl_lockdown" hide_label="1">
+        <field name="protect_users" label="lbl_protect_users" multiple="multiple" type="only_pro_field" options="RSFirewall_Model_Configuration::get_instance()->get_administrator_users();" description="desc_protect_users" />
+        <field name="disable_wp_installer" label="lbl_disable_wp_installer" type="switchery" default="0" description="desc_disable_wp_installer"/>
+        <field name="disable_admin_creation" label="lbl_disable_admin_creation" type="switchery" default="0" description="desc_disable_admin_creation"/>
+    </section>
+    <section name="rsfirewall_logging" label="lbl_logging" hide_label="1">
+        <field name="email_addresses" label="lbl_email_addresses" type="textarea" description="desc_email_addresses"/>
+        <field name="include_alert_levels" label="lbl_include_alert_levels" multiple="multiple" type="select" description="desc_include_alert_levels">
+            <option value="low">option_low</option>
+            <option value="medium">option_medium</option>
+            <option value="high">option_high</option>
+            <option value="critical">option_critical</option>
+        </field>
+        <field name="log_history" label="lbl_log_history" type="textbox" default="30" description="desc_log_history"/>
+        <field name="emails_per_hour" label="lbl_emails_per_hour" type="textbox" default="50" description="desc_emails_per_hour"/>
+        <field name="events_to_show" label="lbl_events_to_show" type="textbox" default="5" description="desc_events_to_show"/>
+        <field name="ipv4_whois_service" label="lbl_ipv4_whois_service" type="textbox" default="http://whois.domaintools.com/{ip}" description="desc_ipv4_whois_service"/>
+        <field name="ipv6_whois_service" label="lbl_ipv6_whois_service" type="textbox" default="" description="desc_ipv6_whois_service"/>
+    </section>
+    <section name="rsfirewall_import" label="lbl_import" hide_label="1">
+        <field name="upload_config" label="lbl_upload_config" type="upload" description="desc_upload_config"/>
+    </section>
+    <section name="rsfirewall_country_blocking" label="lbl_country_blocking" callback="only_pro_version" hide_label="1">
+    </section>
+    <section name="rsfirewall_two_factor_auth" label="lbl_rsfirewall_two_factor_auth" callback="only_pro_version" hide_label="1">
+    </section>
+    <section name="rsfirewall_updates" label="lbl_updates" hide_label="1">
+        <field name="code" label="lbl_code" type="textbox" description="desc_code"/>
+    </section>
+</form>
+

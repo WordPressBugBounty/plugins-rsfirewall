@@ -1,0 +1,55 @@
+.rsfirewall-fix-action {
+  background-color : transparent;
+  border           : 1px solid @brand-primary;
+  padding          : 5px 10px;
+  color            : @brand-primary;
+  &:hover {
+	background-color : @brand-primary;
+	color            : #FFF;
+	cursor           : pointer;
+  }
+  &:active {
+	background-color : darken(@brand-primary, 5%);
+	color            : #FFF;
+  }
+}
+
+.system-check-link {
+  text-align : center;
+  a {
+	color            : #FFF;
+	background-color : @brand-primary;
+	padding          : 8px 20px;
+	text-decoration  : none;
+	margin-top       : 15px;
+	display          : inline-block;
+	&:hover {
+	  background-color : darken(@brand-primary, 5%);
+	}
+  }
+}
+
+.rsfirewall-btn {
+  background-color : @brand-primary;
+  color            : #FFF;
+  padding          : 8px 15px;
+  text-align       : center;
+  border           : 1px solid fade(@brand-primary, 70%);
+  &:hover {
+	background-color : lighten(@brand-primary, 3%);
+  }
+  &:active {
+	background-color : darken(@brand-primary, 5%);
+  }
+}
+
+.rsfirewall-input-append {
+  .rsfirewall-button-append {
+	height           : 28px;
+	background-color : #FFF;
+	box-shadow       : 0 1px 2px rgba(0, 0, 0, 0.07) inset;
+	border           : 1px solid #d0d0c0;
+	margin-left      : -1px;
+	border-left      : none;
+  }
+}
