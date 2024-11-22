@@ -191,7 +191,7 @@ class RSFirewall {
      */
     public function set_locale()
     {
-        add_action( 'plugins_loaded', array('RSFirewall_i18n','load_plugin_textdomain'));
+        add_action( 'init', array('RSFirewall_i18n','load_plugin_textdomain'));
     }
 	
 	 /**

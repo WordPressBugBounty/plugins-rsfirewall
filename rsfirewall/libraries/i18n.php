@@ -35,7 +35,12 @@ class RSFirewall_i18n
      */
 	public static function get_locale($array)
     {
-		self::load_plugin_textdomain();
+		// From version 6.7.0 onwards, the plugin text domain is loaded in the init hook, and therefor we don't need to load it here
+		if (version_compare(wp_get_wp_version(), '6.7.0', '<'))
+		{
+			self::load_plugin_textdomain();
+		}
+		
         $codes = array(
             'PROTECTED_USER_CHANGE'      				=> wp_kses_post(__( 'There was an attempt to change a protected user:<br/> <strong>(%s)</strong>.', 'rsfirewall' )),
             'CORE_FILE_MODIFIED'         				=> wp_kses_post(__( 'The following core file is modified: <em> %s </em>. Please review it manually as the scan might have detected false alerts.', 'rsfirewall' )),

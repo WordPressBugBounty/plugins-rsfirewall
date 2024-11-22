@@ -125,6 +125,9 @@ class Net_DNS2_Socket
         // create a list of options for the context 
         //
         $opts = [ 'socket' => [] ];
+		
+		// this must be a string
+        $this->local_host = (string) $this->local_host;
         
         //
         // bind to a local IP/port if it's set
