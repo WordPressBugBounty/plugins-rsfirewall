@@ -36,7 +36,7 @@ class RSFirewall_i18n
 	public static function get_locale($array)
     {
 		// From version 6.7.0 onwards, the plugin text domain is loaded in the init hook, and therefor we don't need to load it here
-		if (version_compare(wp_get_wp_version(), '6.7.0', '<'))
+		if (!function_exists('wp_get_wp_version') || version_compare(wp_get_wp_version(), '6.7.0', '<'))
 		{
 			self::load_plugin_textdomain();
 		}

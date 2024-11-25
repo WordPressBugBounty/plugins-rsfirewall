@@ -10,7 +10,7 @@
 Plugin Name: RSFirewall!
 Plugin URI: https://www.rsjoomla.com/wordpress-plugins/wordpress-security-plugin.html
 Description: Based on the success of the most popular firewall for Joomla!, RSFirewall! is now available to protect your WordPress website as well.
-Version: 1.1.35
+Version: 1.1.36
 Author: RSJoomla!
 Author URI: https://www.rsjoomla.com
 License: GNU General Public License http://www.gnu.org/licenses/gpl-3.0.en.html
