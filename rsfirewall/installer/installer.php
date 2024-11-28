@@ -173,6 +173,18 @@ class RSFirewall_Installer {
         if ($old_version !== null && version_compare($new_version, $old_version, '>')) {
             static::update();
         }
+		
+		// Update the existing transient on a fresh update/install
+        $transient = get_site_transient('update_plugins');
+
+        // make sure it exists
+        if ($transient) {
+			// remake
+			$transient = RSFirewall_Version::get_instance()->activate_updates(true)->check_update($transient);
+			
+			// set the new updated transient
+			set_site_transient('update_plugins', $transient);
+        } 
     }
 
     /**
@@ -191,7 +203,7 @@ class RSFirewall_Installer {
 
         // Update the RSFirewall version in the database
         update_option( 'rsfirewall_version', RSFirewall_Version::get_instance()->version );
-
+		
 		self::removeSQL('signatures.sql');
     }
 

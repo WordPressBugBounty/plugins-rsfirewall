@@ -266,6 +266,27 @@ class RSFirewall_Model_Configuration extends RSFirewall_Model {
 		$blog_id = is_multisite() ? 'rsf_'.get_current_blog_id() : 'rsf_';
 		$blog_id = md5($blog_id);
 
+		if (isset($section['code']))
+		{
+			$current_code = get_option('rsfirewall_updates');
+
+			// if the code has changed, delete the update_plugins transient so that the update is checked again
+			if ($current_code['code'] != $section['code'])
+			{
+				// get existing transient
+				$transient = get_site_transient('update_plugins');
+
+				// make sure it exists
+				if ($transient) {
+					// remake
+					$transient = RSFirewall_Version::get_instance()->activate_updates(true, $section['code'])->check_update($transient);
+
+					//set the transient
+					set_site_transient('update_plugins', $transient);
+				}
+			}
+		}
+
 		if ( ! empty( $section['enable_backend'] ) ) {
 			try {
 				// verify that a password hasn't been set

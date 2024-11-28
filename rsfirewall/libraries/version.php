@@ -13,7 +13,7 @@ if ( ! defined( 'WPINC' ) ) {
 
 class RSFirewall_Version
 {
-    public $version = '1.1.36';
+    public $version = '1.1.37';
     public $key = 'RSJFIREWALLWP';
 
     public function __construct() {}
@@ -27,13 +27,13 @@ class RSFirewall_Version
         return $inst;
     }
 
-    public function activate_updates() {
+    public function activate_updates($return = false, $update_code = null) {
         require_once RSFIREWALL_BASE . 'libraries/autoupdate.php';
 
         $args = array(
             'current_version' => $this->version,
             'slug'            => 'rsfirewall',
-            'update_code'     => RSFirewall_Config::get('code'),
+            'update_code'     => !is_null($update_code) ? $update_code : RSFirewall_Config::get('code'),
             'key'             => $this->key,
             'type'            => 'plugin'
         );
@@ -43,7 +43,11 @@ class RSFirewall_Version
             $args['is_lite'] = true;
         }
 
-        new RSFirewall_Autoupdate ( $args );
+       $autoupdate = new RSFirewall_Autoupdate ( $args );
+
+       if ($return) {
+           return $autoupdate;
+       }
     }
 
     public function get_latest_version() {
