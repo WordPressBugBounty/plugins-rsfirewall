@@ -260,6 +260,7 @@ class RSFirewall_Core {
 
             $args  = array(
                 'post_type'  => $this->prefix.'lists',
+				'posts_per_page' => -1,
                 'meta_query' => array(
                     'relation' => 'AND',
                     array(

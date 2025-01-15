@@ -171,11 +171,45 @@ class RSFirewall_IP {
 			}
 
 			// Check if mask bits match on both addresses.
-			return $this->apply_mask( $mask ) === $networkIP->apply_mask( $mask );
+			return $this->match_ip( $this->to_address(), $range);
 		}
 
 		// None of the above - single IP mode.
 		return $this->to_address() === $range;
+	}
+	
+	public function match_ip($ip, $cidr)
+	{
+		// Get mask bits
+		list($net, $maskBits) = explode('/', $cidr);
+
+		// Size
+		$size = strpos($ip, ':') === false ? 4 : 16;
+
+		// Convert to binary
+		$ip = inet_pton($ip);
+		$net = inet_pton($net);
+		if (!$ip)
+		{
+			throw new Exception(sprintf( esc_html__( 'Could not unpack IP address %s.', 'rsfirewall' ), $ip ) );
+		}
+		if (!$net)
+		{
+			throw new Exception(sprintf( esc_html__( 'Could not unpack IP address %s.', 'rsfirewall' ), $net ));
+		}
+
+		// Build mask
+		$solid = floor($maskBits / 8);
+		$solidBits = $solid * 8;
+		$mask = str_repeat(chr(255), $solid);
+		for ($i = $solidBits; $i < $maskBits; $i += 8) {
+			$bits = max(0, min(8, $maskBits - $i));
+			$mask .= chr((pow(2, $bits) - 1) << (8 - $bits));
+		}
+		$mask = str_pad($mask, $size, chr(0));
+
+		// Compare the mask
+		return ($ip & $mask) === ($net & $mask);
 	}
 
 	// the old class

@@ -374,9 +374,14 @@ class RSFirewall_Helper
 
 	public static function explode($string)
 	{
-		$string = str_replace(array("\r\n", "\r"), "\n", $string);
-
-		return explode("\n", $string);
+		if ($string !== null)
+		{
+			$string = str_replace(array("\r\n", "\r"), "\n", $string);
+			
+			return explode("\n", $string);
+		}
+		
+		return array();
 	}
 
 	/**
