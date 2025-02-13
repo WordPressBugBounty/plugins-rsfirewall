@@ -59,6 +59,9 @@ class RSFirewall_Installer {
         self::runSQL('signatures.sql');
         self::runSQL('hashes.sql');
 
+        // Remove duplicate hashes
+        self::removeDuplicateHashes();
+
         //Set the default options
         $configuration_xml_path = RSFIREWALL_BASE.'models/configuration.xml';
         if (is_file($configuration_xml_path)) {
@@ -67,7 +70,7 @@ class RSFirewall_Installer {
 
         // check the ip
         $ip = $_SERVER['REMOTE_ADDR'];
-        $error_msg = sprintf(wp_kses_post(__('Your IP is currently detected as <strong>%s</strong>. If this does not match your current IP, go to RSFirewall Configuration &mdash; Active Scanner &mdash; Grab IP from Proxy Headers and select which PHP headers forward your current IP address. You can select them one by one until your correct IP address is reported. If in doubt, contact your hosting provider for more information. You can Google &quot;what is my ip address&quot; to find out what your real IP address is.'.$test, 'rsfirewall')), $ip);
+        $error_msg = sprintf(wp_kses_post(__('Your IP is currently detected as <strong>%s</strong>. If this does not match your current IP, go to RSFirewall Configuration &mdash; Active Scanner &mdash; Grab IP from Proxy Headers and select which PHP headers forward your current IP address. You can select them one by one until your correct IP address is reported. If in doubt, contact your hosting provider for more information. You can Google &quot;what is my ip address&quot; to find out what your real IP address is.', 'rsfirewall')), $ip);
 
         set_transient( 'global_admin_notice', $error_msg, 120);
 
@@ -164,6 +167,55 @@ class RSFirewall_Installer {
         }
     }
 
+    protected static function updateTablesDefaults()
+    {
+        global $wpdb;
+
+        $tables = [
+                'rsfirewall_hashes',
+                'rsfirewall_ignored', 
+                'rsfirewall_offenders', 
+                'rsfirewall_signatures'
+        ];
+
+        foreach ($tables as $table)
+        {
+            // build the table name
+            $table = $wpdb->prefix.$table;
+
+            // check to see if the table exists
+            if (!$wpdb->get_var("SHOW TABLES LIKE '".$table."'"))
+            {
+                continue;
+            }
+
+            $table_data = $wpdb->get_results("SHOW COLUMNS FROM `".$table."`");
+
+            // check to see if the table has default set
+            foreach ($table_data as $column)
+            {
+                // set default values for columns of type varchar that don't have a default value
+                if (stripos($column->Type, 'varchar') !== false && is_null($column->Default))
+                {
+                    $wpdb->query("ALTER TABLE `".$table."` CHANGE `".$column->Field."` `".$column->Field."` ".$column->Type." NOT NULL DEFAULT ''");
+                }
+
+                // set default values for columns of type int and derivatives of integer that don't have a default value, except for primary keys
+                if ($column->Key != 'PRI' && stripos($column->Type, 'int') !== false && is_null($column->Default))
+                {
+                    $wpdb->query("ALTER TABLE `".$table."` CHANGE `".$column->Field."` `".$column->Field."` ".$column->Type." NOT NULL DEFAULT 0");
+                }
+
+                // set default values for columns of type datetime that don't have a default value
+                if (stripos($column->Type, 'datetime') !== false && is_null($column->Default))
+                {
+                    $wpdb->query("ALTER TABLE `".$table."` CHANGE `".$column->Field."` `".$column->Field."` ".$column->Type." NOT NULL DEFAULT '0000-00-00 00:00:00'");
+                }
+            }
+            
+        }
+    }
+
     public static function upgrade() {
         // Get the current version if it has previously activated
         $old_version = get_option('rsfirewall_version', null);
@@ -192,11 +244,14 @@ class RSFirewall_Installer {
      * @since 1.0.0
      */
     protected static function update() {
-        // The hashes must always be updated
-        self::runSQL('hashes.sql');
-
         // Add new tables if exists
         self::runSQL('standard-tables.sql');
+
+	    // Update the defaults for the tables
+	    self::updateTablesDefaults();
+
+	    // The hashes must always be updated
+	    self::runSQL('hashes.sql');
 
         // The signatures must always be updated
         self::runSQL('signatures.sql');
@@ -205,6 +260,25 @@ class RSFirewall_Installer {
         update_option( 'rsfirewall_version', RSFirewall_Version::get_instance()->version );
 		
 		self::removeSQL('signatures.sql');
+
+        // Remove duplicate hashes
+        self::removeDuplicateHashes();
+    }
+
+    protected static function removeDuplicateHashes()
+    {
+        global $wpdb;
+
+        $table = $wpdb->prefix.'rsfirewall_hashes';
+        $wpdb->query("
+            DELETE `h1` FROM $table `h1`
+            INNER JOIN (
+                SELECT MIN(id) as `id`, `file`, `hash`, `type`
+                FROM $table
+                GROUP BY `file`, `hash`, `type`
+                HAVING COUNT(*) > 1
+            ) `h2` ON `h1`.file = `h2`.file AND `h1`.hash = `h2`.hash AND `h1`.type = `h2`.type AND `h1`.id != `h2`.id AND h1.`date` = '0000-00-00 00:00:00'
+        ");
     }
 
     /**
@@ -244,6 +318,7 @@ class RSFirewall_Installer {
         delete_option('rsfirewall_admin_users');
         delete_option('rsfirewall_log_emails_send_after');
         delete_option('rsfirewall_log_emails_count');
+        delete_option('rsfirewall_hardening');
 
         // Delete all the posts related to rsfirewall
         self::delete_custom_posts('rsf_feeds');
