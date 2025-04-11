@@ -21,8 +21,6 @@ try {
 $latest_quick_actions = $this->model->get_latest_quick_actions();
 $latest_threats       = $this->model->get_latest_threats();
 $correct_code         = $code && strlen( $code ) == 20;
-$feeds				  = $this->model->get_feeds();
-
 $current_version      = RSFirewall_Version::get_instance();
 ?>
 <!-- Create a header in the default WordPress 'wrap' container -->
@@ -197,23 +195,6 @@ $current_version      = RSFirewall_Version::get_instance();
 	</div>
 	<!-- /.Stat Graph -->
 	<!-- Actions -->
-	<?php if (!empty($feeds)) { ?>
-	<div class="row margin-top-x2">
-		<div class="col-md-12">
-			<div class="rs-box">
-				<h3 class="bordered-bottom"><?php echo esc_html__('RSS Feeds', 'rsfirewall')?></h3>
-				<?php foreach($feeds as $feed) { ?>
-					<h4><?php echo esc_html($feed->name); ?></h4>
-					<ul>
-						<?php foreach ($feed->items as $item) { ?>
-							<li><?php echo $item->date;?> - <a href="<?php echo esc_attr($item->link); ?>" target="_blank"><?php echo esc_html($item->title); ?></a></li>
-						<?php } ?>
-					</ul>
-				<?php } ?>
-			</div>
-		</div>
-	</div>
-	<?php } ?>
 	<div class="row margin-top-x2">
 		<div class="col-md-12">
 			<div class="rs-box">

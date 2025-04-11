@@ -35,8 +35,7 @@ class RSFirewall_Post extends RSFirewall_Model
      */
     public function register()
     {
-
-        add_action( 'init', array($this, 'init') );
+        $this->init();
         add_action( 'save_post_' . $this->prefix.$this->filename, array($this, 'save'), 10, 2);
         add_action( 'manage_' . $this->prefix.$this->filename . '_posts_custom_column', array($this, 'column'), 10, 2 );
 

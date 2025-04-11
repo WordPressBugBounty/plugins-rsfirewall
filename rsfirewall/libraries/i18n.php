@@ -390,14 +390,6 @@ class RSFirewall_i18n
 			'option_url'							=> esc_html__('URL', 'rsfirewall'),
 		);
 
-		$form_feeds = array(
-			'lbl_url' 								=> esc_html__('RSS Feed URL', 'rsfirewall'),
-			'desc_url' 								=> wp_kses_post(__('This is the URL of the feed.', 'rsfirewall')),
-			'lbl_limit' 							=> esc_html__('Entries to show', 'rsfirewall'),
-			'desc_limit'							=> wp_kses_post(__('This is the numbers of entries to show (most recent entries will be shown)','rsfirewall')),
-
-		);
-
 		$form_lists = array(
 			'lbl_ip' 								=> esc_html__('IP Address', 'rsfirewall'),
 			'desc_ip' 								=> wp_kses_post(__('Add a new IP address to the list. You can use wildcards anywhere, for example 192.168.1.* will match any address from 192.168.1.1 to 192.168.1.254.', 'rsfirewall')),
@@ -428,9 +420,6 @@ class RSFirewall_i18n
 
 			'page_title_exceptions' 				=>esc_html__('Exceptions', 'rsfirewall'),
 			'menu_title_exceptions' 				=>esc_html__('Exceptions', 'rsfirewall'),
-
-			'page_title_feeds' 						=>esc_html__('RSS Feeds', 'rsfirewall'),
-			'menu_title_feeds' 						=>esc_html__('RSS Feeds', 'rsfirewall'),
 
 			'page_title_file' 						=>esc_html__('File Contents', 'rsfirewall'),
 			'menu_title_file' 						=>esc_html__('File Contents', 'rsfirewall'),

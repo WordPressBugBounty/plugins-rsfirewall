@@ -49,7 +49,7 @@ class RSFirewall_Model_Threats extends RSFirewall_Post {
             'publicly_queryable'   => false,
             'rewrite'              => array( "slug" => $this->prefix."threats" ),
             'capabilities'         => array(
-                'create_posts' => false,
+                'create_posts' => 'do_not_allow',
                 'delete_posts' => true,
                 'delete_post' => true,
                 // Removes support for the "Add New" function ( use 'do_not_allow' instead of false for multisite set ups )

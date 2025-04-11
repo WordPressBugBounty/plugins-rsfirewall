@@ -86,7 +86,7 @@ class RSFirewall {
     public function add_menu_pages()
     {
         $items = array();
-		$locals = RSFirewall_i18n::get_locale( 'menus_strings');
+        $locals = RSFirewall_i18n::get_locale( 'menus_strings');
 		
         foreach (glob(RSFIREWALL_BASE . "views/*.xml") as $file)
         {
@@ -304,7 +304,7 @@ class RSFirewall {
 		
 		add_action( 'admin_notices', array($this, 'global_admin_notice') );
 		if (!$disabled) {
-			add_action( 'plugins_loaded', array( $this, 'wp_login_slug' ), 1 );
+			add_action( 'init', array( $this, 'wp_login_slug' ), 1 );
 			add_action( 'init', array($this, 'backend_password'), 2 );
 		} else {
             // Add the message that the plugin functionalities are not working

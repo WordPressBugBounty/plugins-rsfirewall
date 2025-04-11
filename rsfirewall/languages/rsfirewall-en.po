@@ -1,22 +1,21 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RSFirewall!\n"
-"POT-Creation-Date: 2025-02-13 11:13+0200\n"
-"PO-Revision-Date: 2025-02-13 11:13+0200\n"
+"POT-Creation-Date: 2025-04-11 14:42+0300\n"
+"PO-Revision-Date: 2025-04-11 14:42+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: rsfirewall.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
@@ -54,9 +53,9 @@ msgstr ""
 #: controllers/check.php:127
 msgid ""
 "A new version of RSFirewall! has been released. You can see the complete "
-"list of changes in the official plugin changelog found <a href=\"https://www."
-"rsjoomla.com/support/documentation/rsfirewall-wordpress/changelog/rsfirewall-"
-"for-wordpress-changelog.html\" target=\"_blank\">here</a>."
+"list of changes in the official plugin changelog found <a href=\"https://"
+"www.rsjoomla.com/support/documentation/rsfirewall-wordpress/changelog/"
+"rsfirewall-for-wordpress-changelog.html\" target=\"_blank\">here</a>."
 msgstr ""
 
 #: controllers/check.php:154
@@ -176,7 +175,7 @@ msgid ""
 msgstr ""
 
 #: helpers/fields.php:225 helpers/fields.php:233 models/configuration.php:662
-#: views/check.php:146 views/dashboard.php:116
+#: views/check.php:146 views/dashboard.php:114
 msgid "Purchase the full version of RSFirewall!"
 msgstr ""
 
@@ -754,7 +753,7 @@ msgstr ""
 msgid "RSFirewall! could not find the appropriate CSV file for your WP version"
 msgstr ""
 
-#: libraries/i18n.php:105 libraries/i18n.php:386 libraries/i18n.php:406
+#: libraries/i18n.php:105 libraries/i18n.php:386 libraries/i18n.php:398
 #: models/exceptions.php:448 models/lists.php:561 views/ignored.php:9
 msgid "Reason"
 msgstr ""
@@ -807,7 +806,7 @@ msgstr ""
 msgid "Fix permission"
 msgstr ""
 
-#: libraries/i18n.php:118 views/dashboard.php:162
+#: libraries/i18n.php:118 views/dashboard.php:160
 msgid "Fix"
 msgstr ""
 
@@ -1055,7 +1054,7 @@ msgid ""
 "will be added to the blocklist and banned from your website."
 msgstr ""
 
-#: libraries/i18n.php:192 libraries/i18n.php:417 libraries/i18n.php:418
+#: libraries/i18n.php:192 libraries/i18n.php:409 libraries/i18n.php:410
 #: views/check.php:34
 msgid "System Check"
 msgstr ""
@@ -1229,8 +1228,8 @@ msgstr ""
 msgid ""
 "Stops malicious scripts scanning the site for user data by requesting "
 "numerical user IDs even in REST API calls. (EX: ?author=1, example.com/wp-"
-"json/oembed/1.0/embed?url=http%3A%2F%2Fexample.com%2Fhello-world%2F, example."
-"com/wp-json/wp/v2/users)"
+"json/oembed/1.0/embed?url=http%3A%2F%2Fexample.com%2Fhello-world%2F, "
+"example.com/wp-json/wp/v2/users)"
 msgstr ""
 
 #: libraries/i18n.php:227
@@ -1631,9 +1630,9 @@ msgstr ""
 #: libraries/i18n.php:318
 msgid ""
 "Files with the following extensions will be deleted as soon as they've been "
-"uploaded to the temporary directory on your server. If you enable the &quot;"
-"Multiple extensions check&quot;, this will check all the files extensions, "
-"as opposed to the last one."
+"uploaded to the temporary directory on your server. If you enable the "
+"&quot;Multiple extensions check&quot;, this will check all the files "
+"extensions, as opposed to the last one."
 msgstr ""
 
 #: libraries/i18n.php:320
@@ -1897,108 +1896,86 @@ msgstr ""
 msgid "URL"
 msgstr ""
 
-#: libraries/i18n.php:394 models/feeds.php:372
-msgid "RSS Feed URL"
-msgstr ""
-
-#: libraries/i18n.php:395
-msgid "This is the URL of the feed."
-msgstr ""
-
-#: libraries/i18n.php:396
-msgid "Entries to show"
-msgstr ""
-
-#: libraries/i18n.php:397
-msgid ""
-"This is the numbers of entries to show (most recent entries will be shown)"
-msgstr ""
-
-#: libraries/i18n.php:402 models/lists.php:559 models/threats.php:299
+#: libraries/i18n.php:394 models/lists.php:559 models/threats.php:299
 msgid "IP Address"
 msgstr ""
 
-#: libraries/i18n.php:403
+#: libraries/i18n.php:395
 msgid ""
 "Add a new IP address to the list. You can use wildcards anywhere, for "
 "example 192.168.1.* will match any address from 192.168.1.1 to 192.168.1.254."
 msgstr ""
 
-#: libraries/i18n.php:404
+#: libraries/i18n.php:396
 msgid "List Type"
 msgstr ""
 
-#: libraries/i18n.php:405
+#: libraries/i18n.php:397
 msgid ""
 "Set the type of the list - blocklist (banned) or safelist (no protections "
 "triggered)."
 msgstr ""
 
-#: libraries/i18n.php:407
+#: libraries/i18n.php:399
 msgid ""
 "This reason will show up to the attacker when he visits your site and finds "
 "himself banned."
 msgstr ""
 
-#: libraries/i18n.php:409 models/lists.php:142
+#: libraries/i18n.php:401 models/lists.php:142
 msgid "Safelist"
 msgstr ""
 
-#: libraries/i18n.php:410 models/lists.php:141
+#: libraries/i18n.php:402 models/lists.php:141
 msgid "Blocklist"
 msgstr ""
 
-#: libraries/i18n.php:414 views/dashboard.php:33
+#: libraries/i18n.php:406 views/dashboard.php:31
 msgid "Dashboard"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-#: libraries/i18n.php:415
+#: libraries/i18n.php:407
 msgid "RSFirewall!"
 msgstr ""
 
-#: libraries/i18n.php:420 libraries/i18n.php:421
+#: libraries/i18n.php:412 libraries/i18n.php:413
 msgid "Database Check"
 msgstr ""
 
-#: libraries/i18n.php:423
+#: libraries/i18n.php:415
 msgid "Firewall Configuration"
 msgstr ""
 
-#: libraries/i18n.php:424 libraries/rsfirewall.php:160
+#: libraries/i18n.php:416 libraries/rsfirewall.php:160
 msgid "Configuration"
 msgstr ""
 
-#: libraries/i18n.php:426 libraries/i18n.php:427 views/diff.php:26
+#: libraries/i18n.php:418 libraries/i18n.php:419 views/diff.php:26
 msgid "File Differences"
 msgstr ""
 
-#: libraries/i18n.php:429 libraries/i18n.php:430 models/exceptions.php:38
+#: libraries/i18n.php:421 libraries/i18n.php:422 models/exceptions.php:38
 msgid "Exceptions"
 msgstr ""
 
-#: libraries/i18n.php:432 libraries/i18n.php:433 models/feeds.php:24
-#: models/feeds.php:38 views/dashboard.php:204
-msgid "RSS Feeds"
-msgstr ""
-
-#: libraries/i18n.php:435 libraries/i18n.php:436 views/file.php:20
+#: libraries/i18n.php:424 libraries/i18n.php:425 views/file.php:20
 msgid "File Contents"
 msgstr ""
 
-#: libraries/i18n.php:438 libraries/i18n.php:439
+#: libraries/i18n.php:427 libraries/i18n.php:428
 msgid "Folders"
 msgstr ""
 
-#: libraries/i18n.php:441 libraries/i18n.php:442
+#: libraries/i18n.php:430 libraries/i18n.php:431
 msgid "Ignored Files"
 msgstr ""
 
-#: libraries/i18n.php:444 libraries/i18n.php:445
+#: libraries/i18n.php:433 libraries/i18n.php:434
 msgid "Blocklist / Safelist"
 msgstr ""
 
-#: libraries/i18n.php:447 libraries/i18n.php:448 models/threats.php:36
+#: libraries/i18n.php:436 libraries/i18n.php:437 models/threats.php:36
 msgid "Threats"
 msgstr ""
 
@@ -2061,7 +2038,7 @@ msgstr ""
 msgid "Network mask supplied '%s' is out of range '%s'."
 msgstr ""
 
-#: libraries/post.php:159
+#: libraries/post.php:158
 msgid "Dismiss this notice."
 msgstr ""
 
@@ -2099,7 +2076,7 @@ msgstr ""
 msgid "Not computed yet."
 msgstr ""
 
-#: libraries/widgets.php:77 views/dashboard.php:71
+#: libraries/widgets.php:77 views/dashboard.php:69
 msgid "Latest system log messages"
 msgstr ""
 
@@ -2107,7 +2084,7 @@ msgstr ""
 msgid "View more"
 msgstr ""
 
-#: libraries/widgets.php:88 views/dashboard.php:82
+#: libraries/widgets.php:88 views/dashboard.php:80
 msgid "No messages to show"
 msgstr ""
 
@@ -2159,7 +2136,7 @@ msgstr ""
 msgid "Check your database for post revisions"
 msgstr ""
 
-#: models/check.php:202 views/dashboard.php:53
+#: models/check.php:202 views/dashboard.php:51
 msgid " - Pro Version"
 msgstr ""
 
@@ -2468,10 +2445,6 @@ msgstr ""
 msgid "%s alert"
 msgstr ""
 
-#: models/dashboard.php:278
-msgid "Feed - "
-msgstr ""
-
 #: models/diff.php:78 models/file.php:61 models/file.php:85
 #, php-format
 msgid "Couldn't find %s ."
@@ -2553,13 +2526,11 @@ msgstr ""
 msgid "Search Exception"
 msgstr ""
 
-#: models/exceptions.php:32 models/feeds.php:32 models/lists.php:30
-#: models/threats.php:30
+#: models/exceptions.php:32 models/lists.php:30 models/threats.php:30
 msgid "Not Found"
 msgstr ""
 
-#: models/exceptions.php:33 models/feeds.php:33 models/lists.php:31
-#: models/threats.php:31
+#: models/exceptions.php:33 models/lists.php:31 models/threats.php:31
 msgid "Not found in Trash"
 msgstr ""
 
@@ -2584,32 +2555,31 @@ msgid "Plugin"
 msgstr ""
 
 #: models/exceptions.php:291 models/exceptions.php:344
-#: models/exceptions.php:345 models/exceptions.php:492 models/feeds.php:187
-#: models/feeds.php:240 models/feeds.php:241 models/feeds.php:402
-#: models/lists.php:488 models/lists.php:492 models/lists.php:593
-#: models/lists.php:645 models/lists.php:646
+#: models/exceptions.php:345 models/exceptions.php:492 models/lists.php:488
+#: models/lists.php:492 models/lists.php:593 models/lists.php:645
+#: models/lists.php:646
 msgid "Publish"
 msgstr ""
 
-#: models/exceptions.php:337 models/feeds.php:233 models/lists.php:638
+#: models/exceptions.php:337 models/lists.php:638
 msgid "Back to the list"
 msgstr ""
 
-#: models/exceptions.php:347 models/exceptions.php:348 models/feeds.php:243
-#: models/feeds.php:244 models/lists.php:648 models/lists.php:649
+#: models/exceptions.php:347 models/exceptions.php:348 models/lists.php:648
+#: models/lists.php:649
 msgid "Submit for Review"
 msgstr ""
 
-#: models/exceptions.php:352 models/exceptions.php:353 models/feeds.php:248
-#: models/feeds.php:249 models/lists.php:653 models/lists.php:654
+#: models/exceptions.php:352 models/exceptions.php:353 models/lists.php:653
+#: models/lists.php:654
 msgid "Update"
 msgstr ""
 
-#: models/exceptions.php:360 models/feeds.php:256 models/lists.php:661
+#: models/exceptions.php:360 models/lists.php:661
 msgid "Delete Permanently"
 msgstr ""
 
-#: models/exceptions.php:362 models/feeds.php:258 models/lists.php:663
+#: models/exceptions.php:362 models/lists.php:663
 msgid "Move to Trash"
 msgstr ""
 
@@ -2617,11 +2587,11 @@ msgstr ""
 msgid "You must enter a Match!"
 msgstr ""
 
-#: models/exceptions.php:446 models/feeds.php:371
+#: models/exceptions.php:446
 msgid "Date Added"
 msgstr ""
 
-#: models/exceptions.php:450 models/feeds.php:374 models/lists.php:563
+#: models/exceptions.php:450 models/lists.php:563
 msgid "Change Status"
 msgstr ""
 
@@ -2629,80 +2599,14 @@ msgstr ""
 msgid "Url"
 msgstr ""
 
-#: models/exceptions.php:516 models/feeds.php:426 models/lists.php:520
-#: models/threats.php:504 models/threats.php:553
+#: models/exceptions.php:516 models/lists.php:520 models/threats.php:504
+#: models/threats.php:553
 msgid "The post id is not correct!"
 msgstr ""
 
-#: models/exceptions.php:522 models/feeds.php:432 models/lists.php:526
-#: models/threats.php:510 models/threats.php:559
+#: models/exceptions.php:522 models/lists.php:526 models/threats.php:510
+#: models/threats.php:559
 msgid "This post does not exist!"
-msgstr ""
-
-#: models/feeds.php:22
-msgctxt "Post Type General Name"
-msgid "RSS Feeds"
-msgstr ""
-
-#: models/feeds.php:23
-msgctxt "Post Type Singular Name"
-msgid "RSS Feeds"
-msgstr ""
-
-#: models/feeds.php:25 models/feeds.php:26
-msgid "Add New RSS Feed"
-msgstr ""
-
-#: models/feeds.php:27
-msgid "All RSS Feeds"
-msgstr ""
-
-#: models/feeds.php:28
-msgid "View RSS Feed"
-msgstr ""
-
-#: models/feeds.php:29
-msgid "Edit RSS Feed"
-msgstr ""
-
-#: models/feeds.php:30
-msgid "Update RSS Feed"
-msgstr ""
-
-#: models/feeds.php:31
-msgid "Search RSS Feed"
-msgstr ""
-
-#: models/feeds.php:39
-msgid "RSS Feeds added on your website"
-msgstr ""
-
-#: models/feeds.php:121
-msgid "The RSS Feed has been updated!"
-msgstr ""
-
-#: models/feeds.php:122
-msgid "The RSS Feed has been  updated!"
-msgstr ""
-
-#: models/feeds.php:123
-msgid "The RSS Feed has been added!"
-msgstr ""
-
-#: models/feeds.php:181
-msgid "RSS Feed"
-msgstr ""
-
-#: models/feeds.php:304
-msgid "You did not enter an URL!"
-msgstr ""
-
-#: models/feeds.php:309
-msgid "Pleas enter how many entries to be shown"
-msgstr ""
-
-#: models/feeds.php:373
-msgid "Show newest"
 msgstr ""
 
 #: models/fix.php:41
@@ -3090,9 +2994,9 @@ msgstr ""
 msgid ""
 "This PHP module prevents the correct functioning of the System Check. Please "
 "disable it (ask your hosting provider for details on how to do this) and try "
-"again. If you cannot disable it, please increase the xdebug."
-"max_nesting_level to a higher value if the System Check fails, as this "
-"process eats up a lot of memory and Xdebug interferes with it."
+"again. If you cannot disable it, please increase the "
+"xdebug.max_nesting_level to a higher value if the System Check fails, as "
+"this process eats up a lot of memory and Xdebug interferes with it."
 msgstr ""
 
 #: views/check.php:70
@@ -3168,66 +3072,66 @@ msgstr ""
 msgid "No files have been safelisted yet!"
 msgstr ""
 
-#: views/dashboard.php:48
+#: views/dashboard.php:46
 msgid "You are <strong>Protected</strong>"
 msgstr ""
 
-#: views/dashboard.php:50
+#: views/dashboard.php:48
 msgid "Active Scanner is disabled. You will not be protected."
 msgstr ""
 
-#: views/dashboard.php:53
+#: views/dashboard.php:51
 #, php-format
 msgid ""
 "A newer version (%s%s) is available. Please update to the latest version of "
 "the plugin."
 msgstr ""
 
-#: views/dashboard.php:61
+#: views/dashboard.php:59
 msgid "Run System Check"
 msgstr ""
 
-#: views/dashboard.php:93
+#: views/dashboard.php:91
 msgid "Version"
 msgstr ""
 
-#: views/dashboard.php:96
+#: views/dashboard.php:94
 msgid "Copyright"
 msgstr ""
 
-#: views/dashboard.php:99
+#: views/dashboard.php:97
 msgid "License"
 msgstr ""
 
-#: views/dashboard.php:104
+#: views/dashboard.php:102
 msgid "License Code"
 msgstr ""
 
-#: views/dashboard.php:109
+#: views/dashboard.php:107
 msgid "Please Update the plugin to the Pro Version"
 msgstr ""
 
-#: views/dashboard.php:114
+#: views/dashboard.php:112
 msgid "Need more features?"
 msgstr ""
 
-#: views/dashboard.php:130
+#: views/dashboard.php:128
 msgid "Quick Actions"
 msgstr ""
 
-#: views/dashboard.php:178
+#: views/dashboard.php:176
 msgid "Accept Changes"
 msgstr ""
 
-#: views/dashboard.php:193
+#: views/dashboard.php:191
 msgid "Attacks blocked graph"
 msgstr ""
 
-#: views/dashboard.php:220
+#: views/dashboard.php:201
 msgid "Need help?"
 msgstr ""
 
-#: views/dashboard.php:221
+#: views/dashboard.php:202
 msgid ""
 "Please take a look at our extensive <a href=\"https://www.rsjoomla.com/"
 "support/documentation/rsfirewall-wordpress.html\" "
@@ -3236,12 +3140,12 @@ msgid ""
 "target=\"_blank\">forum section</a>."
 msgstr ""
 
-#: views/dashboard.php:222
+#: views/dashboard.php:203
 msgid ""
 "If you need priority support please purchase the full version of RSFirewall!"
 msgstr ""
 
-#: views/dashboard.php:226
+#: views/dashboard.php:207
 msgid "Purchase now"
 msgstr ""
 
