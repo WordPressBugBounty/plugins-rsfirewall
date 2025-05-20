@@ -74,7 +74,7 @@ class RSFirewall {
     public function enable_updates() {
         $code = RSFirewall_Config::get('code');
         if ( $code && strlen( $code ) == 20) {
-            add_action('init', array($this->version_class, 'activate_updates'));
+            $this->version_class->activate_updates();
         }
     }
 

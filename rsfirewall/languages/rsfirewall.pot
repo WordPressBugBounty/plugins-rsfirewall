@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RSFirewall!\n"
-"POT-Creation-Date: 2025-04-11 14:43+0300\n"
-"PO-Revision-Date: 2025-04-11 14:42+0300\n"
+"POT-Creation-Date: 2025-04-10 13:25+0300\n"
+"PO-Revision-Date: 2025-04-10 13:25+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -19,11 +19,14 @@ msgstr ""
 "__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: "
+"proversion\\libraries\\geoip\\geolite2\\vendor\n"
 
 #: controllers/check.php:87 controllers/check.php:118 controllers/check.php:150
 #: controllers/check.php:182 controllers/check.php:218
 #: controllers/check.php:254 controllers/check.php:284 controllers/fix.php:51
-#: controllers/fix.php:116
+#: controllers/fix.php:116 proversion/controllers/check.php:74
+#: proversion/controllers/check.php:103 proversion/controllers/check.php:132
 msgid "RSFirewall! Encountered an error"
 msgstr ""
 
@@ -277,11 +280,14 @@ msgid ""
 "Configuration area, under the Logging Utility tab."
 msgstr ""
 
-#: helpers/rsfirewall.php:287
+#: helpers/rsfirewall.php:287 proversion/controllers/tfa.php:35
+#: proversion/controllers/tfa.php:104 proversion/controllers/tfa.php:166
+#: proversion/controllers/tfa.php:174 proversion/controllers/tfa.php:199
+#: proversion/controllers/tfa.php:207
 msgid "Unauthorised access!"
 msgstr ""
 
-#: installer/installer.php:73
+#: installer/installer.php:73 proversion/installer/installer.php:94
 #, php-format
 msgid ""
 "Your IP is currently detected as <strong>%s</strong>. If this does not match "
@@ -400,12 +406,12 @@ msgstr ""
 msgid "Blocklisted in our database"
 msgstr ""
 
-#: libraries/core/core.php:576
+#: libraries/core/core.php:576 proversion/libraries/core/core.php:49
 #, php-format
 msgid "Country code: %s"
 msgstr ""
 
-#: libraries/core/core.php:582
+#: libraries/core/core.php:582 proversion/libraries/core/core.php:55
 #, php-format
 msgid "Your location (%s) has been blocked."
 msgstr ""
@@ -807,7 +813,8 @@ msgstr ""
 msgid "Fix permission"
 msgstr ""
 
-#: libraries/i18n.php:118 views/dashboard.php:160
+#: libraries/i18n.php:118 proversion/views/dashboard.php:153
+#: views/dashboard.php:160
 msgid "Fix"
 msgstr ""
 
@@ -1056,7 +1063,7 @@ msgid ""
 msgstr ""
 
 #: libraries/i18n.php:192 libraries/i18n.php:409 libraries/i18n.php:410
-#: views/check.php:34
+#: proversion/views/check.php:35 views/check.php:34
 msgid "System Check"
 msgstr ""
 
@@ -1931,7 +1938,8 @@ msgstr ""
 msgid "Blocklist"
 msgstr ""
 
-#: libraries/i18n.php:406 views/dashboard.php:31
+#: libraries/i18n.php:406 proversion/views/dashboard.php:31
+#: views/dashboard.php:31
 msgid "Dashboard"
 msgstr ""
 
@@ -1941,6 +1949,7 @@ msgid "RSFirewall!"
 msgstr ""
 
 #: libraries/i18n.php:412 libraries/i18n.php:413
+#: proversion/views/dbcheck.php:23
 msgid "Database Check"
 msgstr ""
 
@@ -2077,7 +2086,8 @@ msgstr ""
 msgid "Not computed yet."
 msgstr ""
 
-#: libraries/widgets.php:77 views/dashboard.php:69
+#: libraries/widgets.php:77 proversion/views/dashboard.php:69
+#: views/dashboard.php:69
 msgid "Latest system log messages"
 msgstr ""
 
@@ -2085,7 +2095,8 @@ msgstr ""
 msgid "View more"
 msgstr ""
 
-#: libraries/widgets.php:88 views/dashboard.php:80
+#: libraries/widgets.php:88 proversion/views/dashboard.php:80
+#: views/dashboard.php:80
 msgid "No messages to show"
 msgstr ""
 
@@ -2141,7 +2152,7 @@ msgstr ""
 msgid " - Pro Version"
 msgstr ""
 
-#: models/check.php:226
+#: models/check.php:226 proversion/models/check.php:190
 msgid "Could not connect to the server and retrieve the version!"
 msgstr ""
 
@@ -2674,7 +2685,7 @@ msgstr ""
 msgid "Could not add the files to the ignored table. Please try again."
 msgstr ""
 
-#: models/fix.php:331
+#: models/fix.php:331 proversion/models/check.php:688
 #, php-format
 msgid ""
 "Could not open %s for reading. Please make sure you have read permissions."
@@ -2694,7 +2705,7 @@ msgstr ""
 msgid "%d file(s) was added to the ignored table."
 msgstr ""
 
-#: models/fix.php:400
+#: models/fix.php:400 proversion/models/check.php:1302
 #, php-format
 msgid "%d file(s) was added to the hashes table."
 msgstr ""
@@ -2949,6 +2960,765 @@ msgstr ""
 msgid "You have unblocked the IP:  %s"
 msgstr ""
 
+#: proversion/controllers/check.php:168
+msgid "RSFirewall! encountered an error"
+msgstr ""
+
+#: proversion/controllers/check.php:217
+#, php-format
+msgid "Hash scanning in progress: %d%%"
+msgstr ""
+
+#: proversion/controllers/check.php:378
+msgid "RSFirewall encountered an error. Please try again."
+msgstr ""
+
+#: proversion/controllers/configuration.php:33
+msgid ""
+"It seems downloading the file has failed; you can manually upload it by "
+"selecting the file from your computer:"
+msgstr ""
+
+#: proversion/controllers/configuration.php:34
+msgid ""
+"To start the upload, click on the Save Changes button below after you've "
+"selected the file."
+msgstr ""
+
+#: proversion/controllers/configuration.php:35
+#, php-format
+msgid "Download unsuccessful, server error encountered: %s"
+msgstr ""
+
+#: proversion/controllers/dbcheck.php:65
+#, php-format
+msgid "<b>Optimize:</b> %s, <b>Repair:</b> %s"
+msgstr ""
+
+#: proversion/controllers/tfa.php:139
+#, php-format
+msgid "Authentication Code for %s"
+msgstr ""
+
+#: proversion/controllers/tfa.php:143
+#, php-format
+msgid "The Authentication Code is: <strong>%s</strong>"
+msgstr ""
+
+#: proversion/controllers/tfa.php:224 proversion/libraries/core/tfa.php:220
+msgid "Code:"
+msgstr ""
+
+#: proversion/installer/installer.php:89 proversion/installer/installer.php:367
+#: proversion/models/configuration.php:472
+#, php-format
+msgid ""
+"Your PHP version <strong>(%s)</strong> is not compatible with the GeoLite2 "
+"Library which maps IPs to countries; please update your PHP version to use "
+"this feature."
+msgstr ""
+
+#: proversion/installer/installer.php:329
+#, php-format
+msgid "The folder <strong>%s</strong> is not writable!"
+msgstr ""
+
+#: proversion/installer/installer.php:338
+#, php-format
+msgid "Error when connecting, response code returned is %d."
+msgstr ""
+
+#: proversion/installer/installer.php:344
+#: proversion/models/configuration.php:148
+#, php-format
+msgid "Could not write to %s!"
+msgstr ""
+
+#: proversion/installer/installer.php:363
+msgid ""
+"<br/><strong>The new GeoLite2 library could not be downloaded!</strong> "
+"Please try to download it manually from Configuration - Country Blocking"
+msgstr ""
+
+#: proversion/installer/installer.php:401
+#: proversion/models/configuration.php:209
+#: proversion/models/configuration.php:222
+#, php-format
+msgid "Could not open %s for reading!"
+msgstr ""
+
+#: proversion/installer/installer.php:429
+msgid "Attempted to extract a file with invalid characters in its name."
+msgstr ""
+
+#: proversion/installer/installer.php:437
+#, php-format
+msgid "Could not write data to file %s!"
+msgstr ""
+
+#: proversion/libraries/core/active-scanner.php:70
+msgid ""
+"This form has not been submitted because your IP is listed in a spam "
+"database. If you feel this is an error, please contact the webmaster."
+msgstr ""
+
+#: proversion/libraries/core/active-scanner.php:115
+#, php-format
+msgid "Missing user (%s) from db. Re-added."
+msgstr ""
+
+#: proversion/libraries/core/active-scanner.php:117
+#, php-format
+msgid ""
+"User (%s) change attempt: column (%s) value attempted to change from (%s) to "
+"(%s). Prevented."
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:138
+msgid "Two Factor Authentication Options"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:139
+msgid ""
+"Using one or more of the methods below will greatly increase the security of "
+"your user account. After enabling at least one method you will be asked for "
+"an Authentication Code after you login with your user username and password. "
+"The code that you need to provide can be generated from the mobile app, an "
+"email that is sent to you when using the email method or an unique code from "
+"the pre-generated list. The last two options we recommend to use as backup "
+"solutions in case anything happens with your mobile app."
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:144
+msgid "Status"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:145
+msgid "Method"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:150 proversion/libraries/core/tfa.php:178
+#: proversion/libraries/core/tfa.php:197
+msgid "Enable"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:152 proversion/libraries/core/tfa.php:245
+msgid "TOTP - Time-Based One-Time Password"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:153
+msgid "The Authentication Codes are generated by a mobile app."
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:159 proversion/libraries/core/tfa.php:187
+#: proversion/libraries/core/tfa.php:206
+msgid "Show details"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:162
+msgid "Please enable this option first to generate the QR code."
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:165
+msgid "Scan this QR code with your app."
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:167
+msgid "Secret:"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:168
+msgid "Current Code:"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:169
+msgid "Regenerate Secret"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:172
+msgid "Compatible mobile apps:"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:180 proversion/libraries/core/tfa.php:248
+msgid "Email Authentication Code"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:181
+#, php-format
+msgid ""
+"An Authentication Code will be sent to <strong>%s</strong> after you login."
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:190
+msgid ""
+"An Authentication Code is generated and sent to your email address after you "
+"login."
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:199 proversion/libraries/core/tfa.php:251
+msgid "Unique Codes"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:200
+msgid ""
+"As a failsafe, a list of unique codes will be generated so that you can "
+"still login in case all else fails."
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:210
+msgid ""
+"In order for the list of codes to be shown, this method has to be enabled "
+"first."
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:223
+msgid "Regenerate Unique Codes"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:227
+msgid "Something went wrong and the codes could not be generated!"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:241
+msgid "Default Method"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:369
+msgid "No secret key provided"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:413
+msgid "Something went wrong when loading the TFA classes!"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:600
+msgid "Please enter an username."
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:601
+msgid "Authentication Code"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:602
+msgid "(check your mobile app to get this code)"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:603
+msgid "(check your email for the code - it will expire in 5 minutes)"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:604
+msgid "(use one of the pre-generated unique codes)"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:605
+msgid "Use TOTP"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:606
+msgid "Use Email"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:607
+msgid "Use Unique"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:632
+msgid ""
+"Two Factor Authentication is active, please make sure the JavaScript is "
+"enabled!"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:668
+msgid "Please enter the Authentication Code!"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:689 proversion/libraries/core/tfa.php:721
+#: proversion/libraries/core/tfa.php:763
+msgid "The Authentication Code you entered is not valid!"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:703
+msgid "The Authentication Code has expired!"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:735
+msgid "There are no more unique codes available!"
+msgstr ""
+
+#: proversion/libraries/core/tfa.php:857
+msgid "Too many TFA attempts"
+msgstr ""
+
+#: proversion/models/check.php:94
+msgid "Checking if your website is listed on Google Safe Browsing lists"
+msgstr ""
+
+#: proversion/models/check.php:102
+msgid "Checking if your website is listed on Google Web Risk lists"
+msgstr ""
+
+#: proversion/models/check.php:114
+msgid "Checking if your website is listed on SpamHaus.org and Tornevall.org"
+msgstr ""
+
+#: proversion/models/check.php:130
+msgid "Integrity of core files"
+msgstr ""
+
+#: proversion/models/check.php:141
+msgid "Folders Permission Check"
+msgstr ""
+
+#: proversion/models/check.php:147
+msgid "Files Permission Check"
+msgstr ""
+
+#: proversion/models/check.php:154
+msgid "Malware scan"
+msgstr ""
+
+#: proversion/models/check.php:203 proversion/models/check.php:319
+msgid "No API Key configured in RSFirewall! configuration."
+msgstr ""
+
+#: proversion/models/check.php:204
+msgid ""
+"This system check step has been skipped. You can enable it by adding the KEY "
+"in Firewall Configuration > System Check >  Google Safe Browsing API Key "
+"field. You can get your key by following instructions from <a href='https://"
+"developers.google.com/safe-browsing/lookup_guide#GettingStarted'>here</a>."
+msgstr ""
+
+#: proversion/models/check.php:247 proversion/models/check.php:304
+#: proversion/models/check.php:400 proversion/models/check.php:459
+msgid "RSFirewall! encountered an error!"
+msgstr ""
+
+#: proversion/models/check.php:260
+msgid "Your website is not listed on Google Safe Browsing lists."
+msgstr ""
+
+#: proversion/models/check.php:261 proversion/models/check.php:273
+msgid ""
+"Safe Browsing alerts webmasters if their sites have been hacked and provides "
+"information to help clean up the problem."
+msgstr ""
+
+#: proversion/models/check.php:272 proversion/models/check.php:427
+#, php-format
+msgid "Your website is marked as <em> %s </em> on Google Safe Browsing lists."
+msgstr ""
+
+#: proversion/models/check.php:279
+msgid "Could not check Google Safe Browsing: Bad Request"
+msgstr ""
+
+#: proversion/models/check.php:285
+msgid "Could not check Google Safe Browsing: API key not authorized"
+msgstr ""
+
+#: proversion/models/check.php:286
+msgid ""
+"You can get your key by following instructions from <a href='https://"
+"developers.google.com/safe-browsing/lookup_guide#GettingStarted'>here</a>."
+msgstr ""
+
+#: proversion/models/check.php:292 proversion/models/check.php:298
+msgid "Could not check Google Safe Browsing: service unavailable"
+msgstr ""
+
+#: proversion/models/check.php:320
+msgid ""
+"This system check step has been skipped. You can enable it by adding the KEY "
+"in Firewall Configuration > System Check >  Google Web Risk API Key field. "
+"You can get your key by following instructions from <a href='https://"
+"cloud.google.com/web-risk/docs/apis'>here</a>."
+msgstr ""
+
+#: proversion/models/check.php:413
+#, php-format
+msgid "Your website is not listed on Google Web Risk %s list."
+msgstr ""
+
+#: proversion/models/check.php:414 proversion/models/check.php:428
+msgid ""
+"Web Risk alerts webmasters if their sites have been hacked and provides "
+"information to help clean up the problem."
+msgstr ""
+
+#: proversion/models/check.php:434
+#, php-format
+msgid "Could not check Google Web Risk %s list: Bad Request"
+msgstr ""
+
+#: proversion/models/check.php:440
+msgid "Could not check Google Web Risk: API key not authorized"
+msgstr ""
+
+#: proversion/models/check.php:441
+msgid ""
+"You can get your key by following instructions from <a href='https://"
+"cloud.google.com/web-risk/docs/apis'>here</a>."
+msgstr ""
+
+#: proversion/models/check.php:447 proversion/models/check.php:453
+msgid "Could not check Google Web Risk: service unavailable"
+msgstr ""
+
+#: proversion/models/check.php:473
+#, php-format
+msgid "Your website is marked as <em> %s </em> on <em>%s</em> lists."
+msgstr ""
+
+#: proversion/models/check.php:474 proversion/models/check.php:480
+msgid ""
+"Indicates if your server IP address is marked as spam or infected by 3rd "
+"party exploits!"
+msgstr ""
+
+#: proversion/models/check.php:479
+msgid "Your website is not listed on SpamHaus.org or Tornevall.org lists."
+msgstr ""
+
+#: proversion/models/check.php:633
+msgid "Could not connect to the server and retrieve the hashes!"
+msgstr ""
+
+#: proversion/models/check.php:641
+#, php-format
+msgid "Error when connecting, response code returned is %s."
+msgstr ""
+
+#: proversion/models/check.php:645
+#, php-format
+msgid ""
+"Could not write hash file to %s. Please make sure the folder permissions are "
+"correct."
+msgstr ""
+
+#: proversion/models/check.php:651
+#, php-format
+msgid ""
+"Could not write hash file to %s. Please contact the server administrator!"
+msgstr ""
+
+#: proversion/models/check.php:830
+#, php-format
+msgid "Suspicious file found in %s. This file should not be here."
+msgstr ""
+
+#: proversion/models/check.php:1298
+msgid "Could not add the items to the hashes table. Please try again."
+msgstr ""
+
+#: proversion/models/configuration.php:63
+msgid " ago"
+msgstr ""
+
+#: proversion/models/configuration.php:86
+#: proversion/models/configuration.php:439
+msgid ""
+"All requirements are setup correctly. You are able to use the Country "
+"Blocking feature."
+msgstr ""
+
+#: proversion/models/configuration.php:98
+msgid ""
+"Since 30.12.2019, downloading the GeoIP database requires a license key "
+"which can be obtained for free from MaxMind."
+msgstr ""
+
+#: proversion/models/configuration.php:121
+#, php-format
+msgid "The folder %s could not be created.."
+msgstr ""
+
+#: proversion/models/configuration.php:128
+#: proversion/models/configuration.php:192
+#, php-format
+msgid "The folder %s is not writable."
+msgstr ""
+
+#: proversion/models/configuration.php:142
+#, php-format
+msgid "Error when connecting, response code returned is %d, Message: %s, %s."
+msgstr ""
+
+#: proversion/models/configuration.php:183
+msgid ""
+"Please upload only GeoLite2-Country.mmdb.tar.gz or GeoLite2-Country.mmdb "
+"files!"
+msgstr ""
+
+#: proversion/models/configuration.php:198
+#, php-format
+msgid "The database file already exists in %s and is not writable."
+msgstr ""
+
+#: proversion/models/configuration.php:420
+msgid "Please follow these instructions."
+msgstr ""
+
+#: proversion/models/configuration.php:421
+#, php-format
+msgid ""
+"After activating Two Factor Authentication you'll need to configure it for "
+"your user account in the <strong><a href=\"%s\">Your Profile</a></strong> "
+"section."
+msgstr ""
+
+#: proversion/models/configuration.php:422
+msgid "If you're an Administrator you can only disable it for other users."
+msgstr ""
+
+#: proversion/models/configuration.php:432
+#, no-php-format
+msgid ""
+"Country blocking will block all IPs that appear to be coming from these "
+"countries. This is not 100% foolproof - you might be blocking legitimate "
+"requests in the process."
+msgstr ""
+
+#: proversion/models/configuration.php:433
+msgid ""
+"For a step by step tutorial regarding obtaining GeoLite2-Country.mmdb, "
+"please click here"
+msgstr ""
+
+#: proversion/models/configuration.php:445
+#: proversion/models/configuration.php:451
+msgid "GeoLite2 Country Database"
+msgstr ""
+
+#: proversion/models/configuration.php:446
+msgid ""
+"Blocking countries relies on a 3rd party database; you can download it "
+"automatically by clicking on the button below. If the download fails, you "
+"can always upload it manually afterwards."
+msgstr ""
+
+#: proversion/models/configuration.php:447
+msgid "Download GeoLite2-Country.mmdb"
+msgstr ""
+
+#: proversion/models/configuration.php:452
+#, php-format
+msgid ""
+"Last modified: <em>%s</em> It seems you haven't updated your database in a "
+"while. Click the button below to update it."
+msgstr ""
+
+#: proversion/models/configuration.php:453
+msgid "Update GeoLite2-Country.mmdb"
+msgstr ""
+
+#: proversion/models/configuration.php:471
+msgid "PHP Version Compatibility Error"
+msgstr ""
+
+#: proversion/views/check.php:26 views/check.php:25
+msgid "Never"
+msgstr ""
+
+#: proversion/views/check.php:41 views/check.php:40
+#, php-format
+msgid "Last run: %s %s"
+msgstr ""
+
+#: proversion/views/check.php:62 views/check.php:61
+msgid ""
+"RSFirewall! has computed a grade based on your website's security level. "
+"Please keep in mind that\n"
+"\t\t\t\t\t\tthere are areas that RSFirewall! cannot cover, so don't rely on "
+"this grade as a definite\n"
+"\t\t\t\t\t\tindicator of your website's security"
+msgstr ""
+
+#: proversion/views/check.php:69 views/check.php:68
+msgid "This server has the PHP 'Xdebug' module enabled."
+msgstr ""
+
+#: proversion/views/check.php:70 views/check.php:69
+msgid ""
+"This PHP module prevents the correct functioning of the System Check. Please "
+"disable it (ask your hosting provider for details on how to do this) and try "
+"again. If you cannot disable it, please increase the "
+"xdebug.max_nesting_level to a higher value if the System Check fails, as "
+"this process eats up a lot of memory and Xdebug interferes with it."
+msgstr ""
+
+#: proversion/views/check.php:71 views/check.php:70
+msgid "I understand the risks and want to continue"
+msgstr ""
+
+#: proversion/views/check.php:75 views/check.php:74
+msgid "Perform the System Check"
+msgstr ""
+
+#: proversion/views/check.php:90 views/check.php:89
+msgid "WordPress Configuration"
+msgstr ""
+
+#: proversion/views/check.php:113 views/check.php:112
+msgid "Server Configuration"
+msgstr ""
+
+#: proversion/views/check.php:135 views/check.php:134
+msgid "Attempt to fix PHP Configuration"
+msgstr ""
+
+#: proversion/views/check.php:137 views/check.php:136
+msgid ""
+"RSFirewall! will attempt to fix your PHP settings if the configuration is "
+"not secure by creating a local php.ini file in the root of your hosting "
+"account. If the hosting provider allows this, the php.ini file will be read "
+"and the new settings will take effect. If it does not work, then it means "
+"that the hosting provider does not allow the reading of local php.ini files. "
+"Please contact your hosting provider and/or system administrator in order to "
+"get this enabled."
+msgstr ""
+
+#: proversion/views/check.php:143 views/check.php:142
+msgid "File Integrity"
+msgstr ""
+
+#: proversion/views/dashboard.php:46 views/dashboard.php:46
+msgid "You are <strong>Protected</strong>"
+msgstr ""
+
+#: proversion/views/dashboard.php:48 views/dashboard.php:48
+msgid "Active Scanner is disabled. You will not be protected."
+msgstr ""
+
+#: proversion/views/dashboard.php:51
+#, php-format
+msgid ""
+"A newer version (%s) is available. Please update to the latest version of "
+"the plugin."
+msgstr ""
+
+#: proversion/views/dashboard.php:59 views/dashboard.php:59
+msgid "Run System Check"
+msgstr ""
+
+#: proversion/views/dashboard.php:91 views/dashboard.php:91
+msgid "Version"
+msgstr ""
+
+#: proversion/views/dashboard.php:94 views/dashboard.php:94
+msgid "Copyright"
+msgstr ""
+
+#: proversion/views/dashboard.php:97 views/dashboard.php:97
+msgid "License"
+msgstr ""
+
+#: proversion/views/dashboard.php:101 views/dashboard.php:102
+msgid "License Code"
+msgstr ""
+
+#: proversion/views/dashboard.php:106
+msgid "Get license code"
+msgstr ""
+
+#: proversion/views/dashboard.php:121 views/dashboard.php:128
+msgid "Quick Actions"
+msgstr ""
+
+#: proversion/views/dashboard.php:169 views/dashboard.php:176
+msgid "Accept Changes"
+msgstr ""
+
+#: proversion/views/dashboard.php:185 views/dashboard.php:191
+msgid "Attacks blocked graph"
+msgstr ""
+
+#: proversion/views/dashboard.php:191
+msgid "Attacks blocked region based"
+msgstr ""
+
+#: proversion/views/dashboard.php:201 views/dashboard.php:201
+msgid "Need help?"
+msgstr ""
+
+#: proversion/views/dashboard.php:202
+msgid ""
+"Before submitting a ticket through our support ticketing system, please take "
+"a look at our extensive <a href=\"https://www.rsjoomla.com/support/"
+"documentation/rsfirewall-wordpress.html\" target=\"_blank\">documentation</"
+"a>."
+msgstr ""
+
+#: proversion/views/dashboard.php:203
+msgid ""
+"Submit a ticket through our support system and one of our staff members will "
+"help you shortly."
+msgstr ""
+
+#: proversion/views/dashboard.php:207
+msgid "Get priority support"
+msgstr ""
+
+#: proversion/views/dbcheck.php:29
+msgid ""
+"Repairing &amp; optimizing tables can only be performed on <strong>MyISAM</"
+"strong> tables. If you see fewer tables, don't worry - your other tables are "
+"fine and there's no point in checking them."
+msgstr ""
+
+#: proversion/views/dbcheck.php:46
+msgid "Perform the Database Check"
+msgstr ""
+
+#: proversion/views/dbcheck.php:62
+msgid "Server Database"
+msgstr ""
+
+#: proversion/views/dbcheck.php:67
+msgid "Table Name"
+msgstr ""
+
+#: proversion/views/dbcheck.php:68
+msgid "Engine"
+msgstr ""
+
+#: proversion/views/dbcheck.php:69
+msgid "Collation"
+msgstr ""
+
+#: proversion/views/dbcheck.php:70
+msgid "# of Rows"
+msgstr ""
+
+#: proversion/views/dbcheck.php:71
+msgid "Data (KB)"
+msgstr ""
+
+#: proversion/views/dbcheck.php:72
+msgid "Index (KB)"
+msgstr ""
+
+#: proversion/views/dbcheck.php:73
+msgid "Overhead (KB)"
+msgstr ""
+
+#: proversion/views/dbcheck.php:74
+msgid "Result"
+msgstr ""
+
+#: proversion/views/dbcheck.php:91
+msgid "Not supported"
+msgstr ""
+
+#: proversion/views/dbcheck.php:145
+msgid ""
+"Unfortunately, the database checking feature is not supported for your "
+"database version (or you do not have any MyISAM tables in your "
+"installation). Don't worry - this means that your tables are fine and "
+"there's no point in checking them."
+msgstr ""
+
 #: templates/rsfirewall-404.php:7 templates/rsfirewall-404.php:64
 msgid "404 Page Not Found"
 msgstr ""
@@ -2967,72 +3737,6 @@ msgstr ""
 
 #: templates/rsfirewall-login.php:166
 msgid "Access"
-msgstr ""
-
-#: views/check.php:25
-msgid "Never"
-msgstr ""
-
-#: views/check.php:40
-#, php-format
-msgid "Last run: %s %s"
-msgstr ""
-
-#: views/check.php:61
-msgid ""
-"RSFirewall! has computed a grade based on your website's security level. "
-"Please keep in mind that\n"
-"\t\t\t\t\t\tthere are areas that RSFirewall! cannot cover, so don't rely on "
-"this grade as a definite\n"
-"\t\t\t\t\t\tindicator of your website's security"
-msgstr ""
-
-#: views/check.php:68
-msgid "This server has the PHP 'Xdebug' module enabled."
-msgstr ""
-
-#: views/check.php:69
-msgid ""
-"This PHP module prevents the correct functioning of the System Check. Please "
-"disable it (ask your hosting provider for details on how to do this) and try "
-"again. If you cannot disable it, please increase the "
-"xdebug.max_nesting_level to a higher value if the System Check fails, as "
-"this process eats up a lot of memory and Xdebug interferes with it."
-msgstr ""
-
-#: views/check.php:70
-msgid "I understand the risks and want to continue"
-msgstr ""
-
-#: views/check.php:74
-msgid "Perform the System Check"
-msgstr ""
-
-#: views/check.php:89
-msgid "WordPress Configuration"
-msgstr ""
-
-#: views/check.php:112
-msgid "Server Configuration"
-msgstr ""
-
-#: views/check.php:134
-msgid "Attempt to fix PHP Configuration"
-msgstr ""
-
-#: views/check.php:136
-msgid ""
-"RSFirewall! will attempt to fix your PHP settings if the configuration is "
-"not secure by creating a local php.ini file in the root of your hosting "
-"account. If the hosting provider allows this, the php.ini file will be read "
-"and the new settings will take effect. If it does not work, then it means "
-"that the hosting provider does not allow the reading of local php.ini files. "
-"Please contact your hosting provider and/or system administrator in order to "
-"get this enabled."
-msgstr ""
-
-#: views/check.php:142
-msgid "File Integrity"
 msgstr ""
 
 #: views/configuration.php:24
@@ -3073,39 +3777,11 @@ msgstr ""
 msgid "No files have been safelisted yet!"
 msgstr ""
 
-#: views/dashboard.php:46
-msgid "You are <strong>Protected</strong>"
-msgstr ""
-
-#: views/dashboard.php:48
-msgid "Active Scanner is disabled. You will not be protected."
-msgstr ""
-
 #: views/dashboard.php:51
 #, php-format
 msgid ""
 "A newer version (%s%s) is available. Please update to the latest version of "
 "the plugin."
-msgstr ""
-
-#: views/dashboard.php:59
-msgid "Run System Check"
-msgstr ""
-
-#: views/dashboard.php:91
-msgid "Version"
-msgstr ""
-
-#: views/dashboard.php:94
-msgid "Copyright"
-msgstr ""
-
-#: views/dashboard.php:97
-msgid "License"
-msgstr ""
-
-#: views/dashboard.php:102
-msgid "License Code"
 msgstr ""
 
 #: views/dashboard.php:107
@@ -3114,22 +3790,6 @@ msgstr ""
 
 #: views/dashboard.php:112
 msgid "Need more features?"
-msgstr ""
-
-#: views/dashboard.php:128
-msgid "Quick Actions"
-msgstr ""
-
-#: views/dashboard.php:176
-msgid "Accept Changes"
-msgstr ""
-
-#: views/dashboard.php:191
-msgid "Attacks blocked graph"
-msgstr ""
-
-#: views/dashboard.php:201
-msgid "Need help?"
 msgstr ""
 
 #: views/dashboard.php:202

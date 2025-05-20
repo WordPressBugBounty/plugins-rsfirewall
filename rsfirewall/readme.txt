@@ -4,7 +4,7 @@ Tags: firewall, security, malware scanner, system check, web application firewal
 Requires at least: 4.5.15
 Tested up to: 6.8
 Requires PHP: 5.4
-Stable tag: 1.1.40
+Stable tag: 1.1.42
 License: GPLv3
 
 Based on the success of the most popular firewall for Joomla!, RSFirewall! is now available to protect your WordPress website as well.
@@ -60,6 +60,14 @@ All connections are made with [wp_remote_get](https://codex.wordpress.org/Functi
 Upload the RSFirewall! plugin to your blog and activate it. Out of the box protection is supplied upon activation but it's always wise to check out the Configuration area to view all options available and perform a System Check to ensure your website's integrity.
 
 == Changelog ==
+
+= 1.1.42 =
+
+* Fixed - Some translations were still not loaded correctly
+
+= 1.1.41 =
+
+* Fixed - When using 'Lockdown' - 'Protect the following administrator users from any change' and updating to WordPress 6.8, users would not be able to login due to changes in the WordPress hashing algorithm. To login, temporarily disable RSFirewall! by following the instructions at this page: https://www.rsjoomla.com/support/documentation/rsfirewall-wordpress/frequently-asked-questions/i-cannot-access-my-administration-section.html - this will allow you to update RSFirewall! to the latest version and then reactivate it.
 
 = 1.1.40 =
 
