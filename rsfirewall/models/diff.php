@@ -53,7 +53,15 @@ class RSFirewall_Model_Diff extends RSFirewall_Model
      * @since 1.0.0
      */
     public function get_local_filename() {
-        return RSFIREWALL_SITE . '/' . $this->get_file();
+         $path = realpath(RSFIREWALL_SITE . '/' . $this->get_file());
+        $root = realpath(RSFIREWALL_SITE);
+
+        // Check if the path is valid and within the root directory
+        if ($path === false || strpos($path, $root) !== 0) {
+            throw new Exception(sprintf(__('Invalid file path: %s', 'rsfirewall'), $this->get_file()));
+        }
+
+        return $path;
     }
 
     /**

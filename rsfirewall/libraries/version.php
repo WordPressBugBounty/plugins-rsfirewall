@@ -13,7 +13,7 @@ if ( ! defined( 'WPINC' ) ) {
 
 class RSFirewall_Version
 {
-    public $version = '1.1.42';
+    public $version = '1.1.43';
     public $key = 'RSJFIREWALLWP';
 
     public function __construct() {}

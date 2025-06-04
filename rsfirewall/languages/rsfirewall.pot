@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RSFirewall!\n"
-"POT-Creation-Date: 2025-04-10 13:25+0300\n"
-"PO-Revision-Date: 2025-04-10 13:25+0300\n"
+"POT-Creation-Date: 2025-06-04 09:46+0300\n"
+"PO-Revision-Date: 2025-06-04 09:46+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -2457,46 +2457,51 @@ msgstr ""
 msgid "%s alert"
 msgstr ""
 
-#: models/diff.php:78 models/file.php:61 models/file.php:85
+#: models/diff.php:61 models/file.php:53
 #, php-format
-msgid "Couldn't find %s ."
-msgstr ""
-
-#: models/diff.php:82 models/file.php:65 models/file.php:89
-#, php-format
-msgid "%s is not readable."
+msgid "Invalid file path: %s"
 msgstr ""
 
 #: models/diff.php:86 models/file.php:69 models/file.php:93
 #, php-format
+msgid "Couldn't find %s ."
+msgstr ""
+
+#: models/diff.php:90 models/file.php:73 models/file.php:97
+#, php-format
+msgid "%s is not readable."
+msgstr ""
+
+#: models/diff.php:94 models/file.php:77 models/file.php:101
+#, php-format
 msgid "%s is not a file."
 msgstr ""
 
-#: models/diff.php:113
+#: models/diff.php:121
 #, php-format
 msgid "RSFirewall! could not connect to the GitHub server: %s - %s."
 msgstr ""
 
-#: models/diff.php:133
+#: models/diff.php:141
 msgid "There is no file to download!"
 msgstr ""
 
-#: models/diff.php:143
+#: models/diff.php:151
 #, php-format
 msgid ""
 "RSFirewall! could not connect to the GitHub server. Response code: %s; "
 "Message: %s"
 msgstr ""
 
-#: models/diff.php:157
+#: models/diff.php:165
 msgid "RSFirewall! could not overwrite the local file."
 msgstr ""
 
-#: models/diff.php:179
+#: models/diff.php:187
 msgid "File overwritten succesfully."
 msgstr ""
 
-#: models/diff.php:179
+#: models/diff.php:187
 msgid "File added succesfully."
 msgstr ""
 
