@@ -13,7 +13,7 @@ if ( ! defined( 'WPINC' ) ) {
 
 class RSFirewall_Version
 {
-    public $version = '1.1.43';
+    public $version = '1.1.44';
     public $key = 'RSJFIREWALLWP';
 
     public function __construct() {}
@@ -90,7 +90,8 @@ class RSFirewall_Version
 
             // compatibility format
             $version = new stdClass();
-            $version->new_version = $call_api->version;
+            // check for new_version first
+            $version->new_version = isset($call_api->new_version) ?  $call_api->new_version : $call_api->version;
 
             return $version;
         }

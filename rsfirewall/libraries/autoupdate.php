@@ -70,10 +70,19 @@ class RSFirewall_Autoupdate
         }
 
         // Set the Update Code and Key
-        $this->update_code = isset($args['update_code']) ? $args['update_code'] : null;;
-        $this->key         = isset($args['key']) ? $args['key'] : null;;
+        $this->update_code = isset($args['update_code']) ? $args['update_code'] : null;
+        $this->key         = isset($args['key']) ? $args['key'] : null;
 
-        if ($enable_filters) {
+        // Trim the update code if it's a string
+        if (is_string($this->update_code)) {
+            $this->update_code = trim($this->update_code);
+        }
+
+        // If the update code is empty, set it to null
+        $this->update_code = (!is_null($this->update_code) && !strlen($this->update_code)) ? null : $this->update_code;
+
+        if ((!$this->is_lite || ($this->is_lite && !is_null($this->update_code))) && $enable_filters)
+        {
             // filter for checking if a new version is available
             add_filter('pre_set_site_transient_update_plugins', array($this, 'check_update'));
             // Define the alternative response for information checking
@@ -101,11 +110,14 @@ class RSFirewall_Autoupdate
             // Add / Overwrite the slug
             $remote_version->slug = $this->slug;
 
-            // Add / Overwrite the plugin
-            $remote_version->plugin = $this->plugin_file_root;
+            if (!$this->is_lite || ($this->is_lite && !is_null($this->update_code))) 
+            {
+                // Add / Overwrite the plugin
+                $remote_version->plugin = $this->plugin_file_root;
 
-            // Set the new transient
-            $transient->response[$this->plugin_file_root] =  $remote_version;
+                 // Set the new transient
+                $transient->response[$this->plugin_file_root] =  $remote_version;
+            }
         }
 
         return $transient;
@@ -141,7 +153,7 @@ class RSFirewall_Autoupdate
      * @param string $action
      * @param boolean $credentials
      *
-     * @return string|boolean
+     * @return object|boolean
      */
     public function get_url($action, $credentials = false) {
         $params = array(
