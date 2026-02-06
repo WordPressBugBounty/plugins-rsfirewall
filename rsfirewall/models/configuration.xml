@@ -48,6 +48,7 @@
             <option checked="checked" value="mozilla">option_mozzila_impersonators</option>
         </field>
         <field name="protect_forms_from_abuse" label="lbl_protect_forms_from_abuse" type="only_pro_field" default="0" description="desc_protect_forms_from_abuse"/>
+        <field name="dns_address" label="lbl_dns_address" type="only_pro_field" default="0" description="desc_dns_address"/>
         <field name="deny_access_to_referers" label="lbl_deny_access_to_referers" type="textarea" description="desc_deny_access_to_referers"/>
         <field name="auto_blacklist_separator" label="lbl_auto_blacklist_separator" type="separator"/>
         <field name="enable_auto_blacklist" label="lbl_enable_auto_blacklist" type="switchery" default="0" description="desc_enable_auto_blacklist"/>

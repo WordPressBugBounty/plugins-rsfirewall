@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RSFirewall!\n"
-"POT-Creation-Date: 2025-06-04 09:46+0300\n"
-"PO-Revision-Date: 2025-06-04 09:46+0300\n"
+"POT-Creation-Date: 2026-02-05 13:06+0200\n"
+"PO-Revision-Date: 2026-02-05 13:06+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: rsfirewall.php\n"
@@ -19,14 +19,11 @@ msgstr ""
 "__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
-"X-Poedit-SearchPathExcluded-1: "
-"proversion\\libraries\\geoip\\geolite2\\vendor\n"
 
 #: controllers/check.php:87 controllers/check.php:118 controllers/check.php:150
 #: controllers/check.php:182 controllers/check.php:218
 #: controllers/check.php:254 controllers/check.php:284 controllers/fix.php:51
-#: controllers/fix.php:116 proversion/controllers/check.php:74
-#: proversion/controllers/check.php:103 proversion/controllers/check.php:132
+#: controllers/fix.php:116
 msgid "RSFirewall! Encountered an error"
 msgstr ""
 
@@ -167,40 +164,40 @@ msgstr ""
 msgid "The file id is empty!"
 msgstr ""
 
-#: helpers/fields.php:223 helpers/fields.php:233 models/configuration.php:660
+#: helpers/fields.php:230 helpers/fields.php:240 models/configuration.php:660
 #: views/check.php:144
 msgid "This feature is not available in the free version of RSFirewall!"
 msgstr ""
 
-#: helpers/fields.php:224 models/configuration.php:661 views/check.php:145
+#: helpers/fields.php:231 models/configuration.php:661 views/check.php:145
 msgid ""
 "If you wish to use this feature please consider purchasing the full version "
 "of RSFirewall!"
 msgstr ""
 
-#: helpers/fields.php:225 helpers/fields.php:233 models/configuration.php:662
+#: helpers/fields.php:232 helpers/fields.php:240 models/configuration.php:662
 #: views/check.php:146 views/dashboard.php:114
 msgid "Purchase the full version of RSFirewall!"
 msgstr ""
 
-#: helpers/fields.php:342
+#: helpers/fields.php:352
 msgid "File Manager"
 msgstr ""
 
-#: helpers/fields.php:342
+#: helpers/fields.php:352
 msgid "Open File Manager"
 msgstr ""
 
-#: helpers/fields.php:457 libraries/i18n.php:255
+#: helpers/fields.php:467 libraries/i18n.php:255
 msgid "Safelist Blocked PHP Files"
 msgstr ""
 
-#: helpers/fields.php:457
+#: helpers/fields.php:467
 #, php-format
 msgid "Safelist Files (%s)"
 msgstr ""
 
-#: helpers/fields.php:459
+#: helpers/fields.php:469
 msgid ""
 "There are no folders hardened! You can safelist PHP files only if any of the "
 "folders above are hardened."
@@ -280,14 +277,11 @@ msgid ""
 "Configuration area, under the Logging Utility tab."
 msgstr ""
 
-#: helpers/rsfirewall.php:287 proversion/controllers/tfa.php:35
-#: proversion/controllers/tfa.php:104 proversion/controllers/tfa.php:166
-#: proversion/controllers/tfa.php:174 proversion/controllers/tfa.php:199
-#: proversion/controllers/tfa.php:207
+#: helpers/rsfirewall.php:287
 msgid "Unauthorised access!"
 msgstr ""
 
-#: installer/installer.php:73 proversion/installer/installer.php:94
+#: installer/installer.php:73
 #, php-format
 msgid ""
 "Your IP is currently detected as <strong>%s</strong>. If this does not match "
@@ -375,12 +369,12 @@ msgid ""
 "was disabled from RSFirewall! <br/> <a href=\""
 msgstr ""
 
-#: libraries/core/active-scanner.php:850
+#: libraries/core/active-scanner.php:864
 #, php-format
 msgid "Attempt to create a new Administrator account (%s) was blocked."
 msgstr ""
 
-#: libraries/core/active-scanner.php:1015
+#: libraries/core/active-scanner.php:1029
 msgid "Session injection attempt blocked!"
 msgstr ""
 
@@ -406,12 +400,12 @@ msgstr ""
 msgid "Blocklisted in our database"
 msgstr ""
 
-#: libraries/core/core.php:576 proversion/libraries/core/core.php:49
+#: libraries/core/core.php:576
 #, php-format
 msgid "Country code: %s"
 msgstr ""
 
-#: libraries/core/core.php:582 proversion/libraries/core/core.php:55
+#: libraries/core/core.php:582
 #, php-format
 msgid "Your location (%s) has been blocked."
 msgstr ""
@@ -760,12 +754,13 @@ msgstr ""
 msgid "RSFirewall! could not find the appropriate CSV file for your WP version"
 msgstr ""
 
-#: libraries/i18n.php:105 libraries/i18n.php:386 libraries/i18n.php:398
-#: models/exceptions.php:448 models/lists.php:561 views/ignored.php:9
+#: libraries/i18n.php:105 libraries/i18n.php:388 libraries/i18n.php:400
+#: libraries/i18n.php:412 models/exceptions.php:448 models/lists.php:566
+#: views/ignored.php:9
 msgid "Reason"
 msgstr ""
 
-#: libraries/i18n.php:106 libraries/i18n.php:376 models/exceptions.php:447
+#: libraries/i18n.php:106 libraries/i18n.php:378 models/exceptions.php:447
 msgid "Match"
 msgstr ""
 
@@ -813,8 +808,7 @@ msgstr ""
 msgid "Fix permission"
 msgstr ""
 
-#: libraries/i18n.php:118 proversion/views/dashboard.php:153
-#: views/dashboard.php:160
+#: libraries/i18n.php:118 views/dashboard.php:160
 msgid "Fix"
 msgstr ""
 
@@ -885,19 +879,19 @@ msgstr ""
 msgid "Scanning has finished"
 msgstr ""
 
-#: libraries/i18n.php:148 libraries/i18n.php:363
+#: libraries/i18n.php:148 libraries/i18n.php:365
 msgid "low"
 msgstr ""
 
-#: libraries/i18n.php:149 libraries/i18n.php:364
+#: libraries/i18n.php:149 libraries/i18n.php:366
 msgid "medium"
 msgstr ""
 
-#: libraries/i18n.php:150 libraries/i18n.php:365
+#: libraries/i18n.php:150 libraries/i18n.php:367
 msgid "high"
 msgstr ""
 
-#: libraries/i18n.php:151 libraries/i18n.php:366
+#: libraries/i18n.php:151 libraries/i18n.php:368
 msgid "critical"
 msgstr ""
 
@@ -1044,7 +1038,7 @@ msgstr ""
 msgid "Enabling logging for the failed attempts."
 msgstr ""
 
-#: libraries/i18n.php:187 libraries/i18n.php:284
+#: libraries/i18n.php:187 libraries/i18n.php:286
 msgid "Automatic Blocklisting"
 msgstr ""
 
@@ -1062,8 +1056,8 @@ msgid ""
 "will be added to the blocklist and banned from your website."
 msgstr ""
 
-#: libraries/i18n.php:192 libraries/i18n.php:409 libraries/i18n.php:410
-#: proversion/views/check.php:35 views/check.php:34
+#: libraries/i18n.php:192 libraries/i18n.php:423 libraries/i18n.php:424
+#: views/check.php:34
 msgid "System Check"
 msgstr ""
 
@@ -1489,46 +1483,58 @@ msgid ""
 "the domain name, eg. blocked-domain.*, blocked*domain.com"
 msgstr ""
 
-#: libraries/i18n.php:285
+#: libraries/i18n.php:283
+msgid "DNS for resolving lists"
+msgstr ""
+
+#: libraries/i18n.php:284
+msgid ""
+"Leave this empty to query the lists using one of the public DNS; in some "
+"cases, the PBL lists will deny querying using public DNS - if you have your "
+"own network DNS, supply the IP here. Multiple IPs can be provided, each on a "
+"new line."
+msgstr ""
+
+#: libraries/i18n.php:287
 msgid "Automatic blocklisting"
 msgstr ""
 
-#: libraries/i18n.php:286
+#: libraries/i18n.php:288
 msgid ""
 "Automatic blocklisting will automatically add to the blocklist repeat "
 "offenders based on the minimum number of attempts specified below."
 msgstr ""
 
-#: libraries/i18n.php:287
+#: libraries/i18n.php:289
 msgid "Automatic blocklisting for admin area"
 msgstr ""
 
-#: libraries/i18n.php:288
+#: libraries/i18n.php:290
 msgid ""
 "With this option enabled, failed backend logins will lead to an automatic "
 "ban. This option is independent from the reCAPTCHA challenge configurable "
 "below."
 msgstr ""
 
-#: libraries/i18n.php:289
+#: libraries/i18n.php:291
 msgid "# of attempts"
 msgstr ""
 
-#: libraries/i18n.php:290
+#: libraries/i18n.php:292
 msgid ""
 "This is the minimum number of attempts before the attacker will be added to "
 "the blocklist and banned from your website."
 msgstr ""
 
-#: libraries/i18n.php:292
+#: libraries/i18n.php:294
 msgid "reCAPTCHA"
 msgstr ""
 
-#: libraries/i18n.php:293
+#: libraries/i18n.php:295
 msgid "Enable Google reCAPTCHA for login forms"
 msgstr ""
 
-#: libraries/i18n.php:294
+#: libraries/i18n.php:296
 msgid ""
 "This will prompt a reCAPTCHA security on you login forms. reCAPTCHA will "
 "appear after the number of failed login attempts you specify below.</"
@@ -1537,105 +1543,105 @@ msgid ""
 "Member, WP-Members, AJAX Login and Registration modal popup</strong>."
 msgstr ""
 
-#: libraries/i18n.php:295
+#: libraries/i18n.php:297
 msgid "Secret Key"
 msgstr ""
 
-#: libraries/i18n.php:296
+#: libraries/i18n.php:298
 msgid "Site Key"
 msgstr ""
 
-#: libraries/i18n.php:297
+#: libraries/i18n.php:299
 msgid "Activate reCAPTCHA after # of attempts"
 msgstr ""
 
-#: libraries/i18n.php:298
+#: libraries/i18n.php:300
 msgid "Activate reCAPTCHA after this number of failed login attempts."
 msgstr ""
 
-#: libraries/i18n.php:299
+#: libraries/i18n.php:301
 msgid "Enable Google reCAPTCHA for comment forms"
 msgstr ""
 
-#: libraries/i18n.php:300
+#: libraries/i18n.php:302
 msgid ""
 "Activate reCAPTCHA for the comment forms. This will display the reCAPTCHA "
 "immediately (it ignores the above attempts option)! It will not be logged on "
 "failure."
 msgstr ""
 
-#: libraries/i18n.php:301
+#: libraries/i18n.php:303
 msgid "Enable Google reCAPTCHA for register forms"
 msgstr ""
 
-#: libraries/i18n.php:302
+#: libraries/i18n.php:304
 msgid ""
 "Activate reCAPTCHA for the register forms. This will display the reCAPTCHA "
 "immediately (it ignores the above attempts option)! It will not be logged on "
 "failure."
 msgstr ""
 
-#: libraries/i18n.php:304
+#: libraries/i18n.php:306
 msgid "Backend Login"
 msgstr ""
 
-#: libraries/i18n.php:305
+#: libraries/i18n.php:307
 msgid "Capture login attempts"
 msgstr ""
 
-#: libraries/i18n.php:306
+#: libraries/i18n.php:308
 msgid ""
 "By enabling this, everytime a user fails to login in the /wp-admin section "
 "will trigger an event in the Threats."
 msgstr ""
 
-#: libraries/i18n.php:307
+#: libraries/i18n.php:309
 msgid "Store passwords"
 msgstr ""
 
-#: libraries/i18n.php:308
+#: libraries/i18n.php:310
 msgid ""
 "Set whether to store the passwords used in the failed login attempts or not."
 msgstr ""
 
-#: libraries/i18n.php:310
+#: libraries/i18n.php:312
 msgid "Uploads"
 msgstr ""
 
-#: libraries/i18n.php:311
+#: libraries/i18n.php:313
 msgid "Filter Uploads"
 msgstr ""
 
-#: libraries/i18n.php:312
+#: libraries/i18n.php:314
 msgid ""
 "By settings this to Yes, the uploads will be deleted instead of the "
 "connection being dropped."
 msgstr ""
 
-#: libraries/i18n.php:313
+#: libraries/i18n.php:315
 msgid "Check for multiple extensions"
 msgstr ""
 
-#: libraries/i18n.php:314
+#: libraries/i18n.php:316
 msgid ""
 "Uploading files with multiple extensions might trick your or any other user "
 "that the file has a safe extension."
 msgstr ""
 
-#: libraries/i18n.php:315
+#: libraries/i18n.php:317
 msgid "Check for known malware"
 msgstr ""
 
-#: libraries/i18n.php:316
+#: libraries/i18n.php:318
 msgid ""
 "Verify uploaded files for known malware patterns, such as PHP shell scripts."
 msgstr ""
 
-#: libraries/i18n.php:317
+#: libraries/i18n.php:319
 msgid "Banned extensions"
 msgstr ""
 
-#: libraries/i18n.php:318
+#: libraries/i18n.php:320
 msgid ""
 "Files with the following extensions will be deleted as soon as they've been "
 "uploaded to the temporary directory on your server. If you enable the "
@@ -1643,15 +1649,15 @@ msgid ""
 "extensions, as opposed to the last one."
 msgstr ""
 
-#: libraries/i18n.php:320
+#: libraries/i18n.php:322
 msgid "Lockdown"
 msgstr ""
 
-#: libraries/i18n.php:321
+#: libraries/i18n.php:323
 msgid "Protect the following administrator users from any change"
 msgstr ""
 
-#: libraries/i18n.php:322
+#: libraries/i18n.php:324
 msgid ""
 "This will create a snapshot of the selected administrator users. If any "
 "changes will happen to any of them, it will get reverted back immediately. "
@@ -1660,22 +1666,22 @@ msgid ""
 "Changes' one more time."
 msgstr ""
 
-#: libraries/i18n.php:323
+#: libraries/i18n.php:325
 msgid "Disable access to the WordPress plugin and theme installer"
 msgstr ""
 
-#: libraries/i18n.php:324
+#: libraries/i18n.php:326
 msgid ""
 "By setting this to Yes, the WordPress plugin and theme installer will no "
 "longer be accessible to other users except administrators <em>(if by any "
 "chance they have the install_plugins and install_themes capabilities)<em>."
 msgstr ""
 
-#: libraries/i18n.php:325
+#: libraries/i18n.php:327
 msgid "Disable the creation of new Administrators"
 msgstr ""
 
-#: libraries/i18n.php:326
+#: libraries/i18n.php:328
 msgid ""
 "By setting this to yes, new users that can login in the /wp-admin section "
 "<strong><em>will be deleted</strong></em> as soon as they are created. Keep "
@@ -1684,46 +1690,46 @@ msgid ""
 "case, they will be deleted as well)."
 msgstr ""
 
-#: libraries/i18n.php:328
+#: libraries/i18n.php:330
 msgid "Logging Utility"
 msgstr ""
 
-#: libraries/i18n.php:329
+#: libraries/i18n.php:331
 msgid "Email address(es)"
 msgstr ""
 
-#: libraries/i18n.php:330
+#: libraries/i18n.php:332
 msgid ""
 "Send an email to the following email address(es) when an event occurs. "
 "Please specify every address on a new line if you would like multiple email "
 "addresses to be notified."
 msgstr ""
 
-#: libraries/i18n.php:331
+#: libraries/i18n.php:333
 msgid "Include these alert levels"
 msgstr ""
 
-#: libraries/i18n.php:332
+#: libraries/i18n.php:334
 msgid ""
 "Please tick the levels for which you would like to receive email "
 "notifications."
 msgstr ""
 
-#: libraries/i18n.php:333
+#: libraries/i18n.php:335
 msgid "# days to keep log history"
 msgstr ""
 
-#: libraries/i18n.php:334
+#: libraries/i18n.php:336
 msgid ""
 "Log entries older than this number of days will be automatically deleted, to "
 "keep the database fresh and prevent it from overloading."
 msgstr ""
 
-#: libraries/i18n.php:335
+#: libraries/i18n.php:337
 msgid "# emails per hours"
 msgstr ""
 
-#: libraries/i18n.php:336
+#: libraries/i18n.php:338
 msgid ""
 "This is the maximum number of emails that will be sent to the specified "
 "addresses within an hour. Set this to a lower number if your inbox is "
@@ -1731,120 +1737,120 @@ msgid ""
 "amount of emails to be sent every hour."
 msgstr ""
 
-#: libraries/i18n.php:337
+#: libraries/i18n.php:339
 msgid "# events to show"
 msgstr ""
 
-#: libraries/i18n.php:338
+#: libraries/i18n.php:340
 msgid "Number of events that will be shown in the Dashboard."
 msgstr ""
 
-#: libraries/i18n.php:339
-msgid "IPv4 Whois Service"
-msgstr ""
-
-#: libraries/i18n.php:340
-msgid ""
-"This will appear as a link on the IP in the Threats area. You can pass the "
-"{ip} placeholder to grab the IP address. Works only for IPv4 addresses."
-msgstr ""
-
 #: libraries/i18n.php:341
-msgid "IPv6 Whois Service"
+msgid "IPv4 Whois Service"
 msgstr ""
 
 #: libraries/i18n.php:342
 msgid ""
 "This will appear as a link on the IP in the Threats area. You can pass the "
-"{ip} placeholder to grab the IP address. Works only for IPv6 addresses."
+"{ip} placeholder to grab the IP address. Works only for IPv4 addresses."
+msgstr ""
+
+#: libraries/i18n.php:343
+msgid "IPv6 Whois Service"
 msgstr ""
 
 #: libraries/i18n.php:344
-msgid "Import"
-msgstr ""
-
-#: libraries/i18n.php:345
-msgid "Upload configuration .json"
+msgid ""
+"This will appear as a link on the IP in the Threats area. You can pass the "
+"{ip} placeholder to grab the IP address. Works only for IPv6 addresses."
 msgstr ""
 
 #: libraries/i18n.php:346
+msgid "Import"
+msgstr ""
+
+#: libraries/i18n.php:347
+msgid "Upload configuration .json"
+msgstr ""
+
+#: libraries/i18n.php:348
 msgid ""
 "This allows you to restore a previously exported RSFirewall! Configuration."
 msgstr ""
 
-#: libraries/i18n.php:347
+#: libraries/i18n.php:349
 msgid "Upload license code from the configuration .json"
 msgstr ""
 
-#: libraries/i18n.php:348
+#: libraries/i18n.php:350
 msgid ""
 "By setting this to Yes the Update Code from the configuration.json file will "
 "also be taken into account. Set this to No if you want to keep the code "
 "you've written in your current config."
 msgstr ""
 
-#: libraries/i18n.php:350
+#: libraries/i18n.php:352
 msgid "Updates"
 msgstr ""
 
-#: libraries/i18n.php:351
+#: libraries/i18n.php:353
 msgid "License Key"
 msgstr ""
 
-#: libraries/i18n.php:352
+#: libraries/i18n.php:354
 msgid ""
 "Please insert your code so that you will have access to updates and support."
 msgstr ""
 
-#: libraries/i18n.php:354
+#: libraries/i18n.php:356
 msgid "Check All"
 msgstr ""
 
-#: libraries/i18n.php:356
+#: libraries/i18n.php:358
 msgid "Other"
 msgstr ""
 
-#: libraries/i18n.php:357
+#: libraries/i18n.php:359
 msgid "Anonymous Proxy"
 msgstr ""
 
-#: libraries/i18n.php:358
+#: libraries/i18n.php:360
 msgid "Other Country"
 msgstr ""
 
-#: libraries/i18n.php:359
+#: libraries/i18n.php:361
 msgid "URL data (GET)"
 msgstr ""
 
-#: libraries/i18n.php:360
+#: libraries/i18n.php:362
 msgid "Form data (POST)"
 msgstr ""
 
-#: libraries/i18n.php:361
+#: libraries/i18n.php:363
 msgid "Empty User Agents"
 msgstr ""
 
-#: libraries/i18n.php:362
+#: libraries/i18n.php:364
 msgid "Mozilla Impersonators"
 msgstr ""
 
-#: libraries/i18n.php:368
+#: libraries/i18n.php:370
 msgid "Google Safe Browsing API"
 msgstr ""
 
-#: libraries/i18n.php:369
+#: libraries/i18n.php:371
 msgid "Google Web Risk API"
 msgstr ""
 
-#: libraries/i18n.php:373 models/exceptions.php:449
+#: libraries/i18n.php:375 models/exceptions.php:449
 msgid "Exception Type"
 msgstr ""
 
-#: libraries/i18n.php:374
+#: libraries/i18n.php:376
 msgid "Use regular expressions"
 msgstr ""
 
-#: libraries/i18n.php:375
+#: libraries/i18n.php:377
 msgid ""
 "You can use regular expressions to match an exception eg. utm_source=(.*?). "
 "If set to No, the exception will match the string given here by using a "
@@ -1852,140 +1858,154 @@ msgid ""
 "expecting."
 msgstr ""
 
-#: libraries/i18n.php:377
+#: libraries/i18n.php:379
 msgid ""
 "Please specify either the full string to match or a regular expression (if "
 "regular expressions are used)."
 msgstr ""
 
-#: libraries/i18n.php:378
+#: libraries/i18n.php:380
 msgid "Skip PHP Protections"
 msgstr ""
 
-#: libraries/i18n.php:379
+#: libraries/i18n.php:381
 msgid "Set this to Yes if you would like to skip PHP protections."
 msgstr ""
 
-#: libraries/i18n.php:380
+#: libraries/i18n.php:382
 msgid "Skip SQL Protections"
 msgstr ""
 
-#: libraries/i18n.php:381
+#: libraries/i18n.php:383
 msgid "Set this to Yes if you would like to skip SQL protections."
 msgstr ""
 
-#: libraries/i18n.php:382
+#: libraries/i18n.php:384
 msgid "Skip JS Protections"
 msgstr ""
 
-#: libraries/i18n.php:383
+#: libraries/i18n.php:385
 msgid "Set this to Yes if you would like to skip JS protections."
 msgstr ""
 
-#: libraries/i18n.php:384
+#: libraries/i18n.php:386
 msgid "Skip Upload Protections"
 msgstr ""
 
-#: libraries/i18n.php:385
+#: libraries/i18n.php:387
 msgid "Set this to Yes if you would like to skip upload protections."
 msgstr ""
 
-#: libraries/i18n.php:387
+#: libraries/i18n.php:389
 msgid ""
 "This reason is only for internal use - it is not displayed anywhere on your "
 "website."
 msgstr ""
 
-#: libraries/i18n.php:389 models/exceptions.php:162 models/exceptions.php:472
+#: libraries/i18n.php:391 models/exceptions.php:162 models/exceptions.php:472
 msgid "User Agent"
 msgstr ""
 
-#: libraries/i18n.php:390 models/exceptions.php:163
+#: libraries/i18n.php:392 models/exceptions.php:163
 msgid "URL"
 msgstr ""
 
-#: libraries/i18n.php:394 models/lists.php:559 models/threats.php:299
+#: libraries/i18n.php:396 models/lists.php:564 models/threats.php:299
 msgid "IP Address"
 msgstr ""
 
-#: libraries/i18n.php:395
+#: libraries/i18n.php:397
 msgid ""
 "Add a new IP address to the list. You can use wildcards anywhere, for "
 "example 192.168.1.* will match any address from 192.168.1.1 to 192.168.1.254."
 msgstr ""
 
-#: libraries/i18n.php:396
+#: libraries/i18n.php:398 libraries/i18n.php:410
 msgid "List Type"
 msgstr ""
 
-#: libraries/i18n.php:397
+#: libraries/i18n.php:399 libraries/i18n.php:411
 msgid ""
 "Set the type of the list - blocklist (banned) or safelist (no protections "
 "triggered)."
 msgstr ""
 
-#: libraries/i18n.php:399
+#: libraries/i18n.php:401
 msgid ""
 "This reason will show up to the attacker when he visits your site and finds "
 "himself banned."
 msgstr ""
 
-#: libraries/i18n.php:401 models/lists.php:142
+#: libraries/i18n.php:403 libraries/i18n.php:415 models/lists.php:147
 msgid "Safelist"
 msgstr ""
 
-#: libraries/i18n.php:402 models/lists.php:141
+#: libraries/i18n.php:404 libraries/i18n.php:416 models/lists.php:146
 msgid "Blocklist"
 msgstr ""
 
-#: libraries/i18n.php:406 proversion/views/dashboard.php:31
-#: views/dashboard.php:31
+#: libraries/i18n.php:408 libraries/i18n.php:453 libraries/i18n.php:454
+msgid "Bulk Add IPs"
+msgstr ""
+
+#: libraries/i18n.php:409
+msgid ""
+"Add multiple IP addresses to the list. You can use wildcards anywhere, for "
+"example 192.168.1.* will match any address from 192.168.1.1 to 192.168.1.254."
+msgstr ""
+
+#: libraries/i18n.php:413
+msgid ""
+"This reason will show up to the attacker when he visits your site and finds "
+"himself banned (will be applied to all IPs)."
+msgstr ""
+
+#: libraries/i18n.php:420 views/dashboard.php:31
 msgid "Dashboard"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-#: libraries/i18n.php:407
+#: libraries/i18n.php:421
 msgid "RSFirewall!"
 msgstr ""
 
-#: libraries/i18n.php:412 libraries/i18n.php:413
-#: proversion/views/dbcheck.php:23
+#: libraries/i18n.php:426 libraries/i18n.php:427
 msgid "Database Check"
 msgstr ""
 
-#: libraries/i18n.php:415
+#: libraries/i18n.php:429
 msgid "Firewall Configuration"
 msgstr ""
 
-#: libraries/i18n.php:416 libraries/rsfirewall.php:160
+#: libraries/i18n.php:430 libraries/rsfirewall.php:162
 msgid "Configuration"
 msgstr ""
 
-#: libraries/i18n.php:418 libraries/i18n.php:419 views/diff.php:26
+#: libraries/i18n.php:432 libraries/i18n.php:433 views/diff.php:26
 msgid "File Differences"
 msgstr ""
 
-#: libraries/i18n.php:421 libraries/i18n.php:422 models/exceptions.php:38
+#: libraries/i18n.php:435 libraries/i18n.php:436 models/exceptions.php:38
 msgid "Exceptions"
 msgstr ""
 
-#: libraries/i18n.php:424 libraries/i18n.php:425 views/file.php:20
+#: libraries/i18n.php:438 libraries/i18n.php:439 views/file.php:20
 msgid "File Contents"
 msgstr ""
 
-#: libraries/i18n.php:427 libraries/i18n.php:428
+#: libraries/i18n.php:441 libraries/i18n.php:442
 msgid "Folders"
 msgstr ""
 
-#: libraries/i18n.php:430 libraries/i18n.php:431
+#: libraries/i18n.php:444 libraries/i18n.php:445
 msgid "Ignored Files"
 msgstr ""
 
-#: libraries/i18n.php:433 libraries/i18n.php:434
+#: libraries/i18n.php:447 libraries/i18n.php:448
 msgid "Blocklist / Safelist"
 msgstr ""
 
-#: libraries/i18n.php:436 libraries/i18n.php:437 models/threats.php:36
+#: libraries/i18n.php:450 libraries/i18n.php:451 models/threats.php:36
 msgid "Threats"
 msgstr ""
 
@@ -2052,7 +2072,7 @@ msgstr ""
 msgid "Dismiss this notice."
 msgstr ""
 
-#: libraries/rsfirewall.php:287
+#: libraries/rsfirewall.php:289
 #, php-format
 msgid ""
 "All the functionalities of the RSFirewall are disabled (the file "
@@ -2061,11 +2081,11 @@ msgid ""
 "href=\"%s\" class=\"button\">Delete</a>"
 msgstr ""
 
-#: libraries/rsfirewall.php:434
+#: libraries/rsfirewall.php:436
 msgid "You are not authorised."
 msgstr ""
 
-#: libraries/rsfirewall.php:492
+#: libraries/rsfirewall.php:494
 msgid "The handler requested is not defined"
 msgstr ""
 
@@ -2086,8 +2106,7 @@ msgstr ""
 msgid "Not computed yet."
 msgstr ""
 
-#: libraries/widgets.php:77 proversion/views/dashboard.php:69
-#: views/dashboard.php:69
+#: libraries/widgets.php:77 views/dashboard.php:69
 msgid "Latest system log messages"
 msgstr ""
 
@@ -2095,8 +2114,7 @@ msgstr ""
 msgid "View more"
 msgstr ""
 
-#: libraries/widgets.php:88 proversion/views/dashboard.php:80
-#: views/dashboard.php:80
+#: libraries/widgets.php:88 views/dashboard.php:80
 msgid "No messages to show"
 msgstr ""
 
@@ -2152,7 +2170,7 @@ msgstr ""
 msgid " - Pro Version"
 msgstr ""
 
-#: models/check.php:226 proversion/models/check.php:190
+#: models/check.php:226
 msgid "Could not connect to the server and retrieve the version!"
 msgstr ""
 
@@ -2424,7 +2442,7 @@ msgstr ""
 msgid "The folder must be one of the select options!"
 msgstr ""
 
-#: models/configuration.php:767 models/exceptions.php:569 models/lists.php:682
+#: models/configuration.php:767 models/exceptions.php:569 models/lists.php:687
 msgid "Your IP address is currently detected as "
 msgstr ""
 
@@ -2563,7 +2581,7 @@ msgstr ""
 msgid "The Exception has been added!"
 msgstr ""
 
-#: models/exceptions.php:161 models/lists.php:140
+#: models/exceptions.php:161 models/lists.php:145
 msgid "Select Type"
 msgstr ""
 
@@ -2572,31 +2590,31 @@ msgid "Plugin"
 msgstr ""
 
 #: models/exceptions.php:291 models/exceptions.php:344
-#: models/exceptions.php:345 models/exceptions.php:492 models/lists.php:488
-#: models/lists.php:492 models/lists.php:593 models/lists.php:645
-#: models/lists.php:646
+#: models/exceptions.php:345 models/exceptions.php:492 models/lists.php:493
+#: models/lists.php:497 models/lists.php:598 models/lists.php:650
+#: models/lists.php:651
 msgid "Publish"
 msgstr ""
 
-#: models/exceptions.php:337 models/lists.php:638
+#: models/exceptions.php:337 models/lists.php:643 views/listsbulkaddips.php:41
 msgid "Back to the list"
 msgstr ""
 
-#: models/exceptions.php:347 models/exceptions.php:348 models/lists.php:648
-#: models/lists.php:649
+#: models/exceptions.php:347 models/exceptions.php:348 models/lists.php:653
+#: models/lists.php:654
 msgid "Submit for Review"
 msgstr ""
 
-#: models/exceptions.php:352 models/exceptions.php:353 models/lists.php:653
-#: models/lists.php:654
+#: models/exceptions.php:352 models/exceptions.php:353 models/lists.php:658
+#: models/lists.php:659
 msgid "Update"
 msgstr ""
 
-#: models/exceptions.php:360 models/lists.php:661
+#: models/exceptions.php:360 models/lists.php:666
 msgid "Delete Permanently"
 msgstr ""
 
-#: models/exceptions.php:362 models/lists.php:663
+#: models/exceptions.php:362 models/lists.php:668
 msgid "Move to Trash"
 msgstr ""
 
@@ -2608,7 +2626,7 @@ msgstr ""
 msgid "Date Added"
 msgstr ""
 
-#: models/exceptions.php:450 models/lists.php:563
+#: models/exceptions.php:450 models/lists.php:568
 msgid "Change Status"
 msgstr ""
 
@@ -2616,13 +2634,13 @@ msgstr ""
 msgid "Url"
 msgstr ""
 
-#: models/exceptions.php:516 models/lists.php:520 models/threats.php:504
-#: models/threats.php:553
+#: models/exceptions.php:516 models/lists.php:525 models/threats.php:510
+#: models/threats.php:559
 msgid "The post id is not correct!"
 msgstr ""
 
-#: models/exceptions.php:522 models/lists.php:526 models/threats.php:510
-#: models/threats.php:559
+#: models/exceptions.php:522 models/lists.php:531 models/threats.php:516
+#: models/threats.php:565
 msgid "This post does not exist!"
 msgstr ""
 
@@ -2690,7 +2708,7 @@ msgstr ""
 msgid "Could not add the files to the ignored table. Please try again."
 msgstr ""
 
-#: models/fix.php:331 proversion/models/check.php:688
+#: models/fix.php:331
 #, php-format
 msgid ""
 "Could not open %s for reading. Please make sure you have read permissions."
@@ -2710,7 +2728,7 @@ msgstr ""
 msgid "%d file(s) was added to the ignored table."
 msgstr ""
 
-#: models/fix.php:400 proversion/models/check.php:1302
+#: models/fix.php:400
 #, php-format
 msgid "%d file(s) was added to the hashes table."
 msgstr ""
@@ -2786,59 +2804,99 @@ msgstr ""
 msgid "White lists / Black lists"
 msgstr ""
 
-#: models/lists.php:124 models/lists.php:125
+#: models/lists.php:129 models/lists.php:130
 msgid "The IP address has been updated!"
 msgstr ""
 
-#: models/lists.php:126
+#: models/lists.php:131
 msgid "The IP address has been added!"
 msgstr ""
 
-#: models/lists.php:334
+#: models/lists.php:339
 msgid "You did not enter an IP address!"
 msgstr ""
 
-#: models/lists.php:359
+#: models/lists.php:364
 msgid "This IP is already listed!"
 msgstr ""
 
-#: models/lists.php:374
+#: models/lists.php:379
 msgid ""
 "Selected range cannot be added because it will block all IP addresses from "
 "visiting your website."
 msgstr ""
 
-#: models/lists.php:383
+#: models/lists.php:388
 msgid "You cannot block your own server IP."
 msgstr ""
 
-#: models/lists.php:433
+#: models/lists.php:438
 #, php-format
 msgid "Specified IP (%s) matches a range that's already in the database (%s)"
 msgstr ""
 
-#: models/lists.php:478
+#: models/lists.php:483
 msgid "Blocklisted"
 msgstr ""
 
-#: models/lists.php:480
+#: models/lists.php:485
 msgid "Safelisted"
 msgstr ""
 
-#: models/lists.php:488
+#: models/lists.php:493
 msgid "Add to trash"
 msgstr ""
 
-#: models/lists.php:560
+#: models/lists.php:565
 msgid "Type"
 msgstr ""
 
-#: models/lists.php:562 views/ignored.php:7
+#: models/lists.php:567 views/ignored.php:7
 msgid "Date"
 msgstr ""
 
-#: models/lists.php:587
+#: models/lists.php:592
 msgid "IP Details"
+msgstr ""
+
+#: models/lists.php:704
+msgid "Bulk add IPs"
+msgstr ""
+
+#: models/listsbulkaddips.php:39
+msgid "No data received!"
+msgstr ""
+
+#: models/listsbulkaddips.php:56
+msgid "No IP addresses provided!"
+msgstr ""
+
+#: models/listsbulkaddips.php:90
+#, php-format
+msgid "Failed to add IP: %s"
+msgstr ""
+
+#: models/listsbulkaddips.php:96
+#, php-format
+msgid "Invalid or duplicate IP: %s"
+msgstr ""
+
+#: models/listsbulkaddips.php:103
+#, php-format
+msgid "%d IP address has been added successfully!"
+msgid_plural "%d IP addresses have been added successfully!"
+msgstr[0] ""
+msgstr[1] ""
+
+#: models/listsbulkaddips.php:110
+#, php-format
+msgid "%d IP address could not be added."
+msgid_plural "%d IP addresses could not be added."
+msgstr[0] ""
+msgstr[1] ""
+
+#: models/listsbulkaddips.php:111
+msgid "Please check the IPs and try again."
 msgstr ""
 
 #: models/threats.php:22
@@ -2935,793 +2993,34 @@ msgstr ""
 msgid "Block"
 msgstr ""
 
-#: models/threats.php:423
+#: models/threats.php:429
 msgid "Add to safelist"
 msgstr ""
 
-#: models/threats.php:424
+#: models/threats.php:430
 msgid "Add to blocklist"
 msgstr ""
 
-#: models/threats.php:459
+#: models/threats.php:465
 msgid "You cannot block your own server IP"
 msgstr ""
 
-#: models/threats.php:471
+#: models/threats.php:477
 msgid "This IP is blocklisted"
 msgstr ""
 
-#: models/threats.php:488
+#: models/threats.php:494
 #, php-format
 msgid "You have added %s IP to the %s."
 msgstr ""
 
-#: models/threats.php:538
+#: models/threats.php:544
 msgid "Threats log has been emptied."
 msgstr ""
 
-#: models/threats.php:588
+#: models/threats.php:594
 #, php-format
 msgid "You have unblocked the IP:  %s"
-msgstr ""
-
-#: proversion/controllers/check.php:168
-msgid "RSFirewall! encountered an error"
-msgstr ""
-
-#: proversion/controllers/check.php:217
-#, php-format
-msgid "Hash scanning in progress: %d%%"
-msgstr ""
-
-#: proversion/controllers/check.php:378
-msgid "RSFirewall encountered an error. Please try again."
-msgstr ""
-
-#: proversion/controllers/configuration.php:33
-msgid ""
-"It seems downloading the file has failed; you can manually upload it by "
-"selecting the file from your computer:"
-msgstr ""
-
-#: proversion/controllers/configuration.php:34
-msgid ""
-"To start the upload, click on the Save Changes button below after you've "
-"selected the file."
-msgstr ""
-
-#: proversion/controllers/configuration.php:35
-#, php-format
-msgid "Download unsuccessful, server error encountered: %s"
-msgstr ""
-
-#: proversion/controllers/dbcheck.php:65
-#, php-format
-msgid "<b>Optimize:</b> %s, <b>Repair:</b> %s"
-msgstr ""
-
-#: proversion/controllers/tfa.php:139
-#, php-format
-msgid "Authentication Code for %s"
-msgstr ""
-
-#: proversion/controllers/tfa.php:143
-#, php-format
-msgid "The Authentication Code is: <strong>%s</strong>"
-msgstr ""
-
-#: proversion/controllers/tfa.php:224 proversion/libraries/core/tfa.php:220
-msgid "Code:"
-msgstr ""
-
-#: proversion/installer/installer.php:89 proversion/installer/installer.php:367
-#: proversion/models/configuration.php:472
-#, php-format
-msgid ""
-"Your PHP version <strong>(%s)</strong> is not compatible with the GeoLite2 "
-"Library which maps IPs to countries; please update your PHP version to use "
-"this feature."
-msgstr ""
-
-#: proversion/installer/installer.php:329
-#, php-format
-msgid "The folder <strong>%s</strong> is not writable!"
-msgstr ""
-
-#: proversion/installer/installer.php:338
-#, php-format
-msgid "Error when connecting, response code returned is %d."
-msgstr ""
-
-#: proversion/installer/installer.php:344
-#: proversion/models/configuration.php:148
-#, php-format
-msgid "Could not write to %s!"
-msgstr ""
-
-#: proversion/installer/installer.php:363
-msgid ""
-"<br/><strong>The new GeoLite2 library could not be downloaded!</strong> "
-"Please try to download it manually from Configuration - Country Blocking"
-msgstr ""
-
-#: proversion/installer/installer.php:401
-#: proversion/models/configuration.php:209
-#: proversion/models/configuration.php:222
-#, php-format
-msgid "Could not open %s for reading!"
-msgstr ""
-
-#: proversion/installer/installer.php:429
-msgid "Attempted to extract a file with invalid characters in its name."
-msgstr ""
-
-#: proversion/installer/installer.php:437
-#, php-format
-msgid "Could not write data to file %s!"
-msgstr ""
-
-#: proversion/libraries/core/active-scanner.php:70
-msgid ""
-"This form has not been submitted because your IP is listed in a spam "
-"database. If you feel this is an error, please contact the webmaster."
-msgstr ""
-
-#: proversion/libraries/core/active-scanner.php:115
-#, php-format
-msgid "Missing user (%s) from db. Re-added."
-msgstr ""
-
-#: proversion/libraries/core/active-scanner.php:117
-#, php-format
-msgid ""
-"User (%s) change attempt: column (%s) value attempted to change from (%s) to "
-"(%s). Prevented."
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:138
-msgid "Two Factor Authentication Options"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:139
-msgid ""
-"Using one or more of the methods below will greatly increase the security of "
-"your user account. After enabling at least one method you will be asked for "
-"an Authentication Code after you login with your user username and password. "
-"The code that you need to provide can be generated from the mobile app, an "
-"email that is sent to you when using the email method or an unique code from "
-"the pre-generated list. The last two options we recommend to use as backup "
-"solutions in case anything happens with your mobile app."
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:144
-msgid "Status"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:145
-msgid "Method"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:150 proversion/libraries/core/tfa.php:178
-#: proversion/libraries/core/tfa.php:197
-msgid "Enable"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:152 proversion/libraries/core/tfa.php:245
-msgid "TOTP - Time-Based One-Time Password"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:153
-msgid "The Authentication Codes are generated by a mobile app."
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:159 proversion/libraries/core/tfa.php:187
-#: proversion/libraries/core/tfa.php:206
-msgid "Show details"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:162
-msgid "Please enable this option first to generate the QR code."
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:165
-msgid "Scan this QR code with your app."
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:167
-msgid "Secret:"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:168
-msgid "Current Code:"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:169
-msgid "Regenerate Secret"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:172
-msgid "Compatible mobile apps:"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:180 proversion/libraries/core/tfa.php:248
-msgid "Email Authentication Code"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:181
-#, php-format
-msgid ""
-"An Authentication Code will be sent to <strong>%s</strong> after you login."
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:190
-msgid ""
-"An Authentication Code is generated and sent to your email address after you "
-"login."
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:199 proversion/libraries/core/tfa.php:251
-msgid "Unique Codes"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:200
-msgid ""
-"As a failsafe, a list of unique codes will be generated so that you can "
-"still login in case all else fails."
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:210
-msgid ""
-"In order for the list of codes to be shown, this method has to be enabled "
-"first."
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:223
-msgid "Regenerate Unique Codes"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:227
-msgid "Something went wrong and the codes could not be generated!"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:241
-msgid "Default Method"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:369
-msgid "No secret key provided"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:413
-msgid "Something went wrong when loading the TFA classes!"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:600
-msgid "Please enter an username."
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:601
-msgid "Authentication Code"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:602
-msgid "(check your mobile app to get this code)"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:603
-msgid "(check your email for the code - it will expire in 5 minutes)"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:604
-msgid "(use one of the pre-generated unique codes)"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:605
-msgid "Use TOTP"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:606
-msgid "Use Email"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:607
-msgid "Use Unique"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:632
-msgid ""
-"Two Factor Authentication is active, please make sure the JavaScript is "
-"enabled!"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:668
-msgid "Please enter the Authentication Code!"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:689 proversion/libraries/core/tfa.php:721
-#: proversion/libraries/core/tfa.php:763
-msgid "The Authentication Code you entered is not valid!"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:703
-msgid "The Authentication Code has expired!"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:735
-msgid "There are no more unique codes available!"
-msgstr ""
-
-#: proversion/libraries/core/tfa.php:857
-msgid "Too many TFA attempts"
-msgstr ""
-
-#: proversion/models/check.php:94
-msgid "Checking if your website is listed on Google Safe Browsing lists"
-msgstr ""
-
-#: proversion/models/check.php:102
-msgid "Checking if your website is listed on Google Web Risk lists"
-msgstr ""
-
-#: proversion/models/check.php:114
-msgid "Checking if your website is listed on SpamHaus.org and Tornevall.org"
-msgstr ""
-
-#: proversion/models/check.php:130
-msgid "Integrity of core files"
-msgstr ""
-
-#: proversion/models/check.php:141
-msgid "Folders Permission Check"
-msgstr ""
-
-#: proversion/models/check.php:147
-msgid "Files Permission Check"
-msgstr ""
-
-#: proversion/models/check.php:154
-msgid "Malware scan"
-msgstr ""
-
-#: proversion/models/check.php:203 proversion/models/check.php:319
-msgid "No API Key configured in RSFirewall! configuration."
-msgstr ""
-
-#: proversion/models/check.php:204
-msgid ""
-"This system check step has been skipped. You can enable it by adding the KEY "
-"in Firewall Configuration > System Check >  Google Safe Browsing API Key "
-"field. You can get your key by following instructions from <a href='https://"
-"developers.google.com/safe-browsing/lookup_guide#GettingStarted'>here</a>."
-msgstr ""
-
-#: proversion/models/check.php:247 proversion/models/check.php:304
-#: proversion/models/check.php:400 proversion/models/check.php:459
-msgid "RSFirewall! encountered an error!"
-msgstr ""
-
-#: proversion/models/check.php:260
-msgid "Your website is not listed on Google Safe Browsing lists."
-msgstr ""
-
-#: proversion/models/check.php:261 proversion/models/check.php:273
-msgid ""
-"Safe Browsing alerts webmasters if their sites have been hacked and provides "
-"information to help clean up the problem."
-msgstr ""
-
-#: proversion/models/check.php:272 proversion/models/check.php:427
-#, php-format
-msgid "Your website is marked as <em> %s </em> on Google Safe Browsing lists."
-msgstr ""
-
-#: proversion/models/check.php:279
-msgid "Could not check Google Safe Browsing: Bad Request"
-msgstr ""
-
-#: proversion/models/check.php:285
-msgid "Could not check Google Safe Browsing: API key not authorized"
-msgstr ""
-
-#: proversion/models/check.php:286
-msgid ""
-"You can get your key by following instructions from <a href='https://"
-"developers.google.com/safe-browsing/lookup_guide#GettingStarted'>here</a>."
-msgstr ""
-
-#: proversion/models/check.php:292 proversion/models/check.php:298
-msgid "Could not check Google Safe Browsing: service unavailable"
-msgstr ""
-
-#: proversion/models/check.php:320
-msgid ""
-"This system check step has been skipped. You can enable it by adding the KEY "
-"in Firewall Configuration > System Check >  Google Web Risk API Key field. "
-"You can get your key by following instructions from <a href='https://"
-"cloud.google.com/web-risk/docs/apis'>here</a>."
-msgstr ""
-
-#: proversion/models/check.php:413
-#, php-format
-msgid "Your website is not listed on Google Web Risk %s list."
-msgstr ""
-
-#: proversion/models/check.php:414 proversion/models/check.php:428
-msgid ""
-"Web Risk alerts webmasters if their sites have been hacked and provides "
-"information to help clean up the problem."
-msgstr ""
-
-#: proversion/models/check.php:434
-#, php-format
-msgid "Could not check Google Web Risk %s list: Bad Request"
-msgstr ""
-
-#: proversion/models/check.php:440
-msgid "Could not check Google Web Risk: API key not authorized"
-msgstr ""
-
-#: proversion/models/check.php:441
-msgid ""
-"You can get your key by following instructions from <a href='https://"
-"cloud.google.com/web-risk/docs/apis'>here</a>."
-msgstr ""
-
-#: proversion/models/check.php:447 proversion/models/check.php:453
-msgid "Could not check Google Web Risk: service unavailable"
-msgstr ""
-
-#: proversion/models/check.php:473
-#, php-format
-msgid "Your website is marked as <em> %s </em> on <em>%s</em> lists."
-msgstr ""
-
-#: proversion/models/check.php:474 proversion/models/check.php:480
-msgid ""
-"Indicates if your server IP address is marked as spam or infected by 3rd "
-"party exploits!"
-msgstr ""
-
-#: proversion/models/check.php:479
-msgid "Your website is not listed on SpamHaus.org or Tornevall.org lists."
-msgstr ""
-
-#: proversion/models/check.php:633
-msgid "Could not connect to the server and retrieve the hashes!"
-msgstr ""
-
-#: proversion/models/check.php:641
-#, php-format
-msgid "Error when connecting, response code returned is %s."
-msgstr ""
-
-#: proversion/models/check.php:645
-#, php-format
-msgid ""
-"Could not write hash file to %s. Please make sure the folder permissions are "
-"correct."
-msgstr ""
-
-#: proversion/models/check.php:651
-#, php-format
-msgid ""
-"Could not write hash file to %s. Please contact the server administrator!"
-msgstr ""
-
-#: proversion/models/check.php:830
-#, php-format
-msgid "Suspicious file found in %s. This file should not be here."
-msgstr ""
-
-#: proversion/models/check.php:1298
-msgid "Could not add the items to the hashes table. Please try again."
-msgstr ""
-
-#: proversion/models/configuration.php:63
-msgid " ago"
-msgstr ""
-
-#: proversion/models/configuration.php:86
-#: proversion/models/configuration.php:439
-msgid ""
-"All requirements are setup correctly. You are able to use the Country "
-"Blocking feature."
-msgstr ""
-
-#: proversion/models/configuration.php:98
-msgid ""
-"Since 30.12.2019, downloading the GeoIP database requires a license key "
-"which can be obtained for free from MaxMind."
-msgstr ""
-
-#: proversion/models/configuration.php:121
-#, php-format
-msgid "The folder %s could not be created.."
-msgstr ""
-
-#: proversion/models/configuration.php:128
-#: proversion/models/configuration.php:192
-#, php-format
-msgid "The folder %s is not writable."
-msgstr ""
-
-#: proversion/models/configuration.php:142
-#, php-format
-msgid "Error when connecting, response code returned is %d, Message: %s, %s."
-msgstr ""
-
-#: proversion/models/configuration.php:183
-msgid ""
-"Please upload only GeoLite2-Country.mmdb.tar.gz or GeoLite2-Country.mmdb "
-"files!"
-msgstr ""
-
-#: proversion/models/configuration.php:198
-#, php-format
-msgid "The database file already exists in %s and is not writable."
-msgstr ""
-
-#: proversion/models/configuration.php:420
-msgid "Please follow these instructions."
-msgstr ""
-
-#: proversion/models/configuration.php:421
-#, php-format
-msgid ""
-"After activating Two Factor Authentication you'll need to configure it for "
-"your user account in the <strong><a href=\"%s\">Your Profile</a></strong> "
-"section."
-msgstr ""
-
-#: proversion/models/configuration.php:422
-msgid "If you're an Administrator you can only disable it for other users."
-msgstr ""
-
-#: proversion/models/configuration.php:432
-#, no-php-format
-msgid ""
-"Country blocking will block all IPs that appear to be coming from these "
-"countries. This is not 100% foolproof - you might be blocking legitimate "
-"requests in the process."
-msgstr ""
-
-#: proversion/models/configuration.php:433
-msgid ""
-"For a step by step tutorial regarding obtaining GeoLite2-Country.mmdb, "
-"please click here"
-msgstr ""
-
-#: proversion/models/configuration.php:445
-#: proversion/models/configuration.php:451
-msgid "GeoLite2 Country Database"
-msgstr ""
-
-#: proversion/models/configuration.php:446
-msgid ""
-"Blocking countries relies on a 3rd party database; you can download it "
-"automatically by clicking on the button below. If the download fails, you "
-"can always upload it manually afterwards."
-msgstr ""
-
-#: proversion/models/configuration.php:447
-msgid "Download GeoLite2-Country.mmdb"
-msgstr ""
-
-#: proversion/models/configuration.php:452
-#, php-format
-msgid ""
-"Last modified: <em>%s</em> It seems you haven't updated your database in a "
-"while. Click the button below to update it."
-msgstr ""
-
-#: proversion/models/configuration.php:453
-msgid "Update GeoLite2-Country.mmdb"
-msgstr ""
-
-#: proversion/models/configuration.php:471
-msgid "PHP Version Compatibility Error"
-msgstr ""
-
-#: proversion/views/check.php:26 views/check.php:25
-msgid "Never"
-msgstr ""
-
-#: proversion/views/check.php:41 views/check.php:40
-#, php-format
-msgid "Last run: %s %s"
-msgstr ""
-
-#: proversion/views/check.php:62 views/check.php:61
-msgid ""
-"RSFirewall! has computed a grade based on your website's security level. "
-"Please keep in mind that\n"
-"\t\t\t\t\t\tthere are areas that RSFirewall! cannot cover, so don't rely on "
-"this grade as a definite\n"
-"\t\t\t\t\t\tindicator of your website's security"
-msgstr ""
-
-#: proversion/views/check.php:69 views/check.php:68
-msgid "This server has the PHP 'Xdebug' module enabled."
-msgstr ""
-
-#: proversion/views/check.php:70 views/check.php:69
-msgid ""
-"This PHP module prevents the correct functioning of the System Check. Please "
-"disable it (ask your hosting provider for details on how to do this) and try "
-"again. If you cannot disable it, please increase the "
-"xdebug.max_nesting_level to a higher value if the System Check fails, as "
-"this process eats up a lot of memory and Xdebug interferes with it."
-msgstr ""
-
-#: proversion/views/check.php:71 views/check.php:70
-msgid "I understand the risks and want to continue"
-msgstr ""
-
-#: proversion/views/check.php:75 views/check.php:74
-msgid "Perform the System Check"
-msgstr ""
-
-#: proversion/views/check.php:90 views/check.php:89
-msgid "WordPress Configuration"
-msgstr ""
-
-#: proversion/views/check.php:113 views/check.php:112
-msgid "Server Configuration"
-msgstr ""
-
-#: proversion/views/check.php:135 views/check.php:134
-msgid "Attempt to fix PHP Configuration"
-msgstr ""
-
-#: proversion/views/check.php:137 views/check.php:136
-msgid ""
-"RSFirewall! will attempt to fix your PHP settings if the configuration is "
-"not secure by creating a local php.ini file in the root of your hosting "
-"account. If the hosting provider allows this, the php.ini file will be read "
-"and the new settings will take effect. If it does not work, then it means "
-"that the hosting provider does not allow the reading of local php.ini files. "
-"Please contact your hosting provider and/or system administrator in order to "
-"get this enabled."
-msgstr ""
-
-#: proversion/views/check.php:143 views/check.php:142
-msgid "File Integrity"
-msgstr ""
-
-#: proversion/views/dashboard.php:46 views/dashboard.php:46
-msgid "You are <strong>Protected</strong>"
-msgstr ""
-
-#: proversion/views/dashboard.php:48 views/dashboard.php:48
-msgid "Active Scanner is disabled. You will not be protected."
-msgstr ""
-
-#: proversion/views/dashboard.php:51
-#, php-format
-msgid ""
-"A newer version (%s) is available. Please update to the latest version of "
-"the plugin."
-msgstr ""
-
-#: proversion/views/dashboard.php:59 views/dashboard.php:59
-msgid "Run System Check"
-msgstr ""
-
-#: proversion/views/dashboard.php:91 views/dashboard.php:91
-msgid "Version"
-msgstr ""
-
-#: proversion/views/dashboard.php:94 views/dashboard.php:94
-msgid "Copyright"
-msgstr ""
-
-#: proversion/views/dashboard.php:97 views/dashboard.php:97
-msgid "License"
-msgstr ""
-
-#: proversion/views/dashboard.php:101 views/dashboard.php:102
-msgid "License Code"
-msgstr ""
-
-#: proversion/views/dashboard.php:106
-msgid "Get license code"
-msgstr ""
-
-#: proversion/views/dashboard.php:121 views/dashboard.php:128
-msgid "Quick Actions"
-msgstr ""
-
-#: proversion/views/dashboard.php:169 views/dashboard.php:176
-msgid "Accept Changes"
-msgstr ""
-
-#: proversion/views/dashboard.php:185 views/dashboard.php:191
-msgid "Attacks blocked graph"
-msgstr ""
-
-#: proversion/views/dashboard.php:191
-msgid "Attacks blocked region based"
-msgstr ""
-
-#: proversion/views/dashboard.php:201 views/dashboard.php:201
-msgid "Need help?"
-msgstr ""
-
-#: proversion/views/dashboard.php:202
-msgid ""
-"Before submitting a ticket through our support ticketing system, please take "
-"a look at our extensive <a href=\"https://www.rsjoomla.com/support/"
-"documentation/rsfirewall-wordpress.html\" target=\"_blank\">documentation</"
-"a>."
-msgstr ""
-
-#: proversion/views/dashboard.php:203
-msgid ""
-"Submit a ticket through our support system and one of our staff members will "
-"help you shortly."
-msgstr ""
-
-#: proversion/views/dashboard.php:207
-msgid "Get priority support"
-msgstr ""
-
-#: proversion/views/dbcheck.php:29
-msgid ""
-"Repairing &amp; optimizing tables can only be performed on <strong>MyISAM</"
-"strong> tables. If you see fewer tables, don't worry - your other tables are "
-"fine and there's no point in checking them."
-msgstr ""
-
-#: proversion/views/dbcheck.php:46
-msgid "Perform the Database Check"
-msgstr ""
-
-#: proversion/views/dbcheck.php:62
-msgid "Server Database"
-msgstr ""
-
-#: proversion/views/dbcheck.php:67
-msgid "Table Name"
-msgstr ""
-
-#: proversion/views/dbcheck.php:68
-msgid "Engine"
-msgstr ""
-
-#: proversion/views/dbcheck.php:69
-msgid "Collation"
-msgstr ""
-
-#: proversion/views/dbcheck.php:70
-msgid "# of Rows"
-msgstr ""
-
-#: proversion/views/dbcheck.php:71
-msgid "Data (KB)"
-msgstr ""
-
-#: proversion/views/dbcheck.php:72
-msgid "Index (KB)"
-msgstr ""
-
-#: proversion/views/dbcheck.php:73
-msgid "Overhead (KB)"
-msgstr ""
-
-#: proversion/views/dbcheck.php:74
-msgid "Result"
-msgstr ""
-
-#: proversion/views/dbcheck.php:91
-msgid "Not supported"
-msgstr ""
-
-#: proversion/views/dbcheck.php:145
-msgid ""
-"Unfortunately, the database checking feature is not supported for your "
-"database version (or you do not have any MyISAM tables in your "
-"installation). Don't worry - this means that your tables are fine and "
-"there's no point in checking them."
 msgstr ""
 
 #: templates/rsfirewall-404.php:7 templates/rsfirewall-404.php:64
@@ -3742,6 +3041,72 @@ msgstr ""
 
 #: templates/rsfirewall-login.php:166
 msgid "Access"
+msgstr ""
+
+#: views/check.php:25
+msgid "Never"
+msgstr ""
+
+#: views/check.php:40
+#, php-format
+msgid "Last run: %s %s"
+msgstr ""
+
+#: views/check.php:61
+msgid ""
+"RSFirewall! has computed a grade based on your website's security level. "
+"Please keep in mind that\n"
+"\t\t\t\t\t\tthere are areas that RSFirewall! cannot cover, so don't rely on "
+"this grade as a definite\n"
+"\t\t\t\t\t\tindicator of your website's security"
+msgstr ""
+
+#: views/check.php:68
+msgid "This server has the PHP 'Xdebug' module enabled."
+msgstr ""
+
+#: views/check.php:69
+msgid ""
+"This PHP module prevents the correct functioning of the System Check. Please "
+"disable it (ask your hosting provider for details on how to do this) and try "
+"again. If you cannot disable it, please increase the "
+"xdebug.max_nesting_level to a higher value if the System Check fails, as "
+"this process eats up a lot of memory and Xdebug interferes with it."
+msgstr ""
+
+#: views/check.php:70
+msgid "I understand the risks and want to continue"
+msgstr ""
+
+#: views/check.php:74
+msgid "Perform the System Check"
+msgstr ""
+
+#: views/check.php:89
+msgid "WordPress Configuration"
+msgstr ""
+
+#: views/check.php:112
+msgid "Server Configuration"
+msgstr ""
+
+#: views/check.php:134
+msgid "Attempt to fix PHP Configuration"
+msgstr ""
+
+#: views/check.php:136
+msgid ""
+"RSFirewall! will attempt to fix your PHP settings if the configuration is "
+"not secure by creating a local php.ini file in the root of your hosting "
+"account. If the hosting provider allows this, the php.ini file will be read "
+"and the new settings will take effect. If it does not work, then it means "
+"that the hosting provider does not allow the reading of local php.ini files. "
+"Please contact your hosting provider and/or system administrator in order to "
+"get this enabled."
+msgstr ""
+
+#: views/check.php:142
+msgid "File Integrity"
 msgstr ""
 
 #: views/configuration.php:24
@@ -3782,11 +3147,39 @@ msgstr ""
 msgid "No files have been safelisted yet!"
 msgstr ""
 
+#: views/dashboard.php:46
+msgid "You are <strong>Protected</strong>"
+msgstr ""
+
+#: views/dashboard.php:48
+msgid "Active Scanner is disabled. You will not be protected."
+msgstr ""
+
 #: views/dashboard.php:51
 #, php-format
 msgid ""
 "A newer version (%s%s) is available. Please update to the latest version of "
 "the plugin."
+msgstr ""
+
+#: views/dashboard.php:59
+msgid "Run System Check"
+msgstr ""
+
+#: views/dashboard.php:91
+msgid "Version"
+msgstr ""
+
+#: views/dashboard.php:94
+msgid "Copyright"
+msgstr ""
+
+#: views/dashboard.php:97
+msgid "License"
+msgstr ""
+
+#: views/dashboard.php:102
+msgid "License Code"
 msgstr ""
 
 #: views/dashboard.php:107
@@ -3795,6 +3188,22 @@ msgstr ""
 
 #: views/dashboard.php:112
 msgid "Need more features?"
+msgstr ""
+
+#: views/dashboard.php:128
+msgid "Quick Actions"
+msgstr ""
+
+#: views/dashboard.php:176
+msgid "Accept Changes"
+msgstr ""
+
+#: views/dashboard.php:191
+msgid "Attacks blocked graph"
+msgstr ""
+
+#: views/dashboard.php:201
+msgid "Need help?"
 msgstr ""
 
 #: views/dashboard.php:202
@@ -3855,6 +3264,18 @@ msgstr ""
 
 #: views/ignored.php:28
 msgid "Remove"
+msgstr ""
+
+#: views/listsbulkaddips.php:14
+msgid "Bulk Add IP Addresses"
+msgstr ""
+
+#: views/listsbulkaddips.php:15
+msgid "Add multiple IP addresses to your blocklist or safelist at once."
+msgstr ""
+
+#: views/listsbulkaddips.php:42
+msgid "Add IPs"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

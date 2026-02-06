@@ -2,9 +2,9 @@
 Contributors: rsjoomla
 Tags: firewall, security, malware scanner, system check, web application firewall
 Requires at least: 4.5.15
-Tested up to: 6.8.2
+Tested up to: 6.9.1
 Requires PHP: 5.4
-Stable tag: 1.1.44
+Stable tag: 1.1.46
 License: GPLv3
 
 Based on the success of the most popular firewall for Joomla!, RSFirewall! is now available to protect your WordPress website as well.
@@ -60,6 +60,17 @@ All connections are made with [wp_remote_get](https://codex.wordpress.org/Functi
 Upload the RSFirewall! plugin to your blog and activate it. Out of the box protection is supplied upon activation but it's always wise to check out the Configuration area to view all options available and perform a System Check to ensure your website's integrity.
 
 == Changelog ==
+
+= 1.1.46 =
+
+* Fixed - Referer was not properly escaped in the Threats page.
+
+= 1.1.45 =
+
+* Added - Possibility to add multiple IP addresses at once (Bulk add IPs button) to the blocklist/safelist.
+* Updated - Can now set own DNS server for querying PBL in Firewall Configuration - Active Scanner.
+* Fixed - Various PHP 8.4 compatibility improvements.
+* Fixed - Spamhaus PBL did not allow querying using default Cloudflare DNS, now attempting to use Open DNS as primary DNS.
 
 = 1.1.44 =
 

@@ -100,6 +100,7 @@ class RSFirewall {
             $items[$ordering] = array(
                 'name'       => $name,
                 'type'       => (string) $xml->type,
+                'parent_slug'=> (string) $xml->parent_slug,
                 'hidden'     => (string) $xml->hidden,
                 'page_title' => isset($locals[$page_title]) ? $locals[$page_title] : $page_title,
                 'menu_title' => isset($locals[$menu_title]) ? $locals[$menu_title] : $menu_title,
@@ -123,6 +124,7 @@ class RSFirewall {
             $items[$ordering] = array(
                 'name'       => $name,
                 'type'       => (string) $xml->type,
+                'parent_slug'=> (string) $xml->parent_slug,
                 'hidden'     => (string) $xml->hidden,
                 'page_title' => isset($locals[$page_title]) ? $locals[$page_title] : $page_title,
                 'menu_title' => isset($locals[$menu_title]) ? $locals[$menu_title] : $menu_title,

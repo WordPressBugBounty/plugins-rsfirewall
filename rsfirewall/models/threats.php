@@ -370,6 +370,12 @@ class RSFirewall_Model_Threats extends RSFirewall_Post {
                 }
             break;
 
+            case 'rsfirewall_page':
+            case 'rsfirewall_username':
+            case 'rsfirewall_referer':
+                $value = esc_html( $value );
+            break;
+
             case 'rsfirewall_date':
                 $date_format = get_option('date_format', 'Y-m-d');
                 $time_format = get_option('time_format', 'H:i:s');

@@ -773,9 +773,17 @@ class RSFirewall_Core_Active_Scanner extends RSFirewall_Core {
         } else {
             // if the users are created / inserted anywhere else
             $admin_users    = RSFirewall_Helper_Users::getAdminUsers();
-            $lockdown_users = get_option('rsfirewall_admin_users');
+            $lockdown_users = get_option('rsfirewall_admin_users', array());
 
-            if ($lockdown_users) {
+            // force both variables to be arrays
+	        foreach (array('admin_users', 'lockdown_users') as $var) {
+		        if (!is_array($$var)) {
+					$$var = (array) $$var;
+		        }
+
+				$$var = array_filter($$var, 'is_numeric');
+	        }
+            if (!empty($lockdown_users)) {
                 if ($diff_users = array_diff($admin_users, $lockdown_users)) {
 					// load the user.php so that we can use the wp_delete_user function
                     if (!function_exists('wp_delete_user')) {
@@ -783,6 +791,12 @@ class RSFirewall_Core_Active_Scanner extends RSFirewall_Core {
                     }
 					
                     foreach ($diff_users as $user_id) {
+                        $user_id = (int) $user_id;
+                        // check if the user still exists
+                        if ($user_id == 0 || !get_userdata($user_id)) {
+                            continue;
+                        }
+                      
                         wp_delete_user($user_id);
                     }
                 }

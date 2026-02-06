@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu>
+    <hidden>true</hidden>
+    <type>submenu</type>
+    <parent_slug>edit.php?post_type=rsf_lists</parent_slug>
+    <page_title>page_title_lists_bulk_add_ips</page_title>
+    <menu_title>menu_title_lists_bulk_add_ips</menu_title>
+    <capability>manage_options</capability>
+    <menu_slug>rsfirewall_lists_bulk_add_ips</menu_slug>
+    <function>display</function>
+    <ordering>104</ordering>
+</menu>

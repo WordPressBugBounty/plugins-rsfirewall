@@ -165,11 +165,14 @@ abstract class RSFirewall_Helper_Fields
     {
         $field      = $args['field'];
         $section    = $args['section'];
+        $class      = isset($args['class']) ? (string) $args['class'] : '';
 
         $id     = (string) $field->attributes()->name;
         $name   = sprintf('%s[%s]', $section, $id);
+        $class  = strlen($class) ? ' class="' . esc_attr($class) . '"' : '';
 
-        echo '<input type="password" autocomplete="off" id="' . esc_attr($id) . '" name="' . esc_attr($name) . '" />';
+
+        echo '<input type="password"' . $class . ' autocomplete="off" id="' . esc_attr($id) . '" name="' . esc_attr($name) . '" />';
     }
 
 	/**
@@ -182,11 +185,13 @@ abstract class RSFirewall_Helper_Fields
         $field      = $args['field'];
         $section    = $args['section'];
         $value      = $args['value'];
+        $class      = isset($args['class']) ? (string) $args['class'] : '';
 
         $id     = (string) $field->attributes()->name;
         $name   = sprintf('%s[%s]', $section, $id);
+        $class  = strlen($class) ? ' class="' . esc_attr($class) . '"' : '';
 
-        echo '<input type="text" id="' . esc_attr($id) . '" name="' . esc_attr($name) . '" value="' . esc_attr($value) . '" />';
+        echo '<input type="text"' . $class . ' id="' . esc_attr($id) . '" name="' . esc_attr($name) . '" value="' . esc_attr($value) . '" />';
 	}
 
     /**
@@ -199,13 +204,15 @@ abstract class RSFirewall_Helper_Fields
         $field      = $args['field'];
         $section    = $args['section'];
         $value      = $args['value'];
+        $class      = isset($args['class']) ? (string) $args['class'] : '';
 
         $id     = (string) $field->attributes()->name;
         $name   = sprintf('%s[%s]', $section, $id);
         $rows   = isset($field->attributes()->rows) ? ' rows="'.(string) $field->attributes()->rows.'"' : '';
         $cols   = isset($field->attributes()->cols) ? ' cols="'.(string) $field->attributes()->cols.'"' : '';
+        $class  = strlen($class) ? ' class="' . esc_attr($class) . '"' : '';
 
-        echo '<textarea type="text" id="' . esc_attr($id) . '" name="' . esc_attr($name) . '"'.$rows.$cols.'>' . esc_html($value) . '</textarea>';
+        echo '<textarea type="text" id="' . esc_attr($id) . '" name="' . esc_attr($name) . '"'.$rows.$cols.$class.'>' . esc_html($value) . '</textarea>';
     }
 
     /**
@@ -246,16 +253,19 @@ abstract class RSFirewall_Helper_Fields
         $field      = $args['field'];
         $section    = $args['section'];
         $values     = (array) $args['value'];
+        $class      = isset($args['class']) ? (string) $args['class'] : '';
 
         $id       = (string) $field->attributes()->name;
         $name     = sprintf('%s[%s]', $section, $id);
         $multiple = (string) $field->attributes()->multiple ? 'multiple="multiple"' : '';
+        $class      = strlen($class) ? ' class="' . esc_attr($class) . '"' : '';
+
         if ($multiple)
         {
             $name .= '[]';
         }
 
-        $html = '<select ' . $multiple . ' id="' . esc_attr($id) . '" name="' . esc_attr($name) . '">';
+        $html = '<select ' . $multiple . $class . ' id="' . esc_attr($id) . '" name="' . esc_attr($name) . '">';
 
         $options = array();
         // Get options from the xml

@@ -93,6 +93,11 @@ class RSFirewall_Model_Lists extends RSFirewall_Post {
 
 		// Add custom filters
 		add_action( 'restrict_manage_posts', array($this, 'add_filters') );
+
+		// Add bulk add IPs button
+		add_action( 'manage_posts_extra_tablenav', array($this, 'add_bulk_button') );
+
+		
 	}
 
 	public function remove_meta_box(){
@@ -325,7 +330,7 @@ class RSFirewall_Model_Lists extends RSFirewall_Post {
 	/**
 	 * Function to check if the ip entered is compatible.
 	 */
-	protected function check_ip($ip, $post_id, $type, $update, $show_error = true) {
+	public function check_ip($ip, $post_id, $type, $update, $show_error = true) {
 		$ip = trim($ip);
 
 		// Check if the IP is not empty
@@ -680,6 +685,23 @@ class RSFirewall_Model_Lists extends RSFirewall_Post {
 			?>
 			<div class="notice notice-warning is-dismissible">
 				<p><?php echo wp_kses_post(__('Your IP address is currently detected as '.RSFirewall_Helper::get_ip().'.', 'rsfirewall')); ?></p>
+			</div>
+			<?php
+		}
+	}
+
+	/**
+	 * Add bulk add IPs button
+	 */
+	public function add_bulk_button($which) {
+		global $typenow;
+
+		if ($typenow == $this->prefix.'lists' && $which == 'top')
+		{
+			$bulk_url = admin_url( 'admin.php?page=rsfirewall_lists_bulk_add_ips');
+			?>
+			<div class="alignleft actions">
+				<a href="<?php echo esc_url($bulk_url); ?>" class="button"><?php echo _e('Bulk add IPs', 'rsfirewall'); ?></a>
 			</div>
 			<?php
 		}

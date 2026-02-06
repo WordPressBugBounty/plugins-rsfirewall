@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <section name="data_bulk">
+        <field name="rsfirewall_bulk_ips" label="lbl_bulk_add_ips" type="textarea" required="1" rows="10" class="large-text code" description="desc_bulk_add_ips"/>
+        <field name="rsfirewall_bulk_type" label="lbl_bulk_add_type" type="select" required="1" description="desc_bulk_add_type">
+            <option checked="checked" value="1">option_whitelist</option>
+            <option value="0">option_blacklist</option>
+        </field>
+        <field name="rsfirewall_bulk_reason" label="lbl_bulk_add_reason" type="textarea" class="large-text code" description="desc_bulk_add_reason"/>
+    </section>
+</form>
+

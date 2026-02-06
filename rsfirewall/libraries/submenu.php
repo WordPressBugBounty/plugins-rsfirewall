@@ -46,8 +46,9 @@ class RSFirewall_Submenu {
 		 * Adds submenu pages
 		 *
 		 */
+		$default_parent_slug = $this->item['hidden'] ? '' : 'rsfirewall';
 		add_submenu_page(
-			$this->item['hidden'] ? '' : 'rsfirewall',
+			(strlen($this->item['parent_slug']) ? $this->item['parent_slug'] : $default_parent_slug),
 			$this->item['page_title'],
 			$this->item['menu_title'],
 			$this->item['capability'],

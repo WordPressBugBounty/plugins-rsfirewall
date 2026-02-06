@@ -280,6 +280,8 @@ class RSFirewall_i18n
 			'desc_protect_forms_from_abuse'			=> wp_kses_post(__('Enabling this option will protect your forms from abusive IPs by checking if they exist in a PBL list.','rsfirewall')),
 			'lbl_deny_access_to_referers'			=> esc_html__('Deny access to the following referers', 'rsfirewall'),
 			'desc_deny_access_to_referers'			=> wp_kses_post(__('Referers are visitors coming from another website (domain). You can block multiple domains by specifying them each on a new line. You can also use wildcards, such as *.domain.com which will block any requests coming from all subdomains of domain.com (eg. www.domain.com, images.domain.com etc). Remember to add domain.com to the list as well, otherwise only subdomains will be blocked when using wildcards. You can also use wildcards anywhere in the domain name, eg. blocked-domain.*, blocked*domain.com','rsfirewall')),
+			'lbl_dns_address'					    => esc_html__('DNS for resolving lists', 'rsfirewall'),
+			'desc_dns_address'						=> wp_kses_post(__('Leave this empty to query the lists using one of the public DNS; in some cases, the PBL lists will deny querying using public DNS - if you have your own network DNS, supply the IP here. Multiple IPs can be provided, each on a new line.','rsfirewall')),
 
 			'lbl_auto_blacklist_separator'			=> esc_html__('Automatic Blocklisting', 'rsfirewall'),
 			'lbl_enable_auto_blacklist'				=> esc_html__('Automatic blocklisting', 'rsfirewall'),
@@ -401,7 +403,19 @@ class RSFirewall_i18n
 			'option_whitelist'						=> esc_html__('Safelist', 'rsfirewall'),
 			'option_blacklist'						=> esc_html__('Blocklist', 'rsfirewall'),
 		);
-		
+
+		$form_listsbulkaddips = array(
+			'lbl_bulk_add_ips' 						=> esc_html__('Bulk Add IPs', 'rsfirewall'),
+			'desc_bulk_add_ips' 					=> wp_kses_post(__('Add multiple IP addresses to the list. You can use wildcards anywhere, for example 192.168.1.* will match any address from 192.168.1.1 to 192.168.1.254.', 'rsfirewall')),
+			'lbl_bulk_add_type' 					=> esc_html__('List Type', 'rsfirewall'),
+			'desc_bulk_add_type'					=> wp_kses_post(__('Set the type of the list - blocklist (banned) or safelist (no protections triggered).','rsfirewall')),
+			'lbl_bulk_add_reason' 					=> esc_html__('Reason', 'rsfirewall'),
+			'desc_bulk_add_reason'					=> wp_kses_post(__('This reason will show up to the attacker when he visits your site and finds himself banned (will be applied to all IPs).','rsfirewall')),
+
+			'option_whitelist'						=> esc_html__('Safelist', 'rsfirewall'),
+			'option_blacklist'						=> esc_html__('Blocklist', 'rsfirewall'),
+		);
+
 		$menus_strings = array(
 			'page_title_dashboard' 					=>esc_html__('Dashboard', 'rsfirewall'),
 			'menu_title_dashboard' 					=>esc_html__('RSFirewall!', 'rsfirewall'),
@@ -435,6 +449,9 @@ class RSFirewall_i18n
 
 			'page_title_threats' 					=>esc_html__('Threats', 'rsfirewall'),
 			'menu_title_threats' 					=>esc_html__('Threats', 'rsfirewall'),
+
+			'page_title_lists_bulk_add_ips' 		=>esc_html__('Bulk Add IPs', 'rsfirewall'),
+			'menu_title_lists_bulk_add_ips' 		=>esc_html__('Bulk Add IPs', 'rsfirewall'),
 		);
 
         return ${$array};
