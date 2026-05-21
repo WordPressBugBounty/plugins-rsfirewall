@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RSFirewall!\n"
-"POT-Creation-Date: 2026-02-05 13:06+0200\n"
-"PO-Revision-Date: 2026-02-05 13:06+0200\n"
+"POT-Creation-Date: 2026-05-21 11:23+0300\n"
+"PO-Revision-Date: 2026-05-21 11:23+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -188,7 +188,7 @@ msgstr ""
 msgid "Open File Manager"
 msgstr ""
 
-#: helpers/fields.php:467 libraries/i18n.php:255
+#: helpers/fields.php:467 libraries/i18n.php:257
 msgid "Safelist Blocked PHP Files"
 msgstr ""
 
@@ -754,13 +754,13 @@ msgstr ""
 msgid "RSFirewall! could not find the appropriate CSV file for your WP version"
 msgstr ""
 
-#: libraries/i18n.php:105 libraries/i18n.php:388 libraries/i18n.php:400
-#: libraries/i18n.php:412 models/exceptions.php:448 models/lists.php:566
+#: libraries/i18n.php:105 libraries/i18n.php:390 libraries/i18n.php:402
+#: libraries/i18n.php:414 models/exceptions.php:448 models/lists.php:566
 #: views/ignored.php:9
 msgid "Reason"
 msgstr ""
 
-#: libraries/i18n.php:106 libraries/i18n.php:378 models/exceptions.php:447
+#: libraries/i18n.php:106 libraries/i18n.php:380 models/exceptions.php:447
 msgid "Match"
 msgstr ""
 
@@ -879,19 +879,19 @@ msgstr ""
 msgid "Scanning has finished"
 msgstr ""
 
-#: libraries/i18n.php:148 libraries/i18n.php:365
+#: libraries/i18n.php:148 libraries/i18n.php:367
 msgid "low"
 msgstr ""
 
-#: libraries/i18n.php:149 libraries/i18n.php:366
+#: libraries/i18n.php:149 libraries/i18n.php:368
 msgid "medium"
 msgstr ""
 
-#: libraries/i18n.php:150 libraries/i18n.php:367
+#: libraries/i18n.php:150 libraries/i18n.php:369
 msgid "high"
 msgstr ""
 
-#: libraries/i18n.php:151 libraries/i18n.php:368
+#: libraries/i18n.php:151 libraries/i18n.php:370
 msgid "critical"
 msgstr ""
 
@@ -1038,7 +1038,7 @@ msgstr ""
 msgid "Enabling logging for the failed attempts."
 msgstr ""
 
-#: libraries/i18n.php:187 libraries/i18n.php:286
+#: libraries/i18n.php:187 libraries/i18n.php:288
 msgid "Automatic Blocklisting"
 msgstr ""
 
@@ -1056,7 +1056,7 @@ msgid ""
 "will be added to the blocklist and banned from your website."
 msgstr ""
 
-#: libraries/i18n.php:192 libraries/i18n.php:423 libraries/i18n.php:424
+#: libraries/i18n.php:192 libraries/i18n.php:425 libraries/i18n.php:426
 #: views/check.php:34
 msgid "System Check"
 msgstr ""
@@ -1143,32 +1143,42 @@ msgid "Select which APIs you would like to use during the System Check."
 msgstr ""
 
 #: libraries/i18n.php:209
-msgid "Google Safe Browsing Key"
+msgid "Google Safe Browsing API Version"
 msgstr ""
 
 #: libraries/i18n.php:210
+msgid ""
+"Select the version of the Google Safe Browsing API that you would like to "
+"use. Version 4 is now deprecated."
+msgstr ""
+
+#: libraries/i18n.php:211
+msgid "Google Safe Browsing Key"
+msgstr ""
+
+#: libraries/i18n.php:212
 msgid ""
 "Safe Browsing is a Google service that enables applications to check URLs "
 "against Google's constantly updated lists of suspected phishing, malware, "
 "and unwanted software pages."
 msgstr ""
 
-#: libraries/i18n.php:211
+#: libraries/i18n.php:213
 msgid "Google Web Risk API Key - Server Key"
 msgstr ""
 
-#: libraries/i18n.php:212
+#: libraries/i18n.php:214
 msgid ""
 "Web Risk is a Google service that enables applications to check URLs against "
 "Google's constantly updated lists of suspected phishing, malware, and "
 "unwanted software pages."
 msgstr ""
 
-#: libraries/i18n.php:213
+#: libraries/i18n.php:215
 msgid "Ignored Hidden Files"
 msgstr ""
 
-#: libraries/i18n.php:214
+#: libraries/i18n.php:216
 msgid ""
 "Any file that starts with a dot (.) is flagged as suspicious during the "
 "System Check, because these are usually hidden by the system and attackers "
@@ -1176,36 +1186,36 @@ msgid ""
 "these can be specified here."
 msgstr ""
 
-#: libraries/i18n.php:216
+#: libraries/i18n.php:218
 msgid "Active Scanner"
 msgstr ""
 
-#: libraries/i18n.php:217
+#: libraries/i18n.php:219
 msgid "Enable Active Scanner"
 msgstr ""
 
-#: libraries/i18n.php:218
+#: libraries/i18n.php:220
 msgid ""
 "By enabling the Active Scanner all the protections will be enabled on your "
 "WordPress! website."
 msgstr ""
 
-#: libraries/i18n.php:219
+#: libraries/i18n.php:221
 msgid "Enable Active Scanner in Admin section?"
 msgstr ""
 
-#: libraries/i18n.php:220
+#: libraries/i18n.php:222
 msgid ""
 "By setting this to Yes the PHP, JS and SQL protections will be triggered in "
 "the backend as well. This should only be enabled if you don't trust people "
 "that have access to your /wp-admin section."
 msgstr ""
 
-#: libraries/i18n.php:221
+#: libraries/i18n.php:223
 msgid "Log all blocked attempts"
 msgstr ""
 
-#: libraries/i18n.php:222
+#: libraries/i18n.php:224
 msgid ""
 "By setting this to Yes, every single attempt that's stopped by RSFirewall! "
 "will be logged. This is useful for debugging your website in case you have "
@@ -1213,20 +1223,20 @@ msgid ""
 "automated attacks don't fill your log."
 msgstr ""
 
-#: libraries/i18n.php:223
+#: libraries/i18n.php:225
 msgid "Convert email addresses from plain text to images"
 msgstr ""
 
-#: libraries/i18n.php:224
+#: libraries/i18n.php:226
 msgid ""
 "This setting will convert all email addresses from plain text to images."
 msgstr ""
 
-#: libraries/i18n.php:225
+#: libraries/i18n.php:227
 msgid "Block User Scan"
 msgstr ""
 
-#: libraries/i18n.php:226
+#: libraries/i18n.php:228
 msgid ""
 "Stops malicious scripts scanning the site for user data by requesting "
 "numerical user IDs even in REST API calls. (EX: ?author=1, example.com/wp-"
@@ -1234,11 +1244,11 @@ msgid ""
 "example.com/wp-json/wp/v2/users)"
 msgstr ""
 
-#: libraries/i18n.php:227
+#: libraries/i18n.php:229
 msgid "Grab IP from Proxy Headers"
 msgstr ""
 
-#: libraries/i18n.php:228
+#: libraries/i18n.php:230
 msgid ""
 "Some servers are behind a proxy or firewall and will not provide the correct "
 "IP. If this is your case, contact the proxy provider and ask them through "
@@ -1247,89 +1257,89 @@ msgid ""
 "through all of them."
 msgstr ""
 
-#: libraries/i18n.php:230
+#: libraries/i18n.php:232
 msgid "Core Scanner"
 msgstr ""
 
-#: libraries/i18n.php:231
+#: libraries/i18n.php:233
 msgid "Remove the generator meta tag"
 msgstr ""
 
-#: libraries/i18n.php:232
+#: libraries/i18n.php:234
 msgid ""
 "Removing the generator meta tag from your website's template will protect "
 "you from spambots or attackers that target WordPress websites"
 msgstr ""
 
-#: libraries/i18n.php:233
+#: libraries/i18n.php:235
 msgid "Check core WordPress files integrity"
 msgstr ""
 
-#: libraries/i18n.php:234
+#: libraries/i18n.php:236
 msgid ""
 "Checks a few core WordPress files for integrity, like the WordPress login "
 "and index.php"
 msgstr ""
 
-#: libraries/i18n.php:235
+#: libraries/i18n.php:237
 msgid "Monitor the following files for changes"
 msgstr ""
 
-#: libraries/i18n.php:236
+#: libraries/i18n.php:238
 msgid ""
 "If any of the following files will be changed, you will be alerted by email "
 "and an entry will be posted in the System Log."
 msgstr ""
 
-#: libraries/i18n.php:237
+#: libraries/i18n.php:239
 msgid "Block access to XML-RPC Server (including Pingbacks and Trackbacks)"
 msgstr ""
 
-#: libraries/i18n.php:238
+#: libraries/i18n.php:240
 msgid ""
 "Stops malicious scripts exploiting the xmlrpc.php and wp-trackback.php files "
 "from being accessed (except safelisted IP's)."
 msgstr ""
 
-#: libraries/i18n.php:239
+#: libraries/i18n.php:241
 msgid "Disable REST API"
 msgstr ""
 
-#: libraries/i18n.php:240
+#: libraries/i18n.php:242
 msgid ""
 "Returns a 404 page when any REST API call is made (except safelisted IP's "
 "and the exceptions you enter bellow). "
 msgstr ""
 
-#: libraries/i18n.php:241
+#: libraries/i18n.php:243
 msgid "Allow REST API calls for logged in Users"
 msgstr ""
 
-#: libraries/i18n.php:242
+#: libraries/i18n.php:244
 msgid ""
 "This option allows the logged in Users to use the REST API calls.<br/"
 "><em>(Test: http(s)://www.example.com/wp-json/wp/v2/posts/)</em>"
 msgstr ""
 
-#: libraries/i18n.php:243
+#: libraries/i18n.php:245
 msgid "Exceptions for the REST API"
 msgstr ""
 
-#: libraries/i18n.php:244
+#: libraries/i18n.php:246
 msgid ""
 "Enter here the exceptions for the REST API. Each on a new line. <em>(Ex: "
 "contact-form-7)</em> "
 msgstr ""
 
-#: libraries/i18n.php:246
+#: libraries/i18n.php:248
 msgid "Hardening"
 msgstr ""
 
-#: libraries/i18n.php:247
+#: libraries/i18n.php:249
 msgid "Disallow direct access to PHP files in wp-content/uploads/"
 msgstr ""
 
-#: libraries/i18n.php:248
+#: libraries/i18n.php:250
 msgid ""
 "Stops direct URL access to PHP files from the wp-content/uploads/ directory!"
 "<br/> Be careful when using this option because many plugins or themes use "
@@ -1337,11 +1347,11 @@ msgid ""
 "\"Safelist PHP files\" option to allow specific files to run properly!"
 msgstr ""
 
-#: libraries/i18n.php:249
+#: libraries/i18n.php:251
 msgid "Disallow direct access to PHP files in wp-content/"
 msgstr ""
 
-#: libraries/i18n.php:250
+#: libraries/i18n.php:252
 msgid ""
 "Stops direct URL access to PHP files from the wp-content/ directory!<br/> Be "
 "careful when using this option because many plugins or themes use PHP files "
@@ -1349,11 +1359,11 @@ msgid ""
 "files\" option to allow specific files to run properly!"
 msgstr ""
 
-#: libraries/i18n.php:251
+#: libraries/i18n.php:253
 msgid "Disallow direct access to PHP files in wp-includes/"
 msgstr ""
 
-#: libraries/i18n.php:252
+#: libraries/i18n.php:254
 msgid ""
 "Stops direct URL access to PHP files from the wp-includes/ directory!<br/> "
 "Be careful when using this option because many plugins or themes use PHP "
@@ -1361,50 +1371,50 @@ msgid ""
 "PHP files\" option to allow specific files to run properly!"
 msgstr ""
 
-#: libraries/i18n.php:253
+#: libraries/i18n.php:255
 msgid "Disable plugin editors"
 msgstr ""
 
-#: libraries/i18n.php:254
+#: libraries/i18n.php:256
 msgid ""
 "Disables the plugin editors to prevent unwanted core files modifications!"
 msgstr ""
 
-#: libraries/i18n.php:256
+#: libraries/i18n.php:258
 msgid ""
 "After applying hardening to any of the above folders you can safelist any "
 "php file located in those folders if you require them to run."
 msgstr ""
 
-#: libraries/i18n.php:258
+#: libraries/i18n.php:260
 msgid "PHP Protections"
 msgstr ""
 
-#: libraries/i18n.php:259
+#: libraries/i18n.php:261
 msgid "Local File Inclusion"
 msgstr ""
 
-#: libraries/i18n.php:260
+#: libraries/i18n.php:262
 msgid ""
 "This disallows directory traversal techniques that might allow an attacker "
 "to read sensitive files by exploiting poorly coded plugins."
 msgstr ""
 
-#: libraries/i18n.php:261
+#: libraries/i18n.php:263
 msgid "Remote File Inclusion"
 msgstr ""
 
-#: libraries/i18n.php:262
+#: libraries/i18n.php:264
 msgid ""
 "This disallows access to URLs that might allow an attacker to download and "
 "run malicious scripts by exploiting poorly coded extensions."
 msgstr ""
 
-#: libraries/i18n.php:263 libraries/i18n.php:267 libraries/i18n.php:273
+#: libraries/i18n.php:265 libraries/i18n.php:269 libraries/i18n.php:275
 msgid "Enable Protection For"
 msgstr ""
 
-#: libraries/i18n.php:264
+#: libraries/i18n.php:266
 msgid ""
 "<strong><em>Form data (POST)</em></strong> enables filtering for information "
 "submitted through forms (eg. article editing, user registration etc).<br/> "
@@ -1412,11 +1422,11 @@ msgid ""
 "that are located in the URL."
 msgstr ""
 
-#: libraries/i18n.php:266
+#: libraries/i18n.php:268
 msgid "SQL Protections"
 msgstr ""
 
-#: libraries/i18n.php:268 libraries/i18n.php:274
+#: libraries/i18n.php:270 libraries/i18n.php:276
 msgid ""
 "<strong><em>Form data (POST)</strong></em> enables filtering for information "
 "submitted through forms (eg. article editing, user registration etc).<br/> "
@@ -1424,29 +1434,29 @@ msgid ""
 "that are located in the URL."
 msgstr ""
 
-#: libraries/i18n.php:270
+#: libraries/i18n.php:272
 msgid "Javascript Protections"
 msgstr ""
 
-#: libraries/i18n.php:271
+#: libraries/i18n.php:273
 msgid "Filter Javascript"
 msgstr ""
 
-#: libraries/i18n.php:272
+#: libraries/i18n.php:274
 msgid ""
 "By setting this to Yes, the Javascript will be filtered instead of the "
 "connection being dropped."
 msgstr ""
 
-#: libraries/i18n.php:276
+#: libraries/i18n.php:278
 msgid "Denial of Service"
 msgstr ""
 
-#: libraries/i18n.php:277
+#: libraries/i18n.php:279
 msgid "Deny access to the following User Agents"
 msgstr ""
 
-#: libraries/i18n.php:278
+#: libraries/i18n.php:280
 msgid ""
 "The following User Agents are usually automated requests to your website and "
 "should not be allowed.<br/> <strong><em>Empty User Agents</strong></em> are "
@@ -1458,21 +1468,21 @@ msgid ""
 "strong></em> are automated scripts trying to impersonate a legitimate browser"
 msgstr ""
 
-#: libraries/i18n.php:279
+#: libraries/i18n.php:281
 msgid "Protect forms from abusive IPs"
 msgstr ""
 
-#: libraries/i18n.php:280
+#: libraries/i18n.php:282
 msgid ""
 "Enabling this option will protect your forms from abusive IPs by checking if "
 "they exist in a PBL list."
 msgstr ""
 
-#: libraries/i18n.php:281
+#: libraries/i18n.php:283
 msgid "Deny access to the following referers"
 msgstr ""
 
-#: libraries/i18n.php:282
+#: libraries/i18n.php:284
 msgid ""
 "Referers are visitors coming from another website (domain). You can block "
 "multiple domains by specifying them each on a new line. You can also use "
@@ -1483,11 +1493,11 @@ msgid ""
 "the domain name, eg. blocked-domain.*, blocked*domain.com"
 msgstr ""
 
-#: libraries/i18n.php:283
+#: libraries/i18n.php:285
 msgid "DNS for resolving lists"
 msgstr ""
 
-#: libraries/i18n.php:284
+#: libraries/i18n.php:286
 msgid ""
 "Leave this empty to query the lists using one of the public DNS; in some "
 "cases, the PBL lists will deny querying using public DNS - if you have your "
@@ -1495,46 +1505,46 @@ msgid ""
 "new line."
 msgstr ""
 
-#: libraries/i18n.php:287
+#: libraries/i18n.php:289
 msgid "Automatic blocklisting"
 msgstr ""
 
-#: libraries/i18n.php:288
+#: libraries/i18n.php:290
 msgid ""
 "Automatic blocklisting will automatically add to the blocklist repeat "
 "offenders based on the minimum number of attempts specified below."
 msgstr ""
 
-#: libraries/i18n.php:289
+#: libraries/i18n.php:291
 msgid "Automatic blocklisting for admin area"
 msgstr ""
 
-#: libraries/i18n.php:290
+#: libraries/i18n.php:292
 msgid ""
 "With this option enabled, failed backend logins will lead to an automatic "
 "ban. This option is independent from the reCAPTCHA challenge configurable "
 "below."
 msgstr ""
 
-#: libraries/i18n.php:291
+#: libraries/i18n.php:293
 msgid "# of attempts"
 msgstr ""
 
-#: libraries/i18n.php:292
+#: libraries/i18n.php:294
 msgid ""
 "This is the minimum number of attempts before the attacker will be added to "
 "the blocklist and banned from your website."
 msgstr ""
 
-#: libraries/i18n.php:294
+#: libraries/i18n.php:296
 msgid "reCAPTCHA"
 msgstr ""
 
-#: libraries/i18n.php:295
+#: libraries/i18n.php:297
 msgid "Enable Google reCAPTCHA for login forms"
 msgstr ""
 
-#: libraries/i18n.php:296
+#: libraries/i18n.php:298
 msgid ""
 "This will prompt a reCAPTCHA security on you login forms. reCAPTCHA will "
 "appear after the number of failed login attempts you specify below.</"
@@ -1543,105 +1553,105 @@ msgid ""
 "Member, WP-Members, AJAX Login and Registration modal popup</strong>."
 msgstr ""
 
-#: libraries/i18n.php:297
+#: libraries/i18n.php:299
 msgid "Secret Key"
 msgstr ""
 
-#: libraries/i18n.php:298
+#: libraries/i18n.php:300
 msgid "Site Key"
 msgstr ""
 
-#: libraries/i18n.php:299
+#: libraries/i18n.php:301
 msgid "Activate reCAPTCHA after # of attempts"
 msgstr ""
 
-#: libraries/i18n.php:300
+#: libraries/i18n.php:302
 msgid "Activate reCAPTCHA after this number of failed login attempts."
 msgstr ""
 
-#: libraries/i18n.php:301
+#: libraries/i18n.php:303
 msgid "Enable Google reCAPTCHA for comment forms"
 msgstr ""
 
-#: libraries/i18n.php:302
+#: libraries/i18n.php:304
 msgid ""
 "Activate reCAPTCHA for the comment forms. This will display the reCAPTCHA "
 "immediately (it ignores the above attempts option)! It will not be logged on "
 "failure."
 msgstr ""
 
-#: libraries/i18n.php:303
+#: libraries/i18n.php:305
 msgid "Enable Google reCAPTCHA for register forms"
 msgstr ""
 
-#: libraries/i18n.php:304
+#: libraries/i18n.php:306
 msgid ""
 "Activate reCAPTCHA for the register forms. This will display the reCAPTCHA "
 "immediately (it ignores the above attempts option)! It will not be logged on "
 "failure."
 msgstr ""
 
-#: libraries/i18n.php:306
+#: libraries/i18n.php:308
 msgid "Backend Login"
 msgstr ""
 
-#: libraries/i18n.php:307
+#: libraries/i18n.php:309
 msgid "Capture login attempts"
 msgstr ""
 
-#: libraries/i18n.php:308
+#: libraries/i18n.php:310
 msgid ""
 "By enabling this, everytime a user fails to login in the /wp-admin section "
 "will trigger an event in the Threats."
 msgstr ""
 
-#: libraries/i18n.php:309
+#: libraries/i18n.php:311
 msgid "Store passwords"
 msgstr ""
 
-#: libraries/i18n.php:310
+#: libraries/i18n.php:312
 msgid ""
 "Set whether to store the passwords used in the failed login attempts or not."
 msgstr ""
 
-#: libraries/i18n.php:312
+#: libraries/i18n.php:314
 msgid "Uploads"
 msgstr ""
 
-#: libraries/i18n.php:313
+#: libraries/i18n.php:315
 msgid "Filter Uploads"
 msgstr ""
 
-#: libraries/i18n.php:314
+#: libraries/i18n.php:316
 msgid ""
 "By settings this to Yes, the uploads will be deleted instead of the "
 "connection being dropped."
 msgstr ""
 
-#: libraries/i18n.php:315
+#: libraries/i18n.php:317
 msgid "Check for multiple extensions"
 msgstr ""
 
-#: libraries/i18n.php:316
+#: libraries/i18n.php:318
 msgid ""
 "Uploading files with multiple extensions might trick your or any other user "
 "that the file has a safe extension."
 msgstr ""
 
-#: libraries/i18n.php:317
+#: libraries/i18n.php:319
 msgid "Check for known malware"
 msgstr ""
 
-#: libraries/i18n.php:318
+#: libraries/i18n.php:320
 msgid ""
 "Verify uploaded files for known malware patterns, such as PHP shell scripts."
 msgstr ""
 
-#: libraries/i18n.php:319
+#: libraries/i18n.php:321
 msgid "Banned extensions"
 msgstr ""
 
-#: libraries/i18n.php:320
+#: libraries/i18n.php:322
 msgid ""
 "Files with the following extensions will be deleted as soon as they've been "
 "uploaded to the temporary directory on your server. If you enable the "
@@ -1649,15 +1659,15 @@ msgid ""
 "extensions, as opposed to the last one."
 msgstr ""
 
-#: libraries/i18n.php:322
+#: libraries/i18n.php:324
 msgid "Lockdown"
 msgstr ""
 
-#: libraries/i18n.php:323
+#: libraries/i18n.php:325
 msgid "Protect the following administrator users from any change"
 msgstr ""
 
-#: libraries/i18n.php:324
+#: libraries/i18n.php:326
 msgid ""
 "This will create a snapshot of the selected administrator users. If any "
 "changes will happen to any of them, it will get reverted back immediately. "
@@ -1666,22 +1676,22 @@ msgid ""
 "Changes' one more time."
 msgstr ""
 
-#: libraries/i18n.php:325
+#: libraries/i18n.php:327
 msgid "Disable access to the WordPress plugin and theme installer"
 msgstr ""
 
-#: libraries/i18n.php:326
+#: libraries/i18n.php:328
 msgid ""
 "By setting this to Yes, the WordPress plugin and theme installer will no "
 "longer be accessible to other users except administrators <em>(if by any "
 "chance they have the install_plugins and install_themes capabilities)<em>."
 msgstr ""
 
-#: libraries/i18n.php:327
+#: libraries/i18n.php:329
 msgid "Disable the creation of new Administrators"
 msgstr ""
 
-#: libraries/i18n.php:328
+#: libraries/i18n.php:330
 msgid ""
 "By setting this to yes, new users that can login in the /wp-admin section "
 "<strong><em>will be deleted</strong></em> as soon as they are created. Keep "
@@ -1690,46 +1700,46 @@ msgid ""
 "case, they will be deleted as well)."
 msgstr ""
 
-#: libraries/i18n.php:330
+#: libraries/i18n.php:332
 msgid "Logging Utility"
 msgstr ""
 
-#: libraries/i18n.php:331
+#: libraries/i18n.php:333
 msgid "Email address(es)"
 msgstr ""
 
-#: libraries/i18n.php:332
+#: libraries/i18n.php:334
 msgid ""
 "Send an email to the following email address(es) when an event occurs. "
 "Please specify every address on a new line if you would like multiple email "
 "addresses to be notified."
 msgstr ""
 
-#: libraries/i18n.php:333
+#: libraries/i18n.php:335
 msgid "Include these alert levels"
 msgstr ""
 
-#: libraries/i18n.php:334
+#: libraries/i18n.php:336
 msgid ""
 "Please tick the levels for which you would like to receive email "
 "notifications."
 msgstr ""
 
-#: libraries/i18n.php:335
+#: libraries/i18n.php:337
 msgid "# days to keep log history"
 msgstr ""
 
-#: libraries/i18n.php:336
+#: libraries/i18n.php:338
 msgid ""
 "Log entries older than this number of days will be automatically deleted, to "
 "keep the database fresh and prevent it from overloading."
 msgstr ""
 
-#: libraries/i18n.php:337
+#: libraries/i18n.php:339
 msgid "# emails per hours"
 msgstr ""
 
-#: libraries/i18n.php:338
+#: libraries/i18n.php:340
 msgid ""
 "This is the maximum number of emails that will be sent to the specified "
 "addresses within an hour. Set this to a lower number if your inbox is "
@@ -1737,120 +1747,120 @@ msgid ""
 "amount of emails to be sent every hour."
 msgstr ""
 
-#: libraries/i18n.php:339
+#: libraries/i18n.php:341
 msgid "# events to show"
 msgstr ""
 
-#: libraries/i18n.php:340
+#: libraries/i18n.php:342
 msgid "Number of events that will be shown in the Dashboard."
 msgstr ""
 
-#: libraries/i18n.php:341
-msgid "IPv4 Whois Service"
-msgstr ""
-
-#: libraries/i18n.php:342
-msgid ""
-"This will appear as a link on the IP in the Threats area. You can pass the "
-"{ip} placeholder to grab the IP address. Works only for IPv4 addresses."
-msgstr ""
-
 #: libraries/i18n.php:343
-msgid "IPv6 Whois Service"
+msgid "IPv4 Whois Service"
 msgstr ""
 
 #: libraries/i18n.php:344
 msgid ""
 "This will appear as a link on the IP in the Threats area. You can pass the "
-"{ip} placeholder to grab the IP address. Works only for IPv6 addresses."
+"{ip} placeholder to grab the IP address. Works only for IPv4 addresses."
+msgstr ""
+
+#: libraries/i18n.php:345
+msgid "IPv6 Whois Service"
 msgstr ""
 
 #: libraries/i18n.php:346
-msgid "Import"
-msgstr ""
-
-#: libraries/i18n.php:347
-msgid "Upload configuration .json"
+msgid ""
+"This will appear as a link on the IP in the Threats area. You can pass the "
+"{ip} placeholder to grab the IP address. Works only for IPv6 addresses."
 msgstr ""
 
 #: libraries/i18n.php:348
+msgid "Import"
+msgstr ""
+
+#: libraries/i18n.php:349
+msgid "Upload configuration .json"
+msgstr ""
+
+#: libraries/i18n.php:350
 msgid ""
 "This allows you to restore a previously exported RSFirewall! Configuration."
 msgstr ""
 
-#: libraries/i18n.php:349
+#: libraries/i18n.php:351
 msgid "Upload license code from the configuration .json"
 msgstr ""
 
-#: libraries/i18n.php:350
+#: libraries/i18n.php:352
 msgid ""
 "By setting this to Yes the Update Code from the configuration.json file will "
 "also be taken into account. Set this to No if you want to keep the code "
 "you've written in your current config."
 msgstr ""
 
-#: libraries/i18n.php:352
+#: libraries/i18n.php:354
 msgid "Updates"
 msgstr ""
 
-#: libraries/i18n.php:353
+#: libraries/i18n.php:355
 msgid "License Key"
 msgstr ""
 
-#: libraries/i18n.php:354
+#: libraries/i18n.php:356
 msgid ""
 "Please insert your code so that you will have access to updates and support."
 msgstr ""
 
-#: libraries/i18n.php:356
+#: libraries/i18n.php:358
 msgid "Check All"
 msgstr ""
 
-#: libraries/i18n.php:358
+#: libraries/i18n.php:360
 msgid "Other"
 msgstr ""
 
-#: libraries/i18n.php:359
+#: libraries/i18n.php:361
 msgid "Anonymous Proxy"
 msgstr ""
 
-#: libraries/i18n.php:360
+#: libraries/i18n.php:362
 msgid "Other Country"
 msgstr ""
 
-#: libraries/i18n.php:361
+#: libraries/i18n.php:363
 msgid "URL data (GET)"
 msgstr ""
 
-#: libraries/i18n.php:362
+#: libraries/i18n.php:364
 msgid "Form data (POST)"
 msgstr ""
 
-#: libraries/i18n.php:363
+#: libraries/i18n.php:365
 msgid "Empty User Agents"
 msgstr ""
 
-#: libraries/i18n.php:364
+#: libraries/i18n.php:366
 msgid "Mozilla Impersonators"
 msgstr ""
 
-#: libraries/i18n.php:370
+#: libraries/i18n.php:372
 msgid "Google Safe Browsing API"
 msgstr ""
 
-#: libraries/i18n.php:371
+#: libraries/i18n.php:373
 msgid "Google Web Risk API"
 msgstr ""
 
-#: libraries/i18n.php:375 models/exceptions.php:449
+#: libraries/i18n.php:377 models/exceptions.php:449
 msgid "Exception Type"
 msgstr ""
 
-#: libraries/i18n.php:376
+#: libraries/i18n.php:378
 msgid "Use regular expressions"
 msgstr ""
 
-#: libraries/i18n.php:377
+#: libraries/i18n.php:379
 msgid ""
 "You can use regular expressions to match an exception eg. utm_source=(.*?). "
 "If set to No, the exception will match the string given here by using a "
@@ -1858,154 +1868,154 @@ msgid ""
 "expecting."
 msgstr ""
 
-#: libraries/i18n.php:379
+#: libraries/i18n.php:381
 msgid ""
 "Please specify either the full string to match or a regular expression (if "
 "regular expressions are used)."
 msgstr ""
 
-#: libraries/i18n.php:380
+#: libraries/i18n.php:382
 msgid "Skip PHP Protections"
 msgstr ""
 
-#: libraries/i18n.php:381
+#: libraries/i18n.php:383
 msgid "Set this to Yes if you would like to skip PHP protections."
 msgstr ""
 
-#: libraries/i18n.php:382
+#: libraries/i18n.php:384
 msgid "Skip SQL Protections"
 msgstr ""
 
-#: libraries/i18n.php:383
+#: libraries/i18n.php:385
 msgid "Set this to Yes if you would like to skip SQL protections."
 msgstr ""
 
-#: libraries/i18n.php:384
+#: libraries/i18n.php:386
 msgid "Skip JS Protections"
 msgstr ""
 
-#: libraries/i18n.php:385
+#: libraries/i18n.php:387
 msgid "Set this to Yes if you would like to skip JS protections."
 msgstr ""
 
-#: libraries/i18n.php:386
+#: libraries/i18n.php:388
 msgid "Skip Upload Protections"
 msgstr ""
 
-#: libraries/i18n.php:387
+#: libraries/i18n.php:389
 msgid "Set this to Yes if you would like to skip upload protections."
 msgstr ""
 
-#: libraries/i18n.php:389
+#: libraries/i18n.php:391
 msgid ""
 "This reason is only for internal use - it is not displayed anywhere on your "
 "website."
 msgstr ""
 
-#: libraries/i18n.php:391 models/exceptions.php:162 models/exceptions.php:472
+#: libraries/i18n.php:393 models/exceptions.php:162 models/exceptions.php:472
 msgid "User Agent"
 msgstr ""
 
-#: libraries/i18n.php:392 models/exceptions.php:163
+#: libraries/i18n.php:394 models/exceptions.php:163
 msgid "URL"
 msgstr ""
 
-#: libraries/i18n.php:396 models/lists.php:564 models/threats.php:299
+#: libraries/i18n.php:398 models/lists.php:564 models/threats.php:299
 msgid "IP Address"
 msgstr ""
 
-#: libraries/i18n.php:397
+#: libraries/i18n.php:399
 msgid ""
 "Add a new IP address to the list. You can use wildcards anywhere, for "
 "example 192.168.1.* will match any address from 192.168.1.1 to 192.168.1.254."
 msgstr ""
 
-#: libraries/i18n.php:398 libraries/i18n.php:410
+#: libraries/i18n.php:400 libraries/i18n.php:412
 msgid "List Type"
 msgstr ""
 
-#: libraries/i18n.php:399 libraries/i18n.php:411
+#: libraries/i18n.php:401 libraries/i18n.php:413
 msgid ""
 "Set the type of the list - blocklist (banned) or safelist (no protections "
 "triggered)."
 msgstr ""
 
-#: libraries/i18n.php:401
+#: libraries/i18n.php:403
 msgid ""
 "This reason will show up to the attacker when he visits your site and finds "
 "himself banned."
 msgstr ""
 
-#: libraries/i18n.php:403 libraries/i18n.php:415 models/lists.php:147
+#: libraries/i18n.php:405 libraries/i18n.php:417 models/lists.php:147
 msgid "Safelist"
 msgstr ""
 
-#: libraries/i18n.php:404 libraries/i18n.php:416 models/lists.php:146
+#: libraries/i18n.php:406 libraries/i18n.php:418 models/lists.php:146
 msgid "Blocklist"
 msgstr ""
 
-#: libraries/i18n.php:408 libraries/i18n.php:453 libraries/i18n.php:454
+#: libraries/i18n.php:410 libraries/i18n.php:455 libraries/i18n.php:456
 msgid "Bulk Add IPs"
 msgstr ""
 
-#: libraries/i18n.php:409
+#: libraries/i18n.php:411
 msgid ""
 "Add multiple IP addresses to the list. You can use wildcards anywhere, for "
 "example 192.168.1.* will match any address from 192.168.1.1 to 192.168.1.254."
 msgstr ""
 
-#: libraries/i18n.php:413
+#: libraries/i18n.php:415
 msgid ""
 "This reason will show up to the attacker when he visits your site and finds "
 "himself banned (will be applied to all IPs)."
 msgstr ""
 
-#: libraries/i18n.php:420 views/dashboard.php:31
+#: libraries/i18n.php:422 views/dashboard.php:31
 msgid "Dashboard"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-#: libraries/i18n.php:421
+#: libraries/i18n.php:423
 msgid "RSFirewall!"
 msgstr ""
 
-#: libraries/i18n.php:426 libraries/i18n.php:427
+#: libraries/i18n.php:428 libraries/i18n.php:429
 msgid "Database Check"
 msgstr ""
 
-#: libraries/i18n.php:429
+#: libraries/i18n.php:431
 msgid "Firewall Configuration"
 msgstr ""
 
-#: libraries/i18n.php:430 libraries/rsfirewall.php:162
+#: libraries/i18n.php:432 libraries/rsfirewall.php:162
 msgid "Configuration"
 msgstr ""
 
-#: libraries/i18n.php:432 libraries/i18n.php:433 views/diff.php:26
+#: libraries/i18n.php:434 libraries/i18n.php:435 views/diff.php:26
 msgid "File Differences"
 msgstr ""
 
-#: libraries/i18n.php:435 libraries/i18n.php:436 models/exceptions.php:38
+#: libraries/i18n.php:437 libraries/i18n.php:438 models/exceptions.php:38
 msgid "Exceptions"
 msgstr ""
 
-#: libraries/i18n.php:438 libraries/i18n.php:439 views/file.php:20
+#: libraries/i18n.php:440 libraries/i18n.php:441 views/file.php:20
 msgid "File Contents"
 msgstr ""
 
-#: libraries/i18n.php:441 libraries/i18n.php:442
+#: libraries/i18n.php:443 libraries/i18n.php:444
 msgid "Folders"
 msgstr ""
 
-#: libraries/i18n.php:444 libraries/i18n.php:445
+#: libraries/i18n.php:446 libraries/i18n.php:447
 msgid "Ignored Files"
 msgstr ""
 
-#: libraries/i18n.php:447 libraries/i18n.php:448
+#: libraries/i18n.php:449 libraries/i18n.php:450
 msgid "Blocklist / Safelist"
 msgstr ""
 
-#: libraries/i18n.php:450 libraries/i18n.php:451 models/threats.php:36
+#: libraries/i18n.php:452 libraries/i18n.php:453 models/threats.php:36
 msgid "Threats"
 msgstr ""
 

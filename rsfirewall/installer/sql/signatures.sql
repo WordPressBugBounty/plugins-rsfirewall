@@ -66,7 +66,6 @@ INSERT IGNORE INTO `#__rsfirewall_signatures` (`signature`, `type`, `reason`) VA
 ('UEhQSmlhTWlcLkNvbQ==', 'regexi', 'PHP Injection - Shell'),
 ('UEhQZW5jb2Rlcg==', 'regex', 'PHP Encoded file - PHPencoder variant, please review manually'),
 ('VXBsb2FkIEdhZ2Fs', 'regex', 'PHP Shell - File uploader'),
-('W2EtekEtWjAtOV17NTAwLH0=', 'regex', 'Possible PHP injection (abnormally long string - might be base64)'),
 ('X2lsX2V4ZWNcKFwp', 'regex', 'Possible risk - ionCube encrypted file'),
 ('XC5ydS8=', 'filename', 'Possible hijacked server'),
 ('XC9ldGNcL3Bhc3N3ZA==', 'regex', 'PHP Shell - suspicious code'),
@@ -93,7 +92,6 @@ INSERT IGNORE INTO `#__rsfirewall_signatures` (`signature`, `type`, `reason`) VA
 ('XCRRQkRCNTFFMjVCRjlBN0YzRDI0NzUwNzI4MDNEMUMzNkQ=', 'regex', 'PHP Shell variant compressed'),
 ('XCRyZWRfaG9zdC9cJGZha2Vfc2NyaXB0', 'regex', 'PHP Injection'),
 ('XF9bMC05XStcKFswLTldK1wp', 'regex', 'Possible PHP Injection - function name contains only numbers.'),
-('XFsoIihcXHhbMC05QS1GXXsyfSl7MSx9Iiw/KStcXQ==', 'regexi', 'Javascript variable obfuscation'),
 ('XFx4NDdcXHg0Y1xceDRmQlxceDQxXFx4NGNcXHg1Mw==', 'regex', 'PHP Injection - GLOBALS obfuscated variable call'),
 ('XFx4NjJcXDE0MVxceDczXFwxNDVcXHgzNlxcNjRcXHg1ZlxcMTQ0XFx4NjVcXDE0M1xceDZmXFwx\nNDRcXHg2NQ==', 'regex', 'PHP Injection - base64_decode() obfuscated function call'),
 ('XkdJRjg5OyhbXlxuXSpcbispKyhcPFw/cGhwKQ==', 'regex', 'PHP injection - Hidden inside GIF file'),
@@ -127,4 +125,10 @@ INSERT IGNORE INTO `#__rsfirewall_signatures` (`signature`, `type`, `reason`) VA
 ('ZXZhbFwvXCooLiopXCpcL1wo', 'regexis', 'Obfuscated eval()'),
 ('ZXZhbFwvXCpcKlwvXCg=', 'regex', 'Hidden eval()'),
 ('bmFtZVw9YSB2YWx1ZVw9J0ZpbGVzV2luJw==', 'regex', 'PHP Shell'),
-('bmFtZVw9YSB2YWx1ZVw9J0ZpbGVzTWFuJw==', 'regex', 'PHP Shell');
+('bmFtZVw9YSB2YWx1ZVw9J0ZpbGVzTWFuJw==', 'regex', 'PHP Shell'),
+('XDxiXD5nYWdhbA', 'regex', 'PHP Shell'),
+('XDxpbnB1dCB0eXBlXD1maWxlIG5hbWVcPWZcPg', 'regex', 'PHP Shell'),
+('bWQ1XChcJF9QT1NUXFsicGFzc3dvcmQiXF1cKSA/XD1cPSA/Wyd8Il0oW2EtejAtOV0pezMyfVsnfCJd', 'regexis', 'PHP Shell'),
+('W2EtejAtOV9dKzo6Z1woJ1thLXpfXC4sJyBdKydcKQ', 'regexis', 'PHP Shell'),
+('YmFzZTY0X2RlY29kZVwoc3RycmV2XChzdHJfcm90MTNcKFwk', 'regexis', 'PHP base64 obfuscation'),
+('aW1wbG9kZVwoJycsXHM/YXJyYXlfbWFwXCgnW0EtWl0rJyxccz9zdHJfc3BsaXRcKC4qXClcKVwp', 'regex', 'PHP variable obfuscation');

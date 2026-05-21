@@ -206,6 +206,8 @@ class RSFirewall_i18n
 			'desc_check_md5' 						=> wp_kses_post(__('By setting this to Yes the System Check will take into account an MD5 database to check the PHP files against; please note that this is rather resource intensive.','rsfirewall')),
 			'lbl_google_apis' 						=> esc_html__('Google APIs To Use', 'rsfirewall'),
 			'desc_google_apis' 						=> wp_kses_post(__('Select which APIs you would like to use during the System Check.','rsfirewall')),
+			'lbl_google_safebrowsing_version' 		=> esc_html__('Google Safe Browsing API Version', 'rsfirewall'),
+			'desc_google_safebrowsing_version' 		=> wp_kses_post(__('Select the version of the Google Safe Browsing API that you would like to use. Version 4 is now deprecated.','rsfirewall')),
 			'lbl_google_safe_browsing_key' 			=> esc_html__('Google Safe Browsing Key', 'rsfirewall'),
 			'desc_google_safe_browsing_key' 		=> wp_kses_post(__('Safe Browsing is a Google service that enables applications to check URLs against Google\'s constantly updated lists of suspected phishing, malware, and unwanted software pages.','rsfirewall')),
 			'lbl_google_webrisk_api_key' 			=> esc_html__('Google Web Risk API Key - Server Key', 'rsfirewall'),
