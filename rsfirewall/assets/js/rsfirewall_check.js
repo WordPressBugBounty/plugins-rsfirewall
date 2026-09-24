@@ -74,6 +74,15 @@
             '</thead></table>'
         );
 
+        /**
+         * Add the click event listener for the download original buttons
+         */
+        jQuery(document).on('click', '.rsfirewall-download-original', function () {
+            var $button = jQuery(this);
+            // attr() is used instead of data() to get the raw attribute value as a string
+            RSFirewall.diffs.download($button.attr('data-file'), $button.attr('data-hid'), false, $button.attr('data-missing') == 1);
+        });
+
 		window.onbeforeunload = function() {
 			try {
 				if (jQuery('.scanning-message:visible').length > 0) {
@@ -189,6 +198,23 @@ RSFirewall.parseJSON = function (data) {
         return jQuery.parseJSON(match[0]);
     }
     return jQuery.parseJSON(data);
+};
+
+/**
+ * Helper function to escape values that come from the server before they are placed into an HTML string or an attribute
+ * @param value
+ */
+RSFirewall.escapeHtml = function (value) {
+    if (value === null || typeof value === 'undefined') {
+        return '';
+    }
+
+    return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
 };
 
 /**
@@ -605,7 +631,7 @@ RSFirewall.System.Check = {
                     /**
                      * Update the progress of the check
                      */
-                    short_message.html(rsfirewall_check_locale.building_file_structure + ' <code>' + next_file_stripped + '</code>');
+                    short_message.html(rsfirewall_check_locale.building_file_structure + ' <code>' + RSFirewall.escapeHtml(next_file_stripped) + '</code>');
 
                     /**
                      * Rerun step as long as we have a next.file
@@ -671,7 +697,7 @@ RSFirewall.System.Check = {
                     /**
                      * Update the progress of the check
                      */
-                    short_message.html(rsfirewall_check_locale.building_file_structure + ' <code>' + next_folder_stripped + '</code>');
+                    short_message.html(rsfirewall_check_locale.building_file_structure + ' <code>' + RSFirewall.escapeHtml(next_folder_stripped) + '</code>');
 
                     /**
                      * Rerun step as long as we have a next.file
@@ -729,7 +755,7 @@ RSFirewall.System.Check = {
                     /**
                      * Update the progress of the check
                      */
-                    short_message.html(rsfirewall_check_locale.building_file_structure + ' <code>' + next_perm_filer_stripped + '</code>');
+                    short_message.html(rsfirewall_check_locale.building_file_structure + ' <code>' + RSFirewall.escapeHtml(next_perm_filer_stripped) + '</code>');
 
                     /**
                      * Rerun step as long as we have a next.file
@@ -1108,7 +1134,7 @@ RSFirewall.System.Templates = {
             var hash_index = 'hash' + j;
             var contents = '<button class="rsfirewall-view-contents" data-toggle="rsmodal" data-target="#rsmodal" data-title="'+rsfirewall_check_locale.modal_title+'" data-viewcontent="1" data-usefooter="1" data-showclose="1" data-size="large" data-action="diff_view_differences" data-hid="'+hash_index+'" data-file="' + encodeURI(json.data.files[i].path) + '">' + rsfirewall_check_locale.view_contents + '</button>';
 
-            var $html = '<tr id="hash' + j + '"><td><input type="checkbox" checked="checked" name="ignore_hashes[]" data-type="' + json.data.files[i].type + '" data-version="' + json.data.version + '" data-hash="' + json.data.files[i].hash + '" value="' + json.data.files[i].path + '" /></td>';
+            var $html = '<tr id="hash' + j + '"><td><input type="checkbox" checked="checked" name="ignore_hashes[]" data-type="' + RSFirewall.escapeHtml(json.data.files[i].type) + '" data-version="' + RSFirewall.escapeHtml(json.data.version) + '" data-hash="' + RSFirewall.escapeHtml(json.data.files[i].hash) + '" value="' + RSFirewall.escapeHtml(json.data.files[i].path) + '" /></td>';
 
             var reason = '';
             var is_missing = false;
@@ -1128,9 +1154,9 @@ RSFirewall.System.Templates = {
                 is_missing = true;
             }
 
-            var download_original = '<button class="rsfirewall-fix-action" onclick="RSFirewall.diffs.download(\'' + json.data.files[i].path + '\', \'' + hash_index + '\', false, '+(is_missing ? true : false)+')">' + rsfirewall_check_locale.download_original + '</button>';
+            var download_original = '<button class="rsfirewall-fix-action rsfirewall-download-original" data-file="' + RSFirewall.escapeHtml(json.data.files[i].path) + '" data-hid="' + hash_index + '" data-missing="' + (is_missing ? 1 : 0) + '">' + rsfirewall_check_locale.download_original + '</button>';
 
-            $html += '<td>' + json.data.files[i].path + '</td>';
+            $html += '<td>' + RSFirewall.escapeHtml(json.data.files[i].path) + '</td>';
             $html += '<td>' + reason + '</td>';
             $html += '<td class="text-center rs_fix_response">' + (is_missing ? '' : contents) + download_original +'</td>';
             $html += '</tr>';
@@ -1141,10 +1167,10 @@ RSFirewall.System.Templates = {
         for (var i = 0; i < json.data.files.length; i++) {
             var j = long_message.find('tr').length;
             var contents = '<button class="rsfirewall-view-contents" data-toggle="rsmodal" data-target="#rsmodal" data-title="'+rsfirewall_check_locale.modal_title+'" data-viewcontent="1" data-usefooter="1" data-showclose="1" data-size="large" data-action="file_view_content" data-file="' + encodeURI(json.data.files[i].path) + '">' + rsfirewall_check_locale.view_contents + '</button>';
-            var $html = '<tr><td><input type="checkbox" checked="checked" name="ignore_files[]" value="' + json.data.files[i].path + '" id="checkbox_file' + j + '" /></td>';
-            $html += '<td>' + json.data.files[i].path + '</td>';
-            $html += '<td>' + json.data.files[i].reason + '</td>';
-            $html += '<td>' + json.data.files[i].match.substr(0, 20) + '</td>';
+            var $html = '<tr><td><input type="checkbox" checked="checked" name="ignore_files[]" value="' + RSFirewall.escapeHtml(json.data.files[i].path) + '" id="checkbox_file' + j + '" /></td>';
+            $html += '<td>' + RSFirewall.escapeHtml(json.data.files[i].path) + '</td>';
+            $html += '<td>' + RSFirewall.escapeHtml(json.data.files[i].reason) + '</td>';
+            $html += '<td>' + RSFirewall.escapeHtml(json.data.files[i].match.substr(0, 20)) + '</td>';
             $html += '<td>' + contents + '</td></tr>';
             long_message.append($html)
         }
@@ -1152,8 +1178,8 @@ RSFirewall.System.Templates = {
     folderPermissions: function (json, long_message) {
         for (var i = 0; i < json.data.folders.length; i++) {
             var j = long_message.find('tr').length;
-            var $html = '<tr><td><input type="checkbox" checked="checked" name="ignore_folders_permission[]" value="' + json.data.folders[i].path + '" id="checkbox_folder_ignore' + j + '" /></td>';
-            $html += '<td>' + json.data.folders[i].path + '</td>';
+            var $html = '<tr><td><input type="checkbox" checked="checked" name="ignore_folders_permission[]" value="' + RSFirewall.escapeHtml(json.data.folders[i].path) + '" id="checkbox_folder_ignore' + j + '" /></td>';
+            $html += '<td>' + RSFirewall.escapeHtml(json.data.folders[i].path) + '</td>';
             $html += '<td>' + json.data.folders[i].expected + '</td>';
             $html += '<td>' + json.data.folders[i].perms + '</td></tr>';
             long_message.append($html)
@@ -1162,8 +1188,8 @@ RSFirewall.System.Templates = {
     filePermissions: function (json, long_message) {
         for (var i = 0; i < json.data.files.length; i++) {
             var j = long_message.find('tr').length;
-            var $html = '<tr><td><input type="checkbox" checked="checked" name="ignore_files_permission[]" value="' + json.data.files[i].path + '" id="checkbox_file_permission' + j + '" /></td>';
-            $html += '<td>' + json.data.files[i].path + '</td>';
+            var $html = '<tr><td><input type="checkbox" checked="checked" name="ignore_files_permission[]" value="' + RSFirewall.escapeHtml(json.data.files[i].path) + '" id="checkbox_file_permission' + j + '" /></td>';
+            $html += '<td>' + RSFirewall.escapeHtml(json.data.files[i].path) + '</td>';
             $html += '<td>' + json.data.files[i].expected + '</td>';
             $html += '<td>' + json.data.files[i].perms + '</td></tr>';
             long_message.append($html)

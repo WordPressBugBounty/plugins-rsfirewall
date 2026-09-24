@@ -531,6 +531,18 @@ class RSFirewall_Model_Lists extends RSFirewall_Post {
 			$this->set_message(__('This post does not exist!', 'rsfirewall'));
 			$change_status = false;
 		}
+		
+		// Check if the post type is the expected custom post type for the lists.
+		if (get_post_type($post_id) !== $this->prefix."lists") {
+			$this->set_message(__('This post is not part of the lists!', 'rsfirewall'));
+			$change_status = false;
+		}
+
+		// Check if the user has the capability to edit the post
+		if (!current_user_can('edit_post', $post_id)) {
+			$this->set_message(__('You do not have permission to edit this post!', 'rsfirewall'));
+			$change_status = false;
+		}
 
 		// change post status
 		if ($change_status ) {

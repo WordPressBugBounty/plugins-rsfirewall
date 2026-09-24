@@ -106,7 +106,7 @@ class RSFirewall_Autoupdate
         $remote_version = $this->get_url('version', true);
 
         // If a newer version is available, add the update
-        if ( $remote_version && ( $this->is_lite || ( !$this->is_lite && version_compare( $this->current_version, $remote_version->new_version, '<' ) ) ) ) {
+        if ( $remote_version && isset( $remote_version->new_version ) && ( $this->is_lite || ( !$this->is_lite && version_compare( $this->current_version, $remote_version->new_version, '<' ) ) ) ) {
             // Add / Overwrite the slug
             $remote_version->slug = $this->slug;
 
@@ -174,12 +174,55 @@ class RSFirewall_Autoupdate
 
         // Make the POST request
         $request = wp_remote_post($this->update_path, $params );
-
+        
         // Check if response is valid
-        if ( !is_wp_error( $request ) || wp_remote_retrieve_response_code( $request ) === 200 ) {
-            return @unserialize( $request['body'] );
+        if ( !is_wp_error( $request ) && (int) wp_remote_retrieve_response_code( $request ) === 200 ) {
+            return $this->unserialize_response( wp_remote_retrieve_body( $request ) );
         }
 
         return false;
+    }
+
+    /**
+     * Unserialize and check the update metadata allowing only stdClass objects
+     * 
+     * @param string $body
+     *
+     * @return object|boolean
+     */
+    private function unserialize_response($body)
+    {
+        if (!is_string($body) || !is_serialized($body))
+        {
+            return false;
+        }
+
+        // Check for any object token that is not stdClass (works for PHP versions without allowed_classes)
+        if (preg_match_all('/[OoC]:\+?\d+:"([^"]*)"/', $body, $matches))
+        {
+            foreach ($matches[1] as $class)
+            {
+                if (strtolower($class) !== 'stdclass')
+                {
+                    return false;
+                }
+            }
+        }
+
+        if (version_compare(PHP_VERSION, '7.0.0', '>='))
+        {
+            $data = @unserialize($body, array('allowed_classes' => array('stdClass')));
+        }
+        else
+        {
+            $data = @unserialize($body);
+        }
+
+        if (!is_object($data) || get_class($data) !== 'stdClass')
+        {
+            return false;
+        }
+
+        return $data;
     }
 }

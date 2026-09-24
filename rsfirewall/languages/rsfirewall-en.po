@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RSFirewall!\n"
-"POT-Creation-Date: 2026-05-21 11:23+0300\n"
-"PO-Revision-Date: 2026-05-21 11:23+0300\n"
+"POT-Creation-Date: 2026-09-24 10:01+0300\n"
+"PO-Revision-Date: 2026-09-24 10:01+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -378,18 +378,26 @@ msgstr ""
 msgid "Session injection attempt blocked!"
 msgstr ""
 
-#: libraries/core/backend-password.php:106
+#: libraries/core/backend-password.php:108
 msgid ""
 "Your IP Address is blocked. <br /> Reason: Too many backend password login "
 "attempts <br /> Please contact an administrator."
 msgstr ""
 
-#: libraries/core/backend-password.php:122
+#: libraries/core/backend-password.php:124
 msgid "The password you have entered is not correct."
 msgstr ""
 
-#: libraries/core/backend-password.php:167
+#: libraries/core/backend-password.php:170
 msgid "Too many backend password login attempts."
+msgstr ""
+
+#: libraries/core/backend-password.php:247
+msgid "This account requires the additional backend password."
+msgstr ""
+
+#: libraries/core/backend-password.php:249
+msgid "Log in from the administrator login page."
 msgstr ""
 
 #: libraries/core/core.php:183
@@ -755,7 +763,7 @@ msgid "RSFirewall! could not find the appropriate CSV file for your WP version"
 msgstr ""
 
 #: libraries/i18n.php:105 libraries/i18n.php:390 libraries/i18n.php:402
-#: libraries/i18n.php:414 models/exceptions.php:448 models/lists.php:566
+#: libraries/i18n.php:414 models/exceptions.php:448 models/lists.php:578
 #: views/ignored.php:9
 msgid "Reason"
 msgstr ""
@@ -1920,7 +1928,7 @@ msgstr ""
 msgid "URL"
 msgstr ""
 
-#: libraries/i18n.php:398 models/lists.php:564 models/threats.php:299
+#: libraries/i18n.php:398 models/lists.php:576 models/threats.php:299
 msgid "IP Address"
 msgstr ""
 
@@ -2452,7 +2460,7 @@ msgstr ""
 msgid "The folder must be one of the select options!"
 msgstr ""
 
-#: models/configuration.php:767 models/exceptions.php:569 models/lists.php:687
+#: models/configuration.php:767 models/exceptions.php:581 models/lists.php:699
 msgid "Your IP address is currently detected as "
 msgstr ""
 
@@ -2601,30 +2609,30 @@ msgstr ""
 
 #: models/exceptions.php:291 models/exceptions.php:344
 #: models/exceptions.php:345 models/exceptions.php:492 models/lists.php:493
-#: models/lists.php:497 models/lists.php:598 models/lists.php:650
-#: models/lists.php:651
+#: models/lists.php:497 models/lists.php:610 models/lists.php:662
+#: models/lists.php:663
 msgid "Publish"
 msgstr ""
 
-#: models/exceptions.php:337 models/lists.php:643 views/listsbulkaddips.php:41
+#: models/exceptions.php:337 models/lists.php:655 views/listsbulkaddips.php:41
 msgid "Back to the list"
 msgstr ""
 
-#: models/exceptions.php:347 models/exceptions.php:348 models/lists.php:653
-#: models/lists.php:654
+#: models/exceptions.php:347 models/exceptions.php:348 models/lists.php:665
+#: models/lists.php:666
 msgid "Submit for Review"
 msgstr ""
 
-#: models/exceptions.php:352 models/exceptions.php:353 models/lists.php:658
-#: models/lists.php:659
+#: models/exceptions.php:352 models/exceptions.php:353 models/lists.php:670
+#: models/lists.php:671
 msgid "Update"
 msgstr ""
 
-#: models/exceptions.php:360 models/lists.php:666
+#: models/exceptions.php:360 models/lists.php:678
 msgid "Delete Permanently"
 msgstr ""
 
-#: models/exceptions.php:362 models/lists.php:668
+#: models/exceptions.php:362 models/lists.php:680
 msgid "Move to Trash"
 msgstr ""
 
@@ -2636,7 +2644,7 @@ msgstr ""
 msgid "Date Added"
 msgstr ""
 
-#: models/exceptions.php:450 models/lists.php:568
+#: models/exceptions.php:450 models/lists.php:580
 msgid "Change Status"
 msgstr ""
 
@@ -2652,6 +2660,14 @@ msgstr ""
 #: models/exceptions.php:522 models/lists.php:531 models/threats.php:516
 #: models/threats.php:565
 msgid "This post does not exist!"
+msgstr ""
+
+#: models/exceptions.php:528
+msgid "This post is not part of the exceptions!"
+msgstr ""
+
+#: models/exceptions.php:534 models/lists.php:543
+msgid "You do not have permission to edit this post!"
 msgstr ""
 
 #: models/fix.php:41
@@ -2857,19 +2873,23 @@ msgstr ""
 msgid "Add to trash"
 msgstr ""
 
-#: models/lists.php:565
+#: models/lists.php:537
+msgid "This post is not part of the lists!"
+msgstr ""
+
+#: models/lists.php:577
 msgid "Type"
 msgstr ""
 
-#: models/lists.php:567 views/ignored.php:7
+#: models/lists.php:579 views/ignored.php:7
 msgid "Date"
 msgstr ""
 
-#: models/lists.php:592
+#: models/lists.php:604
 msgid "IP Details"
 msgstr ""
 
-#: models/lists.php:704
+#: models/lists.php:716
 msgid "Bulk add IPs"
 msgstr ""
 

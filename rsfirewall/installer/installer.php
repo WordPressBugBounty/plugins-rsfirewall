@@ -390,7 +390,7 @@ class RSFirewall_Installer {
 
         $replace = array(
             '$__wp_charset' => $wpdb->get_charset_collate(),
-			'$__wp_collate' => $wpdb->collate,
+			'$__wp_collate' => !empty($wpdb->collate) ? 'COLLATE '.$wpdb->collate : '',
             '#__'           => $wpdb->prefix
         );
 

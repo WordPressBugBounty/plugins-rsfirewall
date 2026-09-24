@@ -37,9 +37,9 @@ class RSFirewall_Core_Backend_Password extends RSFirewall_Core {
         if (is_multisite()) {
             $this->blog_id .= get_current_blog_id();
         }
-        // build the hash as unique as possible
-        $this->cookie_hash = md5($this->blog_id.$this->plugin_name.$this->version.$this->ip.$this->agent);
-        
+        // build the hash as unique as possible, signed with the site secret (and the backend password) so it cannot be forged
+        $this->cookie_hash = hash_hmac('sha256', $this->blog_id.'|'.$this->plugin_name.'|'.$this->version.'|'.$this->ip.'|'.$this->agent.'|'.RSFirewall_Config::get('type_password', ''), wp_salt('auth'));
+
         $this->blog_id = md5($this->blog_id);
     }
 
@@ -75,6 +75,8 @@ class RSFirewall_Core_Backend_Password extends RSFirewall_Core {
 
             // some logins from the front area have the action set to the wp-login.php file, so when the login action is triggered need to add this exception
             if ($this->detect_front_login()) {
+                // the referer can be changed, so privileged accounts must still pass the backend password
+                add_filter('authenticate', array($this, 'check_front_login_role'), 100);
                 return;
             }
 
@@ -100,7 +102,7 @@ class RSFirewall_Core_Backend_Password extends RSFirewall_Core {
             }
 
             // Show the Backend Password
-            if (!isset($_COOKIE['rsf_backend_login'.$this->blog_id]) || $_COOKIE['rsf_backend_login'.$this->blog_id] != $this->cookie_hash) {
+            if (!$this->has_valid_cookie()) {
                 if ($this->is_blacklisted())
                 {
                     $message = wp_kses_post( __('Your IP Address is blocked. <br /> Reason: Too many backend password login attempts <br /> Please contact an administrator.', 'rsfirewall' ));
@@ -108,8 +110,8 @@ class RSFirewall_Core_Backend_Password extends RSFirewall_Core {
                 }
                 if ( isset( $_POST['rsf_backend_password'] ) && strlen( $_POST['rsf_backend_password'] ) ) {
                     $redirect = false;
-                    if ( md5( $_POST['rsf_backend_password'] ) == RSFirewall_Config::get( 'type_password' ) ) {
-                        setcookie( 'rsf_backend_login'.$this->blog_id, $this->cookie_hash, 0, COOKIEPATH, COOKIE_DOMAIN, $this->is_ssl );
+                    if (hash_equals((string) RSFirewall_Config::get('type_password', ''), md5(wp_unslash($_POST['rsf_backend_password'])))) {
+                        $this->set_login_cookie($this->cookie_hash, 0);
                         $redirect = true;
                     } else {
                         $args = array(
@@ -136,7 +138,8 @@ class RSFirewall_Core_Backend_Password extends RSFirewall_Core {
                 }
 
                 // And if the user is not logged in show the form
-                if (!isset($_COOKIE['rsf_backend_login'.$this->blog_id]) || $_COOKIE['rsf_backend_login'.$this->blog_id] != $this->cookie_hash) {
+                if (!$this->has_valid_cookie())
+                {
                    $this->show_backend_login();
                 }
             }
@@ -199,36 +202,88 @@ class RSFirewall_Core_Backend_Password extends RSFirewall_Core {
                 return false;
             }
 
+            // parse the referer and compare the exact host
+            $referer = wp_parse_url($this->referer);
+            if (empty($referer['scheme']) || empty($referer['host']) || !in_array(strtolower($referer['scheme']), array('http', 'https'), true)) {
+                return false;
+            }
+
             // build the exceptions for the referer check
             $site_url = get_site_url();
             $site_url = RSFirewall_Helper::parse_url($site_url);
 
-            $domain = $site_url['host'];
+            $domain = strtolower($site_url['host']);
 
-            $exceptions = array();
-            $exceptions[] = 'http://'.$domain;
-            $exceptions[] = 'https://'.$domain;
+            $exceptions = array($domain);
 
             // add the non www version too
             if (strpos($domain, 'www.') === 0) {
-                $domain = substr($domain, 4);
-                $exceptions[] = 'http://'.$domain;
-                $exceptions[] = 'https://'.$domain;
+                $exceptions[] = substr($domain, 4);
             } else {
                 // if the domain does not have www check for this to
-                $exceptions[] = 'http://www.'.$domain;
-                $exceptions[] = 'https://www.'.$domain;
+                $exceptions[] = 'www.'.$domain;
             }
 
             // check the referer (allow only from the site/frontend)
-            foreach ($exceptions as $exception) {
-                if (strpos($this->referer, $exception) === 0) {
-                    return true;
-                }
-            }
+            return in_array(strtolower($referer['host']), $exceptions, true);
         }
 
         return false;
+    }
+
+    /**
+     * Block the front login bypass for the roles that must pass the backend password
+     */
+    public function check_front_login_role($user) {
+        if (!($user instanceof WP_User) || $this->has_valid_cookie()) {
+            return $user;
+        }
+
+        $check_roles = apply_filters('rsfirewall_backend_login_roles', array('administrator'));
+
+        if (array_intersect($check_roles, (array) $user->roles)) {
+            $message = sprintf(
+                '%s <a href="%s">%s</a>',
+                esc_html__('This account requires the additional backend password.', 'rsfirewall'),
+                esc_url(wp_login_url()),
+                esc_html__('Log in from the administrator login page.', 'rsfirewall')
+            );
+
+            return new WP_Error('rsf_backend_password', $message);
+        }
+
+        return $user;
+    }
+
+    /**
+     * Check if the backend login cookie is present and valid
+     */
+    protected function has_valid_cookie() {
+        $name = 'rsf_backend_login'.$this->blog_id;
+
+        return isset($_COOKIE[$name]) && is_string($_COOKIE[$name]) && hash_equals($this->cookie_hash, $_COOKIE[$name]);
+    }
+
+    /**
+     * Set the backend login cookie
+     */
+    protected function set_login_cookie($value, $expires) {
+        $name = 'rsf_backend_login'.$this->blog_id;
+
+        // the options array is available only from PHP 7.3
+        if (version_compare(PHP_VERSION, '7.3.0', '>=')) {
+            setcookie($name, $value, array(
+                'expires'  => $expires,
+                'path'     => COOKIEPATH,
+                'domain'   => COOKIE_DOMAIN,
+                'secure'   => $this->is_ssl,
+                'httponly' => true,
+                'samesite' => 'Lax',
+            ));
+        } else {
+            // append the samesite for older PHP versions
+            setcookie($name, $value, $expires, COOKIEPATH.'; samesite=Lax', COOKIE_DOMAIN, $this->is_ssl, true);
+        }
     }
 
     /**
@@ -236,7 +291,7 @@ class RSFirewall_Core_Backend_Password extends RSFirewall_Core {
      */
 
     public function delete_login_cookie() {
-        setcookie( 'rsf_backend_login'.$this->blog_id, ' ', time() - YEAR_IN_SECONDS, COOKIEPATH, COOKIE_DOMAIN, $this->is_ssl );
+        $this->set_login_cookie(' ', time() - YEAR_IN_SECONDS);
     }
 
     /**

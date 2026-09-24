@@ -256,21 +256,33 @@ jQuery(document).on('click.rsmodal.data-api', '[data-toggle="rsmodal"]', functio
 // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)
 // ============================================================
 
+var rstransitionEndName;
+
 function rstransitionEnd() {
+    // the result never changes, so it is only looked up once
+    if (typeof rstransitionEndName != 'undefined') {
+        return rstransitionEndName;
+    }
+
     var el = document.createElement('rsmodalfake');
 
+    // the proper order of preference for transition
     var transEndEventNames = {
+        transition       : 'transitionend',
         WebkitTransition : 'webkitTransitionEnd',
         MozTransition    : 'transitionend',
-        OTransition      : 'oTransitionEnd otransitionend',
-        transition       : 'transitionend'
+        OTransition      : 'oTransitionEnd otransitionend'
     };
+
+    rstransitionEndName = false;
 
     for (var tname in transEndEventNames) {
         if (el.style[tname] !== undefined) {
-            return { end: transEndEventNames[tname] }
+            // the event name is returned as a string
+            rstransitionEndName = transEndEventNames[tname];
+            break;
         }
     }
 
-    return false;
+    return rstransitionEndName;
 }
